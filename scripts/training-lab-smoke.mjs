@@ -1,0 +1,38 @@
+// V7-11 shared contract: the Match Lab runner plays ONE exercise with a built-in coach and the game side imports the record.
+//   LAB_DIR=/path/to/lab ESBUILD=… node scripts/training-lab-smoke.mjs        (not a strength batch: one attempt)
+import { readFileSync, writeFileSync, mkdtempSync } from 'node:fs';
+import { execFileSync, spawnSync } from 'node:child_process';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+import { createRequire } from 'node:module';
+const results = [];
+const check = (n, ok, d = '') => { results.push(!!ok); console.log(`${ok ? 'PASS' : 'FAIL'} ${n}${d ? ` — ${d}` : ''}`); };
+const LAB = process.env.LAB_DIR || '/home/claude/w/lab';
+const tmp = mkdtempSync(join(tmpdir(), 'bb-tlab-'));
+execFileSync(process.env.ESBUILD || 'node_modules/.bin/esbuild', ['src/engine/index.ts', '--bundle', '--platform=node', '--format=cjs', `--outfile=${tmp}/engine.cjs`, '--log-level=error']);
+const E = createRequire(import.meta.url)(`${tmp}/engine.cjs`);
+const pos = JSON.parse(readFileSync('examples/01-two-dodges-to-glory.json', 'utf8')).state;
+const ex = E.authorExercise(pos, { id: 'lab-fixture', title: 'Lab fixture', side: 'A', objective: { kind: 'score' }, constraints: { maxActions: 3 }, references: [{ label: 'hidden line', inputs: [{ kind: 'playerAction', playerId: 'A1', action: 'move', path: [[18, 7], [19, 7], [20, 7], [21, 7], [22, 7], [23, 7], [24, 7], [25, 6]].map(([x, y]) => ({ to: { x, y }, kind: 'step' })) }] }] }).exercise;
+const exFile = join(tmp, 'ex.json'); writeFileSync(exFile, E.serializeTraining(ex));
+const run = (...a) => spawnSync('node', [join(LAB, 'runner', 'runner.mjs'), ...a], { encoding: 'utf8', maxBuffer: 1 << 26 });
+let r = run('training-run', exFile, '--coach', 'balanced', '--samples', '80');
+const out = JSON.parse(r.stdout || '{}');
+check('the Lab runner plays the exercise with a built-in coach', r.status === 0 && out.ok && out.attempt?.actor?.kind === 'coach', (r.stderr || '').slice(0, 160));
+check('the attempt record names the coach and carries a graded, legal result with the same grader', out.attempt?.actor?.coachId === 'builtin:balanced' && out.report?.legal?.ok && out.report?.grader?.id === 'bloodboard-tactical-rubric' && out.report.quality.samples === 80);
+check('the realized outcome and the plan quality are reported separately', typeof out.report?.realized?.objectiveAchieved === 'boolean' && (out.report.quality.total === null || typeof out.report.quality.total === 'number'));
+check('grader-only references are scored for comparison after the attempt; their move lists are never copied into the attempt record', !!out.report?.referenceComparison?.length && !('references' in out.attempt) && !JSON.stringify(out.attempt).includes('"inputs"'));
+const imp = E.importAttempt(JSON.stringify(out.attempt), [ex], []);
+check('the game imports the Lab attempt and re-executes it', imp.ok);
+const attFile = join(tmp, 'att.json'); writeFileSync(attFile, JSON.stringify(out.attempt));
+r = run('training-grade', exFile, attFile, '--samples', '80');
+const g = JSON.parse(r.stdout || '{}');
+check('Lab-side grading of the same record gives the same plan quality as the run (deterministic)', g.ok && g.report.quality.total === out.report.quality.total);
+const bad = JSON.parse(JSON.stringify(out.attempt)); bad.log[0].outcome = bad.log[0].outcome === 'turnover' ? 'completed' : 'turnover';
+writeFileSync(attFile, JSON.stringify(bad));
+r = run('training-grade', exFile, attFile);
+const gb = JSON.parse(r.stdout || '{}');
+check('a forged record is refused by the Lab as well', !gb.ok && /reproduce/.test(gb.error || ''), gb.error);
+const damaged = JSON.parse(E.serializeTraining(ex)); damaged.objective.kind = 'no-turnover'; writeFileSync(join(tmp, 'dam.json'), JSON.stringify(damaged));
+r = run('training-run', join(tmp, 'dam.json'));
+check('a damaged exercise is refused by the Lab', r.status !== 0 && /hash/.test(r.stdout), r.stdout.slice(0, 120));
+const ok = results.filter(Boolean).length; console.log(`\n${ok}/${results.length} passed`); process.exit(ok === results.length ? 0 : 1);

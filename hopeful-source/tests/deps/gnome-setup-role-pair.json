@@ -1,0 +1,3802 @@
+{
+  "schema": "hopeful-setup-role-inputs/1",
+  "bundleSha256": "e7a80723999a5fa01af2b6ded64a65640930e51bf03e992d344ca31d32d7d9a6",
+  "hostSha256": "665e7fc4e5825ad633c767b929270a9eb6bac1bc661daff0baefe72832703fc2",
+  "cases": [
+    {
+      "name": "native-gnome-with-myBall",
+      "state": {
+        "format": "bloodboard-state",
+        "version": 1,
+        "phase": "driveSetup",
+        "weather": "perfect",
+        "teams": {
+          "A": {
+            "id": "A",
+            "name": "Setup Audit Gnomes",
+            "rosterId": "gnome",
+            "color": "#6b8f3a",
+            "accent": "#f4e6c4",
+            "rerolls": 1,
+            "leaderReroll": false,
+            "score": 0,
+            "turn": 0,
+            "league": "Halfling Thimble Cup",
+            "apothecary": "available"
+          },
+          "B": {
+            "id": "B",
+            "name": "Setup Audit Humans",
+            "rosterId": "human",
+            "color": "#f3efe4",
+            "accent": "#1d3f8f",
+            "rerolls": 1,
+            "leaderReroll": false,
+            "score": 0,
+            "turn": 0,
+            "league": "Old World Classic",
+            "specialRules": [
+              "Team Captain"
+            ]
+          }
+        },
+        "players": [
+          {
+            "id": "A1",
+            "team": "A",
+            "number": 1,
+            "name": "Woodland Fox",
+            "position": "Woodland Fox",
+            "keywords": [
+              "Animal",
+              "Runner"
+            ],
+            "ma": 7,
+            "st": 2,
+            "ag": 2,
+            "pa": null,
+            "av": 6,
+            "skills": [
+              {
+                "id": "dodge"
+              },
+              {
+                "id": "myBall"
+              },
+              {
+                "id": "sidestep"
+              },
+              {
+                "id": "stunty"
+              }
+            ],
+            "location": "reserves",
+            "pos": null,
+            "stance": "standing",
+            "distracted": false,
+            "activated": false,
+            "usage": {},
+            "defId": "setup-audit-gnome-1"
+          },
+          {
+            "id": "A2",
+            "team": "A",
+            "number": 2,
+            "name": "Woodland Fox",
+            "position": "Woodland Fox",
+            "keywords": [
+              "Animal",
+              "Runner"
+            ],
+            "ma": 7,
+            "st": 2,
+            "ag": 2,
+            "pa": null,
+            "av": 6,
+            "skills": [
+              {
+                "id": "dodge"
+              },
+              {
+                "id": "myBall"
+              },
+              {
+                "id": "sidestep"
+              },
+              {
+                "id": "stunty"
+              }
+            ],
+            "location": "reserves",
+            "pos": null,
+            "stance": "standing",
+            "distracted": false,
+            "activated": false,
+            "usage": {},
+            "defId": "setup-audit-gnome-2"
+          },
+          {
+            "id": "A3",
+            "team": "A",
+            "number": 3,
+            "name": "Altern Forest Treeman",
+            "position": "Altern Forest Treeman",
+            "keywords": [
+              "Big Guy",
+              "Treeman"
+            ],
+            "ma": 2,
+            "st": 6,
+            "ag": 5,
+            "pa": 5,
+            "av": 11,
+            "skills": [
+              {
+                "id": "mightyBlow"
+              },
+              {
+                "id": "standFirm"
+              },
+              {
+                "id": "strongArm"
+              },
+              {
+                "id": "takeRoot"
+              },
+              {
+                "id": "thickSkull"
+              },
+              {
+                "id": "throwTeamMate"
+              },
+              {
+                "id": "timmmber"
+              }
+            ],
+            "location": "reserves",
+            "pos": null,
+            "stance": "standing",
+            "distracted": false,
+            "activated": false,
+            "usage": {},
+            "defId": "setup-audit-gnome-3"
+          },
+          {
+            "id": "A4",
+            "team": "A",
+            "number": 4,
+            "name": "Gnome Beastmaster",
+            "position": "Gnome Beastmaster",
+            "keywords": [
+              "Blocker",
+              "Gnome"
+            ],
+            "ma": 5,
+            "st": 2,
+            "ag": 3,
+            "pa": 4,
+            "av": 8,
+            "skills": [
+              {
+                "id": "guard"
+              },
+              {
+                "id": "jumpUp"
+              },
+              {
+                "id": "stunty"
+              },
+              {
+                "id": "wrestle"
+              }
+            ],
+            "location": "reserves",
+            "pos": null,
+            "stance": "standing",
+            "distracted": false,
+            "activated": false,
+            "usage": {},
+            "defId": "setup-audit-gnome-4"
+          },
+          {
+            "id": "A5",
+            "team": "A",
+            "number": 5,
+            "name": "Gnome Lineman",
+            "position": "Gnome Lineman",
+            "keywords": [
+              "Gnome",
+              "Lineman"
+            ],
+            "ma": 4,
+            "st": 2,
+            "ag": 3,
+            "pa": 4,
+            "av": 7,
+            "skills": [
+              {
+                "id": "jumpUp"
+              },
+              {
+                "id": "rightStuff"
+              },
+              {
+                "id": "stunty"
+              },
+              {
+                "id": "wrestle"
+              }
+            ],
+            "location": "reserves",
+            "pos": null,
+            "stance": "standing",
+            "distracted": false,
+            "activated": false,
+            "usage": {},
+            "defId": "setup-audit-gnome-5",
+            "veteran": "ready"
+          },
+          {
+            "id": "A6",
+            "team": "A",
+            "number": 6,
+            "name": "Gnome Lineman",
+            "position": "Gnome Lineman",
+            "keywords": [
+              "Gnome",
+              "Lineman"
+            ],
+            "ma": 5,
+            "st": 2,
+            "ag": 3,
+            "pa": 4,
+            "av": 7,
+            "skills": [
+              {
+                "id": "jumpUp"
+              },
+              {
+                "id": "rightStuff"
+              },
+              {
+                "id": "stunty"
+              },
+              {
+                "id": "wrestle"
+              }
+            ],
+            "location": "reserves",
+            "pos": null,
+            "stance": "standing",
+            "distracted": false,
+            "activated": false,
+            "usage": {},
+            "defId": "setup-audit-gnome-6"
+          },
+          {
+            "id": "A7",
+            "team": "A",
+            "number": 7,
+            "name": "Gnome Lineman",
+            "position": "Gnome Lineman",
+            "keywords": [
+              "Gnome",
+              "Lineman"
+            ],
+            "ma": 5,
+            "st": 2,
+            "ag": 3,
+            "pa": 4,
+            "av": 7,
+            "skills": [
+              {
+                "id": "jumpUp"
+              },
+              {
+                "id": "rightStuff"
+              },
+              {
+                "id": "stunty"
+              },
+              {
+                "id": "wrestle"
+              }
+            ],
+            "location": "reserves",
+            "pos": null,
+            "stance": "standing",
+            "distracted": false,
+            "activated": false,
+            "usage": {},
+            "defId": "setup-audit-gnome-7"
+          },
+          {
+            "id": "B1",
+            "team": "B",
+            "number": 1,
+            "name": "Human Catcher",
+            "position": "Human Catcher",
+            "keywords": [
+              "Catcher",
+              "Human"
+            ],
+            "ma": 8,
+            "st": 3,
+            "ag": 3,
+            "pa": 4,
+            "av": 8,
+            "skills": [
+              {
+                "id": "catch"
+              },
+              {
+                "id": "dodge"
+              }
+            ],
+            "location": "pitch",
+            "pos": {
+              "x": 13,
+              "y": 4
+            },
+            "stance": "standing",
+            "distracted": false,
+            "activated": false,
+            "usage": {},
+            "defId": "setup-audit-human-1"
+          },
+          {
+            "id": "B2",
+            "team": "B",
+            "number": 2,
+            "name": "Human Blitzer",
+            "position": "Human Blitzer",
+            "keywords": [
+              "Blitzer",
+              "Human"
+            ],
+            "ma": 7,
+            "st": 3,
+            "ag": 3,
+            "pa": 4,
+            "av": 9,
+            "skills": [
+              {
+                "id": "block"
+              },
+              {
+                "id": "tackle"
+              },
+              {
+                "id": "pro"
+              }
+            ],
+            "location": "pitch",
+            "pos": {
+              "x": 13,
+              "y": 5
+            },
+            "stance": "standing",
+            "distracted": false,
+            "activated": false,
+            "usage": {},
+            "defId": "setup-audit-human-2",
+            "captain": true
+          },
+          {
+            "id": "B3",
+            "team": "B",
+            "number": 3,
+            "name": "Human Catcher",
+            "position": "Human Catcher",
+            "keywords": [
+              "Catcher",
+              "Human"
+            ],
+            "ma": 8,
+            "st": 3,
+            "ag": 3,
+            "pa": 4,
+            "av": 8,
+            "skills": [
+              {
+                "id": "catch"
+              },
+              {
+                "id": "dodge"
+              }
+            ],
+            "location": "pitch",
+            "pos": {
+              "x": 13,
+              "y": 6
+            },
+            "stance": "standing",
+            "distracted": false,
+            "activated": false,
+            "usage": {},
+            "defId": "setup-audit-human-3"
+          },
+          {
+            "id": "B4",
+            "team": "B",
+            "number": 4,
+            "name": "Human Blitzer",
+            "position": "Human Blitzer",
+            "keywords": [
+              "Blitzer",
+              "Human"
+            ],
+            "ma": 7,
+            "st": 3,
+            "ag": 3,
+            "pa": 4,
+            "av": 9,
+            "skills": [
+              {
+                "id": "block"
+              },
+              {
+                "id": "tackle"
+              }
+            ],
+            "location": "pitch",
+            "pos": {
+              "x": 15,
+              "y": 3
+            },
+            "stance": "standing",
+            "distracted": false,
+            "activated": false,
+            "usage": {},
+            "defId": "setup-audit-human-4"
+          },
+          {
+            "id": "B5",
+            "team": "B",
+            "number": 5,
+            "name": "Human Lineman",
+            "position": "Human Lineman",
+            "keywords": [
+              "Human",
+              "Lineman"
+            ],
+            "ma": 5,
+            "st": 3,
+            "ag": 3,
+            "pa": 4,
+            "av": 9,
+            "skills": [],
+            "location": "pitch",
+            "pos": {
+              "x": 15,
+              "y": 7
+            },
+            "stance": "standing",
+            "distracted": false,
+            "activated": false,
+            "usage": {},
+            "defId": "setup-audit-human-5",
+            "veteran": "ready"
+          },
+          {
+            "id": "B6",
+            "team": "B",
+            "number": 6,
+            "name": "Human Lineman",
+            "position": "Human Lineman",
+            "keywords": [
+              "Human",
+              "Lineman"
+            ],
+            "ma": 6,
+            "st": 3,
+            "ag": 3,
+            "pa": 4,
+            "av": 9,
+            "skills": [],
+            "location": "pitch",
+            "pos": {
+              "x": 16,
+              "y": 5
+            },
+            "stance": "standing",
+            "distracted": false,
+            "activated": false,
+            "usage": {},
+            "defId": "setup-audit-human-6"
+          },
+          {
+            "id": "B7",
+            "team": "B",
+            "number": 7,
+            "name": "Human Lineman",
+            "position": "Human Lineman",
+            "keywords": [
+              "Human",
+              "Lineman"
+            ],
+            "ma": 6,
+            "st": 3,
+            "ag": 3,
+            "pa": 4,
+            "av": 9,
+            "skills": [],
+            "location": "pitch",
+            "pos": {
+              "x": 18,
+              "y": 5
+            },
+            "stance": "standing",
+            "distracted": false,
+            "activated": false,
+            "usage": {},
+            "defId": "setup-audit-human-7"
+          }
+        ],
+        "ball": {
+          "kind": "none"
+        },
+        "turn": {
+          "active": "B",
+          "half": 1,
+          "used": {
+            "blitz": false,
+            "pass": false,
+            "handoff": false,
+            "foul": false,
+            "secure": false,
+            "ttm": false,
+            "bomb": false,
+            "punt": false,
+            "ktm": false
+          },
+          "stunnedAtStart": [],
+          "activation": null
+        },
+        "rng": {
+          "seed": 13,
+          "counter": 2
+        },
+        "options": {
+          "rulerWidth": 1.8
+        },
+        "log": [
+          {
+            "id": 1,
+            "team": "A",
+            "turn": 0,
+            "title": "Pre-game sequence",
+            "input": {
+              "kind": "pregame"
+            },
+            "events": [
+              {
+                "type": "note",
+                "text": "Introductory rules (p.44): equal Fan Factor, Perfect Conditions and no Kick-off Events.",
+                "rule": {
+                  "page": 44,
+                  "title": "A Game of Two Halves"
+                }
+              },
+              {
+                "type": "roll",
+                "text": "Roll-off for the kicking team: Setup Audit Gnomes 4, Setup Audit Humans 5.",
+                "rule": {
+                  "page": 46,
+                  "title": "Determine Kicking Team"
+                },
+                "dice": [
+                  {
+                    "kind": "d6",
+                    "faces": [
+                      4
+                    ]
+                  },
+                  {
+                    "kind": "d6",
+                    "faces": [
+                      5
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "decision",
+                "text": "Setup Audit Humans coach: Kick off",
+                "rule": {
+                  "page": 46,
+                  "title": "Determine Kicking Team"
+                },
+                "data": {
+                  "requestId": "0:kickOrReceive",
+                  "option": "kick",
+                  "decisionType": "kickOrReceive"
+                }
+              },
+              {
+                "type": "note",
+                "text": "Setup Audit Humans kick off; Setup Audit Gnomes receive. Set up, starting with the kicking team (p.47).",
+                "rule": {
+                  "page": 47,
+                  "title": "Start of a Drive: Set-up"
+                }
+              }
+            ],
+            "decisions": [
+              {
+                "requestId": "0:kickOrReceive",
+                "team": "B",
+                "prompt": "Setup Audit Humans won the roll-off. Kick (defence) or receive (offence)?",
+                "optionId": "kick",
+                "label": "Kick off"
+              }
+            ],
+            "outcome": "completed"
+          },
+          {
+            "id": 2,
+            "team": "B",
+            "turn": 0,
+            "title": "Setup Audit Humans: set-up for Drive 1",
+            "input": {
+              "kind": "setupTeam",
+              "team": "B",
+              "positions": {
+                "B1": {
+                  "x": 13,
+                  "y": 4
+                },
+                "B2": {
+                  "x": 13,
+                  "y": 5
+                },
+                "B3": {
+                  "x": 13,
+                  "y": 6
+                },
+                "B4": {
+                  "x": 15,
+                  "y": 3
+                },
+                "B5": {
+                  "x": 15,
+                  "y": 7
+                },
+                "B6": {
+                  "x": 16,
+                  "y": 5
+                },
+                "B7": {
+                  "x": 18,
+                  "y": 5
+                }
+              }
+            },
+            "events": [
+              {
+                "type": "note",
+                "text": "Setup Audit Humans set up 7 players for Drive 1.",
+                "rule": {
+                  "page": 10,
+                  "title": "Sevens Set-up",
+                  "source": "sevens"
+                },
+                "data": {
+                  "team": "B"
+                }
+              }
+            ],
+            "decisions": [],
+            "outcome": "completed"
+          }
+        ],
+        "pending": null,
+        "variant": "sevens",
+        "title": "Setup Audit Gnomes v Setup Audit Humans",
+        "match": {
+          "kind": "tournament",
+          "options": {},
+          "teamIds": {
+            "A": "setup-audit-gnome",
+            "B": "setup-audit-human"
+          },
+          "rosterRerolls": {
+            "A": 1,
+            "B": 1
+          },
+          "dedicatedFans": {
+            "A": 1,
+            "B": 1
+          },
+          "assistantCoaches": {
+            "A": 1,
+            "B": 1
+          },
+          "cheerleaders": {
+            "A": 0,
+            "B": 0
+          },
+          "half": 1,
+          "drive": 1,
+          "setupDone": {
+            "A": false,
+            "B": true
+          },
+          "bribes": {
+            "A": 0,
+            "B": 0
+          },
+          "coachEjected": {
+            "A": false,
+            "B": false
+          },
+          "driveMods": [],
+          "kicking": "B",
+          "receivedFirst": "A"
+        }
+      },
+      "observation": {
+        "apiVersion": 1,
+        "apiMinor": 2,
+        "requestId": 1,
+        "revision": "2:-:0",
+        "team": "A",
+        "format": "sevens",
+        "phase": "driveSetup",
+        "half": 1,
+        "turn": {
+          "A": 0,
+          "B": 0
+        },
+        "turnsPerHalf": 6,
+        "score": {
+          "A": 0,
+          "B": 0
+        },
+        "weather": "perfect",
+        "rerolls": {
+          "A": 1,
+          "B": 1
+        },
+        "ball": {
+          "kind": "none"
+        },
+        "used": {
+          "blitz": false,
+          "pass": false,
+          "handoff": false,
+          "foul": false,
+          "secure": false,
+          "ttm": false,
+          "bomb": false,
+          "punt": false,
+          "ktm": false
+        },
+        "players": [
+          {
+            "id": "A1",
+            "team": "A",
+            "number": 1,
+            "position": "Woodland Fox",
+            "ma": 7,
+            "st": 2,
+            "ag": 2,
+            "pa": null,
+            "av": 6,
+            "skills": [
+              "dodge",
+              "myBall",
+              "sidestep",
+              "stunty"
+            ],
+            "pos": null,
+            "stance": "standing",
+            "location": "reserves",
+            "activated": false,
+            "name": "Woodland Fox",
+            "keywords": [
+              "Animal",
+              "Runner"
+            ],
+            "distracted": false,
+            "tackleZone": false,
+            "canBeActivated": false,
+            "usage": {}
+          },
+          {
+            "id": "A2",
+            "team": "A",
+            "number": 2,
+            "position": "Woodland Fox",
+            "ma": 7,
+            "st": 2,
+            "ag": 2,
+            "pa": null,
+            "av": 6,
+            "skills": [
+              "dodge",
+              "myBall",
+              "sidestep",
+              "stunty"
+            ],
+            "pos": null,
+            "stance": "standing",
+            "location": "reserves",
+            "activated": false,
+            "name": "Woodland Fox",
+            "keywords": [
+              "Animal",
+              "Runner"
+            ],
+            "distracted": false,
+            "tackleZone": false,
+            "canBeActivated": false,
+            "usage": {}
+          },
+          {
+            "id": "A3",
+            "team": "A",
+            "number": 3,
+            "position": "Altern Forest Treeman",
+            "ma": 2,
+            "st": 6,
+            "ag": 5,
+            "pa": 5,
+            "av": 11,
+            "skills": [
+              "mightyBlow",
+              "standFirm",
+              "strongArm",
+              "takeRoot",
+              "thickSkull",
+              "throwTeamMate",
+              "timmmber"
+            ],
+            "pos": null,
+            "stance": "standing",
+            "location": "reserves",
+            "activated": false,
+            "name": "Altern Forest Treeman",
+            "keywords": [
+              "Big Guy",
+              "Treeman"
+            ],
+            "distracted": false,
+            "tackleZone": false,
+            "canBeActivated": false,
+            "usage": {}
+          },
+          {
+            "id": "A4",
+            "team": "A",
+            "number": 4,
+            "position": "Gnome Beastmaster",
+            "ma": 5,
+            "st": 2,
+            "ag": 3,
+            "pa": 4,
+            "av": 8,
+            "skills": [
+              "guard",
+              "jumpUp",
+              "stunty",
+              "wrestle"
+            ],
+            "pos": null,
+            "stance": "standing",
+            "location": "reserves",
+            "activated": false,
+            "name": "Gnome Beastmaster",
+            "keywords": [
+              "Blocker",
+              "Gnome"
+            ],
+            "distracted": false,
+            "tackleZone": false,
+            "canBeActivated": false,
+            "usage": {}
+          },
+          {
+            "id": "A5",
+            "team": "A",
+            "number": 5,
+            "position": "Gnome Lineman",
+            "ma": 4,
+            "st": 2,
+            "ag": 3,
+            "pa": 4,
+            "av": 7,
+            "skills": [
+              "jumpUp",
+              "rightStuff",
+              "stunty",
+              "wrestle"
+            ],
+            "pos": null,
+            "stance": "standing",
+            "location": "reserves",
+            "activated": false,
+            "name": "Gnome Lineman",
+            "keywords": [
+              "Gnome",
+              "Lineman"
+            ],
+            "distracted": false,
+            "tackleZone": false,
+            "canBeActivated": false,
+            "usage": {},
+            "veteran": "ready"
+          },
+          {
+            "id": "A6",
+            "team": "A",
+            "number": 6,
+            "position": "Gnome Lineman",
+            "ma": 5,
+            "st": 2,
+            "ag": 3,
+            "pa": 4,
+            "av": 7,
+            "skills": [
+              "jumpUp",
+              "rightStuff",
+              "stunty",
+              "wrestle"
+            ],
+            "pos": null,
+            "stance": "standing",
+            "location": "reserves",
+            "activated": false,
+            "name": "Gnome Lineman",
+            "keywords": [
+              "Gnome",
+              "Lineman"
+            ],
+            "distracted": false,
+            "tackleZone": false,
+            "canBeActivated": false,
+            "usage": {}
+          },
+          {
+            "id": "A7",
+            "team": "A",
+            "number": 7,
+            "position": "Gnome Lineman",
+            "ma": 5,
+            "st": 2,
+            "ag": 3,
+            "pa": 4,
+            "av": 7,
+            "skills": [
+              "jumpUp",
+              "rightStuff",
+              "stunty",
+              "wrestle"
+            ],
+            "pos": null,
+            "stance": "standing",
+            "location": "reserves",
+            "activated": false,
+            "name": "Gnome Lineman",
+            "keywords": [
+              "Gnome",
+              "Lineman"
+            ],
+            "distracted": false,
+            "tackleZone": false,
+            "canBeActivated": false,
+            "usage": {}
+          },
+          {
+            "id": "B1",
+            "team": "B",
+            "number": 1,
+            "position": "Human Catcher",
+            "ma": 8,
+            "st": 3,
+            "ag": 3,
+            "pa": 4,
+            "av": 8,
+            "skills": [
+              "catch",
+              "dodge"
+            ],
+            "pos": {
+              "x": 13,
+              "y": 4
+            },
+            "stance": "standing",
+            "location": "pitch",
+            "activated": false,
+            "name": "Human Catcher",
+            "keywords": [
+              "Catcher",
+              "Human"
+            ],
+            "distracted": false,
+            "tackleZone": true,
+            "canBeActivated": false,
+            "usage": {}
+          },
+          {
+            "id": "B2",
+            "team": "B",
+            "number": 2,
+            "position": "Human Blitzer",
+            "ma": 7,
+            "st": 3,
+            "ag": 3,
+            "pa": 4,
+            "av": 9,
+            "skills": [
+              "block",
+              "tackle",
+              "pro"
+            ],
+            "pos": {
+              "x": 13,
+              "y": 5
+            },
+            "stance": "standing",
+            "location": "pitch",
+            "activated": false,
+            "name": "Human Blitzer",
+            "keywords": [
+              "Blitzer",
+              "Human"
+            ],
+            "distracted": false,
+            "tackleZone": true,
+            "canBeActivated": false,
+            "usage": {},
+            "captain": true
+          },
+          {
+            "id": "B3",
+            "team": "B",
+            "number": 3,
+            "position": "Human Catcher",
+            "ma": 8,
+            "st": 3,
+            "ag": 3,
+            "pa": 4,
+            "av": 8,
+            "skills": [
+              "catch",
+              "dodge"
+            ],
+            "pos": {
+              "x": 13,
+              "y": 6
+            },
+            "stance": "standing",
+            "location": "pitch",
+            "activated": false,
+            "name": "Human Catcher",
+            "keywords": [
+              "Catcher",
+              "Human"
+            ],
+            "distracted": false,
+            "tackleZone": true,
+            "canBeActivated": false,
+            "usage": {}
+          },
+          {
+            "id": "B4",
+            "team": "B",
+            "number": 4,
+            "position": "Human Blitzer",
+            "ma": 7,
+            "st": 3,
+            "ag": 3,
+            "pa": 4,
+            "av": 9,
+            "skills": [
+              "block",
+              "tackle"
+            ],
+            "pos": {
+              "x": 15,
+              "y": 3
+            },
+            "stance": "standing",
+            "location": "pitch",
+            "activated": false,
+            "name": "Human Blitzer",
+            "keywords": [
+              "Blitzer",
+              "Human"
+            ],
+            "distracted": false,
+            "tackleZone": true,
+            "canBeActivated": false,
+            "usage": {}
+          },
+          {
+            "id": "B5",
+            "team": "B",
+            "number": 5,
+            "position": "Human Lineman",
+            "ma": 5,
+            "st": 3,
+            "ag": 3,
+            "pa": 4,
+            "av": 9,
+            "skills": [],
+            "pos": {
+              "x": 15,
+              "y": 7
+            },
+            "stance": "standing",
+            "location": "pitch",
+            "activated": false,
+            "name": "Human Lineman",
+            "keywords": [
+              "Human",
+              "Lineman"
+            ],
+            "distracted": false,
+            "tackleZone": true,
+            "canBeActivated": false,
+            "usage": {},
+            "veteran": "ready"
+          },
+          {
+            "id": "B6",
+            "team": "B",
+            "number": 6,
+            "position": "Human Lineman",
+            "ma": 6,
+            "st": 3,
+            "ag": 3,
+            "pa": 4,
+            "av": 9,
+            "skills": [],
+            "pos": {
+              "x": 16,
+              "y": 5
+            },
+            "stance": "standing",
+            "location": "pitch",
+            "activated": false,
+            "name": "Human Lineman",
+            "keywords": [
+              "Human",
+              "Lineman"
+            ],
+            "distracted": false,
+            "tackleZone": true,
+            "canBeActivated": false,
+            "usage": {}
+          },
+          {
+            "id": "B7",
+            "team": "B",
+            "number": 7,
+            "position": "Human Lineman",
+            "ma": 6,
+            "st": 3,
+            "ag": 3,
+            "pa": 4,
+            "av": 9,
+            "skills": [],
+            "pos": {
+              "x": 18,
+              "y": 5
+            },
+            "stance": "standing",
+            "location": "pitch",
+            "activated": false,
+            "name": "Human Lineman",
+            "keywords": [
+              "Human",
+              "Lineman"
+            ],
+            "distracted": false,
+            "tackleZone": true,
+            "canBeActivated": false,
+            "usage": {}
+          }
+        ],
+        "pitch": {
+          "width": 20,
+          "height": 11,
+          "endZone": {
+            "A": 19,
+            "B": 0
+          }
+        },
+        "active": "B",
+        "teams": {
+          "A": {
+            "name": "Setup Audit Gnomes",
+            "rosterId": "gnome",
+            "score": 0,
+            "turn": 0,
+            "rerolls": 1,
+            "leaderReroll": false,
+            "bonusRerolls": 0,
+            "mascotReroll": false,
+            "apothecary": "available",
+            "specialRules": []
+          },
+          "B": {
+            "name": "Setup Audit Humans",
+            "rosterId": "human",
+            "score": 0,
+            "turn": 0,
+            "rerolls": 1,
+            "leaderReroll": false,
+            "bonusRerolls": 0,
+            "mascotReroll": false,
+            "apothecary": "none",
+            "specialRules": [
+              "Team Captain"
+            ]
+          }
+        },
+        "kicking": "B",
+        "drive": 1,
+        "activation": null,
+        "pending": null,
+        "betweenTurns": false,
+        "hostExtensions": {
+          "setup": true,
+          "coachContext": true
+        }
+      },
+      "request": {
+        "defaultPositions": {
+          "A1": {
+            "x": 6,
+            "y": 4
+          },
+          "A2": {
+            "x": 6,
+            "y": 5
+          },
+          "A3": {
+            "x": 6,
+            "y": 6
+          },
+          "A4": {
+            "x": 4,
+            "y": 3
+          },
+          "A5": {
+            "x": 4,
+            "y": 7
+          },
+          "A6": {
+            "x": 3,
+            "y": 5
+          },
+          "A7": {
+            "x": 1,
+            "y": 5
+          }
+        },
+        "fieldedIds": [
+          "A1",
+          "A2",
+          "A3",
+          "A4",
+          "A5",
+          "A6",
+          "A7"
+        ],
+        "fixedPlayerIds": [
+          "A1",
+          "A2",
+          "A3",
+          "A4",
+          "A5",
+          "A6",
+          "A7"
+        ],
+        "legalSquares": [
+          {
+            "x": 0,
+            "y": 0
+          },
+          {
+            "x": 0,
+            "y": 1
+          },
+          {
+            "x": 0,
+            "y": 2
+          },
+          {
+            "x": 0,
+            "y": 3
+          },
+          {
+            "x": 0,
+            "y": 4
+          },
+          {
+            "x": 0,
+            "y": 5
+          },
+          {
+            "x": 0,
+            "y": 6
+          },
+          {
+            "x": 0,
+            "y": 7
+          },
+          {
+            "x": 0,
+            "y": 8
+          },
+          {
+            "x": 0,
+            "y": 9
+          },
+          {
+            "x": 0,
+            "y": 10
+          },
+          {
+            "x": 1,
+            "y": 0
+          },
+          {
+            "x": 1,
+            "y": 1
+          },
+          {
+            "x": 1,
+            "y": 2
+          },
+          {
+            "x": 1,
+            "y": 3
+          },
+          {
+            "x": 1,
+            "y": 4
+          },
+          {
+            "x": 1,
+            "y": 5
+          },
+          {
+            "x": 1,
+            "y": 6
+          },
+          {
+            "x": 1,
+            "y": 7
+          },
+          {
+            "x": 1,
+            "y": 8
+          },
+          {
+            "x": 1,
+            "y": 9
+          },
+          {
+            "x": 1,
+            "y": 10
+          },
+          {
+            "x": 2,
+            "y": 0
+          },
+          {
+            "x": 2,
+            "y": 1
+          },
+          {
+            "x": 2,
+            "y": 2
+          },
+          {
+            "x": 2,
+            "y": 3
+          },
+          {
+            "x": 2,
+            "y": 4
+          },
+          {
+            "x": 2,
+            "y": 5
+          },
+          {
+            "x": 2,
+            "y": 6
+          },
+          {
+            "x": 2,
+            "y": 7
+          },
+          {
+            "x": 2,
+            "y": 8
+          },
+          {
+            "x": 2,
+            "y": 9
+          },
+          {
+            "x": 2,
+            "y": 10
+          },
+          {
+            "x": 3,
+            "y": 0
+          },
+          {
+            "x": 3,
+            "y": 1
+          },
+          {
+            "x": 3,
+            "y": 2
+          },
+          {
+            "x": 3,
+            "y": 3
+          },
+          {
+            "x": 3,
+            "y": 4
+          },
+          {
+            "x": 3,
+            "y": 5
+          },
+          {
+            "x": 3,
+            "y": 6
+          },
+          {
+            "x": 3,
+            "y": 7
+          },
+          {
+            "x": 3,
+            "y": 8
+          },
+          {
+            "x": 3,
+            "y": 9
+          },
+          {
+            "x": 3,
+            "y": 10
+          },
+          {
+            "x": 4,
+            "y": 0
+          },
+          {
+            "x": 4,
+            "y": 1
+          },
+          {
+            "x": 4,
+            "y": 2
+          },
+          {
+            "x": 4,
+            "y": 3
+          },
+          {
+            "x": 4,
+            "y": 4
+          },
+          {
+            "x": 4,
+            "y": 5
+          },
+          {
+            "x": 4,
+            "y": 6
+          },
+          {
+            "x": 4,
+            "y": 7
+          },
+          {
+            "x": 4,
+            "y": 8
+          },
+          {
+            "x": 4,
+            "y": 9
+          },
+          {
+            "x": 4,
+            "y": 10
+          },
+          {
+            "x": 5,
+            "y": 0
+          },
+          {
+            "x": 5,
+            "y": 1
+          },
+          {
+            "x": 5,
+            "y": 2
+          },
+          {
+            "x": 5,
+            "y": 3
+          },
+          {
+            "x": 5,
+            "y": 4
+          },
+          {
+            "x": 5,
+            "y": 5
+          },
+          {
+            "x": 5,
+            "y": 6
+          },
+          {
+            "x": 5,
+            "y": 7
+          },
+          {
+            "x": 5,
+            "y": 8
+          },
+          {
+            "x": 5,
+            "y": 9
+          },
+          {
+            "x": 5,
+            "y": 10
+          },
+          {
+            "x": 6,
+            "y": 0
+          },
+          {
+            "x": 6,
+            "y": 1
+          },
+          {
+            "x": 6,
+            "y": 2
+          },
+          {
+            "x": 6,
+            "y": 3
+          },
+          {
+            "x": 6,
+            "y": 4
+          },
+          {
+            "x": 6,
+            "y": 5
+          },
+          {
+            "x": 6,
+            "y": 6
+          },
+          {
+            "x": 6,
+            "y": 7
+          },
+          {
+            "x": 6,
+            "y": 8
+          },
+          {
+            "x": 6,
+            "y": 9
+          },
+          {
+            "x": 6,
+            "y": 10
+          }
+        ],
+        "lineOfScrimmage": 6,
+        "centreRows": {
+          "min": 2,
+          "max": 8
+        },
+        "minLine": 3,
+        "allOnLine": false,
+        "maxWide": 1,
+        "wideRows": 2,
+        "pitch": {
+          "w": 20,
+          "h": 11
+        },
+        "format": "sevens",
+        "fielding": {
+          "mode": "fixed",
+          "count": 7,
+          "candidates": [
+            {
+              "id": "A1",
+              "number": 1,
+              "position": "Woodland Fox",
+              "ma": 7,
+              "st": 2,
+              "ag": 2,
+              "pa": null,
+              "av": 6,
+              "skills": [
+                "dodge",
+                "myBall",
+                "sidestep",
+                "stunty"
+              ],
+              "onPitch": false
+            },
+            {
+              "id": "A2",
+              "number": 2,
+              "position": "Woodland Fox",
+              "ma": 7,
+              "st": 2,
+              "ag": 2,
+              "pa": null,
+              "av": 6,
+              "skills": [
+                "dodge",
+                "myBall",
+                "sidestep",
+                "stunty"
+              ],
+              "onPitch": false
+            },
+            {
+              "id": "A3",
+              "number": 3,
+              "position": "Altern Forest Treeman",
+              "ma": 2,
+              "st": 6,
+              "ag": 5,
+              "pa": 5,
+              "av": 11,
+              "skills": [
+                "mightyBlow",
+                "standFirm",
+                "strongArm",
+                "takeRoot",
+                "thickSkull",
+                "throwTeamMate",
+                "timmmber"
+              ],
+              "onPitch": false
+            },
+            {
+              "id": "A4",
+              "number": 4,
+              "position": "Gnome Beastmaster",
+              "ma": 5,
+              "st": 2,
+              "ag": 3,
+              "pa": 4,
+              "av": 8,
+              "skills": [
+                "guard",
+                "jumpUp",
+                "stunty",
+                "wrestle"
+              ],
+              "onPitch": false
+            },
+            {
+              "id": "A5",
+              "number": 5,
+              "position": "Gnome Lineman",
+              "ma": 4,
+              "st": 2,
+              "ag": 3,
+              "pa": 4,
+              "av": 7,
+              "skills": [
+                "jumpUp",
+                "rightStuff",
+                "stunty",
+                "wrestle"
+              ],
+              "onPitch": false
+            },
+            {
+              "id": "A6",
+              "number": 6,
+              "position": "Gnome Lineman",
+              "ma": 5,
+              "st": 2,
+              "ag": 3,
+              "pa": 4,
+              "av": 7,
+              "skills": [
+                "jumpUp",
+                "rightStuff",
+                "stunty",
+                "wrestle"
+              ],
+              "onPitch": false
+            },
+            {
+              "id": "A7",
+              "number": 7,
+              "position": "Gnome Lineman",
+              "ma": 5,
+              "st": 2,
+              "ag": 3,
+              "pa": 4,
+              "av": 7,
+              "skills": [
+                "jumpUp",
+                "rightStuff",
+                "stunty",
+                "wrestle"
+              ],
+              "onPitch": false
+            }
+          ],
+          "mustField": []
+        }
+      },
+      "expectedFrozenResult": {
+        "positions": {
+          "A1": {
+            "x": 6,
+            "y": 6
+          },
+          "A2": {
+            "x": 5,
+            "y": 6
+          },
+          "A3": {
+            "x": 6,
+            "y": 4
+          },
+          "A4": {
+            "x": 5,
+            "y": 4
+          },
+          "A5": {
+            "x": 6,
+            "y": 5
+          },
+          "A6": {
+            "x": 2,
+            "y": 8
+          },
+          "A7": {
+            "x": 3,
+            "y": 2
+          }
+        },
+        "coachContext": {
+          "schema": "hopeful-context/2.2.7",
+          "champion": {
+            "drivePlan": {
+              "schema": "hopeful-drive/1",
+              "team": "A",
+              "half": 1,
+              "drive": 1,
+              "format": "sevens",
+              "possession": "none",
+              "primaryCarrier": null,
+              "backupCarrier": null,
+              "preferredY": 5,
+              "backupY": 5,
+              "targetScoringWindow": null,
+              "driveUrgency": "pressure / counterattack",
+              "defensiveObjective": "compress routes and seek recoverable sacks",
+              "emergency": false,
+              "dangerous": false,
+              "ourCount": 0,
+              "theirCount": 7,
+              "laneCost": null,
+              "score": "0:0",
+              "updatedTurn": 1,
+              "revisionReason": "new Drive or match context",
+              "persistence": "host context"
+            }
+          },
+          "plan": null,
+          "stats": {}
+        },
+        "why": "Hopeful 2.2.7-GPT: receiving recovery and protection; 7 fielded, fast opponent, mobile matchup; joint role assignment across six regenerated formations."
+      },
+      "expectedFrozenHost": {
+        "move": {
+          "type": "step",
+          "input": {
+            "kind": "setupTeam",
+            "team": "A",
+            "positions": {
+              "A1": {
+                "x": 6,
+                "y": 6
+              },
+              "A2": {
+                "x": 5,
+                "y": 6
+              },
+              "A3": {
+                "x": 6,
+                "y": 4
+              },
+              "A4": {
+                "x": 5,
+                "y": 4
+              },
+              "A5": {
+                "x": 6,
+                "y": 5
+              },
+              "A6": {
+                "x": 2,
+                "y": 8
+              },
+              "A7": {
+                "x": 3,
+                "y": 2
+              }
+            }
+          },
+          "why": "Hopeful 2.2.7-GPT: receiving recovery and protection; 7 fielded, fast opponent, mobile matchup; joint role assignment across six regenerated formations."
+        },
+        "meta": {
+          "coach": "hopeful-2-2-7-gpt",
+          "requestId": 1,
+          "kind": "setup",
+          "via": "setup",
+          "fellBack": false,
+          "reason": null,
+          "why": "Hopeful 2.2.7-GPT: receiving recovery and protection; 7 fielded, fast opponent, mobile matchup; joint role assignment across six regenerated formations.",
+          "allowanceMs": 60000,
+          "hostExtensions": {
+            "setup": true,
+            "coachContext": true
+          },
+          "diagnostics": [],
+          "usage": {
+            "elapsedMs": 71,
+            "serviceCalls": 0,
+            "serviceMs": 0,
+            "wallServiceMs": 0,
+            "leaves": 0,
+            "positions": 0,
+            "calls": {},
+            "plans": {
+              "hits": 0,
+              "computed": 0,
+              "parallel": 0,
+              "resultHits": 0
+            },
+            "engine": {
+              "maxUnresolved": 0,
+              "inexact": 0,
+              "cutShort": 0
+            },
+            "pooled": false
+          },
+          "setup": {
+            "hook": true,
+            "answered": true,
+            "accepted": true,
+            "fallback": false,
+            "reason": null
+          },
+          "context": {
+            "supplied": null,
+            "returned": true,
+            "committed": true
+          },
+          "progress": []
+        }
+      }
+    },
+    {
+      "name": "same-setup-only-A1-myBall-removed",
+      "state": {
+        "format": "bloodboard-state",
+        "version": 1,
+        "phase": "driveSetup",
+        "weather": "perfect",
+        "teams": {
+          "A": {
+            "id": "A",
+            "name": "Setup Audit Gnomes",
+            "rosterId": "gnome",
+            "color": "#6b8f3a",
+            "accent": "#f4e6c4",
+            "rerolls": 1,
+            "leaderReroll": false,
+            "score": 0,
+            "turn": 0,
+            "league": "Halfling Thimble Cup",
+            "apothecary": "available"
+          },
+          "B": {
+            "id": "B",
+            "name": "Setup Audit Humans",
+            "rosterId": "human",
+            "color": "#f3efe4",
+            "accent": "#1d3f8f",
+            "rerolls": 1,
+            "leaderReroll": false,
+            "score": 0,
+            "turn": 0,
+            "league": "Old World Classic",
+            "specialRules": [
+              "Team Captain"
+            ]
+          }
+        },
+        "players": [
+          {
+            "id": "A1",
+            "team": "A",
+            "number": 1,
+            "name": "Woodland Fox",
+            "position": "Woodland Fox",
+            "keywords": [
+              "Animal",
+              "Runner"
+            ],
+            "ma": 7,
+            "st": 2,
+            "ag": 2,
+            "pa": null,
+            "av": 6,
+            "skills": [
+              {
+                "id": "dodge"
+              },
+              {
+                "id": "sidestep"
+              },
+              {
+                "id": "stunty"
+              }
+            ],
+            "location": "reserves",
+            "pos": null,
+            "stance": "standing",
+            "distracted": false,
+            "activated": false,
+            "usage": {},
+            "defId": "setup-audit-gnome-1"
+          },
+          {
+            "id": "A2",
+            "team": "A",
+            "number": 2,
+            "name": "Woodland Fox",
+            "position": "Woodland Fox",
+            "keywords": [
+              "Animal",
+              "Runner"
+            ],
+            "ma": 7,
+            "st": 2,
+            "ag": 2,
+            "pa": null,
+            "av": 6,
+            "skills": [
+              {
+                "id": "dodge"
+              },
+              {
+                "id": "myBall"
+              },
+              {
+                "id": "sidestep"
+              },
+              {
+                "id": "stunty"
+              }
+            ],
+            "location": "reserves",
+            "pos": null,
+            "stance": "standing",
+            "distracted": false,
+            "activated": false,
+            "usage": {},
+            "defId": "setup-audit-gnome-2"
+          },
+          {
+            "id": "A3",
+            "team": "A",
+            "number": 3,
+            "name": "Altern Forest Treeman",
+            "position": "Altern Forest Treeman",
+            "keywords": [
+              "Big Guy",
+              "Treeman"
+            ],
+            "ma": 2,
+            "st": 6,
+            "ag": 5,
+            "pa": 5,
+            "av": 11,
+            "skills": [
+              {
+                "id": "mightyBlow"
+              },
+              {
+                "id": "standFirm"
+              },
+              {
+                "id": "strongArm"
+              },
+              {
+                "id": "takeRoot"
+              },
+              {
+                "id": "thickSkull"
+              },
+              {
+                "id": "throwTeamMate"
+              },
+              {
+                "id": "timmmber"
+              }
+            ],
+            "location": "reserves",
+            "pos": null,
+            "stance": "standing",
+            "distracted": false,
+            "activated": false,
+            "usage": {},
+            "defId": "setup-audit-gnome-3"
+          },
+          {
+            "id": "A4",
+            "team": "A",
+            "number": 4,
+            "name": "Gnome Beastmaster",
+            "position": "Gnome Beastmaster",
+            "keywords": [
+              "Blocker",
+              "Gnome"
+            ],
+            "ma": 5,
+            "st": 2,
+            "ag": 3,
+            "pa": 4,
+            "av": 8,
+            "skills": [
+              {
+                "id": "guard"
+              },
+              {
+                "id": "jumpUp"
+              },
+              {
+                "id": "stunty"
+              },
+              {
+                "id": "wrestle"
+              }
+            ],
+            "location": "reserves",
+            "pos": null,
+            "stance": "standing",
+            "distracted": false,
+            "activated": false,
+            "usage": {},
+            "defId": "setup-audit-gnome-4"
+          },
+          {
+            "id": "A5",
+            "team": "A",
+            "number": 5,
+            "name": "Gnome Lineman",
+            "position": "Gnome Lineman",
+            "keywords": [
+              "Gnome",
+              "Lineman"
+            ],
+            "ma": 4,
+            "st": 2,
+            "ag": 3,
+            "pa": 4,
+            "av": 7,
+            "skills": [
+              {
+                "id": "jumpUp"
+              },
+              {
+                "id": "rightStuff"
+              },
+              {
+                "id": "stunty"
+              },
+              {
+                "id": "wrestle"
+              }
+            ],
+            "location": "reserves",
+            "pos": null,
+            "stance": "standing",
+            "distracted": false,
+            "activated": false,
+            "usage": {},
+            "defId": "setup-audit-gnome-5",
+            "veteran": "ready"
+          },
+          {
+            "id": "A6",
+            "team": "A",
+            "number": 6,
+            "name": "Gnome Lineman",
+            "position": "Gnome Lineman",
+            "keywords": [
+              "Gnome",
+              "Lineman"
+            ],
+            "ma": 5,
+            "st": 2,
+            "ag": 3,
+            "pa": 4,
+            "av": 7,
+            "skills": [
+              {
+                "id": "jumpUp"
+              },
+              {
+                "id": "rightStuff"
+              },
+              {
+                "id": "stunty"
+              },
+              {
+                "id": "wrestle"
+              }
+            ],
+            "location": "reserves",
+            "pos": null,
+            "stance": "standing",
+            "distracted": false,
+            "activated": false,
+            "usage": {},
+            "defId": "setup-audit-gnome-6"
+          },
+          {
+            "id": "A7",
+            "team": "A",
+            "number": 7,
+            "name": "Gnome Lineman",
+            "position": "Gnome Lineman",
+            "keywords": [
+              "Gnome",
+              "Lineman"
+            ],
+            "ma": 5,
+            "st": 2,
+            "ag": 3,
+            "pa": 4,
+            "av": 7,
+            "skills": [
+              {
+                "id": "jumpUp"
+              },
+              {
+                "id": "rightStuff"
+              },
+              {
+                "id": "stunty"
+              },
+              {
+                "id": "wrestle"
+              }
+            ],
+            "location": "reserves",
+            "pos": null,
+            "stance": "standing",
+            "distracted": false,
+            "activated": false,
+            "usage": {},
+            "defId": "setup-audit-gnome-7"
+          },
+          {
+            "id": "B1",
+            "team": "B",
+            "number": 1,
+            "name": "Human Catcher",
+            "position": "Human Catcher",
+            "keywords": [
+              "Catcher",
+              "Human"
+            ],
+            "ma": 8,
+            "st": 3,
+            "ag": 3,
+            "pa": 4,
+            "av": 8,
+            "skills": [
+              {
+                "id": "catch"
+              },
+              {
+                "id": "dodge"
+              }
+            ],
+            "location": "pitch",
+            "pos": {
+              "x": 13,
+              "y": 4
+            },
+            "stance": "standing",
+            "distracted": false,
+            "activated": false,
+            "usage": {},
+            "defId": "setup-audit-human-1"
+          },
+          {
+            "id": "B2",
+            "team": "B",
+            "number": 2,
+            "name": "Human Blitzer",
+            "position": "Human Blitzer",
+            "keywords": [
+              "Blitzer",
+              "Human"
+            ],
+            "ma": 7,
+            "st": 3,
+            "ag": 3,
+            "pa": 4,
+            "av": 9,
+            "skills": [
+              {
+                "id": "block"
+              },
+              {
+                "id": "tackle"
+              },
+              {
+                "id": "pro"
+              }
+            ],
+            "location": "pitch",
+            "pos": {
+              "x": 13,
+              "y": 5
+            },
+            "stance": "standing",
+            "distracted": false,
+            "activated": false,
+            "usage": {},
+            "defId": "setup-audit-human-2",
+            "captain": true
+          },
+          {
+            "id": "B3",
+            "team": "B",
+            "number": 3,
+            "name": "Human Catcher",
+            "position": "Human Catcher",
+            "keywords": [
+              "Catcher",
+              "Human"
+            ],
+            "ma": 8,
+            "st": 3,
+            "ag": 3,
+            "pa": 4,
+            "av": 8,
+            "skills": [
+              {
+                "id": "catch"
+              },
+              {
+                "id": "dodge"
+              }
+            ],
+            "location": "pitch",
+            "pos": {
+              "x": 13,
+              "y": 6
+            },
+            "stance": "standing",
+            "distracted": false,
+            "activated": false,
+            "usage": {},
+            "defId": "setup-audit-human-3"
+          },
+          {
+            "id": "B4",
+            "team": "B",
+            "number": 4,
+            "name": "Human Blitzer",
+            "position": "Human Blitzer",
+            "keywords": [
+              "Blitzer",
+              "Human"
+            ],
+            "ma": 7,
+            "st": 3,
+            "ag": 3,
+            "pa": 4,
+            "av": 9,
+            "skills": [
+              {
+                "id": "block"
+              },
+              {
+                "id": "tackle"
+              }
+            ],
+            "location": "pitch",
+            "pos": {
+              "x": 15,
+              "y": 3
+            },
+            "stance": "standing",
+            "distracted": false,
+            "activated": false,
+            "usage": {},
+            "defId": "setup-audit-human-4"
+          },
+          {
+            "id": "B5",
+            "team": "B",
+            "number": 5,
+            "name": "Human Lineman",
+            "position": "Human Lineman",
+            "keywords": [
+              "Human",
+              "Lineman"
+            ],
+            "ma": 5,
+            "st": 3,
+            "ag": 3,
+            "pa": 4,
+            "av": 9,
+            "skills": [],
+            "location": "pitch",
+            "pos": {
+              "x": 15,
+              "y": 7
+            },
+            "stance": "standing",
+            "distracted": false,
+            "activated": false,
+            "usage": {},
+            "defId": "setup-audit-human-5",
+            "veteran": "ready"
+          },
+          {
+            "id": "B6",
+            "team": "B",
+            "number": 6,
+            "name": "Human Lineman",
+            "position": "Human Lineman",
+            "keywords": [
+              "Human",
+              "Lineman"
+            ],
+            "ma": 6,
+            "st": 3,
+            "ag": 3,
+            "pa": 4,
+            "av": 9,
+            "skills": [],
+            "location": "pitch",
+            "pos": {
+              "x": 16,
+              "y": 5
+            },
+            "stance": "standing",
+            "distracted": false,
+            "activated": false,
+            "usage": {},
+            "defId": "setup-audit-human-6"
+          },
+          {
+            "id": "B7",
+            "team": "B",
+            "number": 7,
+            "name": "Human Lineman",
+            "position": "Human Lineman",
+            "keywords": [
+              "Human",
+              "Lineman"
+            ],
+            "ma": 6,
+            "st": 3,
+            "ag": 3,
+            "pa": 4,
+            "av": 9,
+            "skills": [],
+            "location": "pitch",
+            "pos": {
+              "x": 18,
+              "y": 5
+            },
+            "stance": "standing",
+            "distracted": false,
+            "activated": false,
+            "usage": {},
+            "defId": "setup-audit-human-7"
+          }
+        ],
+        "ball": {
+          "kind": "none"
+        },
+        "turn": {
+          "active": "B",
+          "half": 1,
+          "used": {
+            "blitz": false,
+            "pass": false,
+            "handoff": false,
+            "foul": false,
+            "secure": false,
+            "ttm": false,
+            "bomb": false,
+            "punt": false,
+            "ktm": false
+          },
+          "stunnedAtStart": [],
+          "activation": null
+        },
+        "rng": {
+          "seed": 13,
+          "counter": 2
+        },
+        "options": {
+          "rulerWidth": 1.8
+        },
+        "log": [
+          {
+            "id": 1,
+            "team": "A",
+            "turn": 0,
+            "title": "Pre-game sequence",
+            "input": {
+              "kind": "pregame"
+            },
+            "events": [
+              {
+                "type": "note",
+                "text": "Introductory rules (p.44): equal Fan Factor, Perfect Conditions and no Kick-off Events.",
+                "rule": {
+                  "page": 44,
+                  "title": "A Game of Two Halves"
+                }
+              },
+              {
+                "type": "roll",
+                "text": "Roll-off for the kicking team: Setup Audit Gnomes 4, Setup Audit Humans 5.",
+                "rule": {
+                  "page": 46,
+                  "title": "Determine Kicking Team"
+                },
+                "dice": [
+                  {
+                    "kind": "d6",
+                    "faces": [
+                      4
+                    ]
+                  },
+                  {
+                    "kind": "d6",
+                    "faces": [
+                      5
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "decision",
+                "text": "Setup Audit Humans coach: Kick off",
+                "rule": {
+                  "page": 46,
+                  "title": "Determine Kicking Team"
+                },
+                "data": {
+                  "requestId": "0:kickOrReceive",
+                  "option": "kick",
+                  "decisionType": "kickOrReceive"
+                }
+              },
+              {
+                "type": "note",
+                "text": "Setup Audit Humans kick off; Setup Audit Gnomes receive. Set up, starting with the kicking team (p.47).",
+                "rule": {
+                  "page": 47,
+                  "title": "Start of a Drive: Set-up"
+                }
+              }
+            ],
+            "decisions": [
+              {
+                "requestId": "0:kickOrReceive",
+                "team": "B",
+                "prompt": "Setup Audit Humans won the roll-off. Kick (defence) or receive (offence)?",
+                "optionId": "kick",
+                "label": "Kick off"
+              }
+            ],
+            "outcome": "completed"
+          },
+          {
+            "id": 2,
+            "team": "B",
+            "turn": 0,
+            "title": "Setup Audit Humans: set-up for Drive 1",
+            "input": {
+              "kind": "setupTeam",
+              "team": "B",
+              "positions": {
+                "B1": {
+                  "x": 13,
+                  "y": 4
+                },
+                "B2": {
+                  "x": 13,
+                  "y": 5
+                },
+                "B3": {
+                  "x": 13,
+                  "y": 6
+                },
+                "B4": {
+                  "x": 15,
+                  "y": 3
+                },
+                "B5": {
+                  "x": 15,
+                  "y": 7
+                },
+                "B6": {
+                  "x": 16,
+                  "y": 5
+                },
+                "B7": {
+                  "x": 18,
+                  "y": 5
+                }
+              }
+            },
+            "events": [
+              {
+                "type": "note",
+                "text": "Setup Audit Humans set up 7 players for Drive 1.",
+                "rule": {
+                  "page": 10,
+                  "title": "Sevens Set-up",
+                  "source": "sevens"
+                },
+                "data": {
+                  "team": "B"
+                }
+              }
+            ],
+            "decisions": [],
+            "outcome": "completed"
+          }
+        ],
+        "pending": null,
+        "variant": "sevens",
+        "title": "Setup Audit Gnomes v Setup Audit Humans",
+        "match": {
+          "kind": "tournament",
+          "options": {},
+          "teamIds": {
+            "A": "setup-audit-gnome",
+            "B": "setup-audit-human"
+          },
+          "rosterRerolls": {
+            "A": 1,
+            "B": 1
+          },
+          "dedicatedFans": {
+            "A": 1,
+            "B": 1
+          },
+          "assistantCoaches": {
+            "A": 1,
+            "B": 1
+          },
+          "cheerleaders": {
+            "A": 0,
+            "B": 0
+          },
+          "half": 1,
+          "drive": 1,
+          "setupDone": {
+            "A": false,
+            "B": true
+          },
+          "bribes": {
+            "A": 0,
+            "B": 0
+          },
+          "coachEjected": {
+            "A": false,
+            "B": false
+          },
+          "driveMods": [],
+          "kicking": "B",
+          "receivedFirst": "A"
+        }
+      },
+      "observation": {
+        "apiVersion": 1,
+        "apiMinor": 2,
+        "requestId": 2,
+        "revision": "2:-:0",
+        "team": "A",
+        "format": "sevens",
+        "phase": "driveSetup",
+        "half": 1,
+        "turn": {
+          "A": 0,
+          "B": 0
+        },
+        "turnsPerHalf": 6,
+        "score": {
+          "A": 0,
+          "B": 0
+        },
+        "weather": "perfect",
+        "rerolls": {
+          "A": 1,
+          "B": 1
+        },
+        "ball": {
+          "kind": "none"
+        },
+        "used": {
+          "blitz": false,
+          "pass": false,
+          "handoff": false,
+          "foul": false,
+          "secure": false,
+          "ttm": false,
+          "bomb": false,
+          "punt": false,
+          "ktm": false
+        },
+        "players": [
+          {
+            "id": "A1",
+            "team": "A",
+            "number": 1,
+            "position": "Woodland Fox",
+            "ma": 7,
+            "st": 2,
+            "ag": 2,
+            "pa": null,
+            "av": 6,
+            "skills": [
+              "dodge",
+              "sidestep",
+              "stunty"
+            ],
+            "pos": null,
+            "stance": "standing",
+            "location": "reserves",
+            "activated": false,
+            "name": "Woodland Fox",
+            "keywords": [
+              "Animal",
+              "Runner"
+            ],
+            "distracted": false,
+            "tackleZone": false,
+            "canBeActivated": false,
+            "usage": {}
+          },
+          {
+            "id": "A2",
+            "team": "A",
+            "number": 2,
+            "position": "Woodland Fox",
+            "ma": 7,
+            "st": 2,
+            "ag": 2,
+            "pa": null,
+            "av": 6,
+            "skills": [
+              "dodge",
+              "myBall",
+              "sidestep",
+              "stunty"
+            ],
+            "pos": null,
+            "stance": "standing",
+            "location": "reserves",
+            "activated": false,
+            "name": "Woodland Fox",
+            "keywords": [
+              "Animal",
+              "Runner"
+            ],
+            "distracted": false,
+            "tackleZone": false,
+            "canBeActivated": false,
+            "usage": {}
+          },
+          {
+            "id": "A3",
+            "team": "A",
+            "number": 3,
+            "position": "Altern Forest Treeman",
+            "ma": 2,
+            "st": 6,
+            "ag": 5,
+            "pa": 5,
+            "av": 11,
+            "skills": [
+              "mightyBlow",
+              "standFirm",
+              "strongArm",
+              "takeRoot",
+              "thickSkull",
+              "throwTeamMate",
+              "timmmber"
+            ],
+            "pos": null,
+            "stance": "standing",
+            "location": "reserves",
+            "activated": false,
+            "name": "Altern Forest Treeman",
+            "keywords": [
+              "Big Guy",
+              "Treeman"
+            ],
+            "distracted": false,
+            "tackleZone": false,
+            "canBeActivated": false,
+            "usage": {}
+          },
+          {
+            "id": "A4",
+            "team": "A",
+            "number": 4,
+            "position": "Gnome Beastmaster",
+            "ma": 5,
+            "st": 2,
+            "ag": 3,
+            "pa": 4,
+            "av": 8,
+            "skills": [
+              "guard",
+              "jumpUp",
+              "stunty",
+              "wrestle"
+            ],
+            "pos": null,
+            "stance": "standing",
+            "location": "reserves",
+            "activated": false,
+            "name": "Gnome Beastmaster",
+            "keywords": [
+              "Blocker",
+              "Gnome"
+            ],
+            "distracted": false,
+            "tackleZone": false,
+            "canBeActivated": false,
+            "usage": {}
+          },
+          {
+            "id": "A5",
+            "team": "A",
+            "number": 5,
+            "position": "Gnome Lineman",
+            "ma": 4,
+            "st": 2,
+            "ag": 3,
+            "pa": 4,
+            "av": 7,
+            "skills": [
+              "jumpUp",
+              "rightStuff",
+              "stunty",
+              "wrestle"
+            ],
+            "pos": null,
+            "stance": "standing",
+            "location": "reserves",
+            "activated": false,
+            "name": "Gnome Lineman",
+            "keywords": [
+              "Gnome",
+              "Lineman"
+            ],
+            "distracted": false,
+            "tackleZone": false,
+            "canBeActivated": false,
+            "usage": {},
+            "veteran": "ready"
+          },
+          {
+            "id": "A6",
+            "team": "A",
+            "number": 6,
+            "position": "Gnome Lineman",
+            "ma": 5,
+            "st": 2,
+            "ag": 3,
+            "pa": 4,
+            "av": 7,
+            "skills": [
+              "jumpUp",
+              "rightStuff",
+              "stunty",
+              "wrestle"
+            ],
+            "pos": null,
+            "stance": "standing",
+            "location": "reserves",
+            "activated": false,
+            "name": "Gnome Lineman",
+            "keywords": [
+              "Gnome",
+              "Lineman"
+            ],
+            "distracted": false,
+            "tackleZone": false,
+            "canBeActivated": false,
+            "usage": {}
+          },
+          {
+            "id": "A7",
+            "team": "A",
+            "number": 7,
+            "position": "Gnome Lineman",
+            "ma": 5,
+            "st": 2,
+            "ag": 3,
+            "pa": 4,
+            "av": 7,
+            "skills": [
+              "jumpUp",
+              "rightStuff",
+              "stunty",
+              "wrestle"
+            ],
+            "pos": null,
+            "stance": "standing",
+            "location": "reserves",
+            "activated": false,
+            "name": "Gnome Lineman",
+            "keywords": [
+              "Gnome",
+              "Lineman"
+            ],
+            "distracted": false,
+            "tackleZone": false,
+            "canBeActivated": false,
+            "usage": {}
+          },
+          {
+            "id": "B1",
+            "team": "B",
+            "number": 1,
+            "position": "Human Catcher",
+            "ma": 8,
+            "st": 3,
+            "ag": 3,
+            "pa": 4,
+            "av": 8,
+            "skills": [
+              "catch",
+              "dodge"
+            ],
+            "pos": {
+              "x": 13,
+              "y": 4
+            },
+            "stance": "standing",
+            "location": "pitch",
+            "activated": false,
+            "name": "Human Catcher",
+            "keywords": [
+              "Catcher",
+              "Human"
+            ],
+            "distracted": false,
+            "tackleZone": true,
+            "canBeActivated": false,
+            "usage": {}
+          },
+          {
+            "id": "B2",
+            "team": "B",
+            "number": 2,
+            "position": "Human Blitzer",
+            "ma": 7,
+            "st": 3,
+            "ag": 3,
+            "pa": 4,
+            "av": 9,
+            "skills": [
+              "block",
+              "tackle",
+              "pro"
+            ],
+            "pos": {
+              "x": 13,
+              "y": 5
+            },
+            "stance": "standing",
+            "location": "pitch",
+            "activated": false,
+            "name": "Human Blitzer",
+            "keywords": [
+              "Blitzer",
+              "Human"
+            ],
+            "distracted": false,
+            "tackleZone": true,
+            "canBeActivated": false,
+            "usage": {},
+            "captain": true
+          },
+          {
+            "id": "B3",
+            "team": "B",
+            "number": 3,
+            "position": "Human Catcher",
+            "ma": 8,
+            "st": 3,
+            "ag": 3,
+            "pa": 4,
+            "av": 8,
+            "skills": [
+              "catch",
+              "dodge"
+            ],
+            "pos": {
+              "x": 13,
+              "y": 6
+            },
+            "stance": "standing",
+            "location": "pitch",
+            "activated": false,
+            "name": "Human Catcher",
+            "keywords": [
+              "Catcher",
+              "Human"
+            ],
+            "distracted": false,
+            "tackleZone": true,
+            "canBeActivated": false,
+            "usage": {}
+          },
+          {
+            "id": "B4",
+            "team": "B",
+            "number": 4,
+            "position": "Human Blitzer",
+            "ma": 7,
+            "st": 3,
+            "ag": 3,
+            "pa": 4,
+            "av": 9,
+            "skills": [
+              "block",
+              "tackle"
+            ],
+            "pos": {
+              "x": 15,
+              "y": 3
+            },
+            "stance": "standing",
+            "location": "pitch",
+            "activated": false,
+            "name": "Human Blitzer",
+            "keywords": [
+              "Blitzer",
+              "Human"
+            ],
+            "distracted": false,
+            "tackleZone": true,
+            "canBeActivated": false,
+            "usage": {}
+          },
+          {
+            "id": "B5",
+            "team": "B",
+            "number": 5,
+            "position": "Human Lineman",
+            "ma": 5,
+            "st": 3,
+            "ag": 3,
+            "pa": 4,
+            "av": 9,
+            "skills": [],
+            "pos": {
+              "x": 15,
+              "y": 7
+            },
+            "stance": "standing",
+            "location": "pitch",
+            "activated": false,
+            "name": "Human Lineman",
+            "keywords": [
+              "Human",
+              "Lineman"
+            ],
+            "distracted": false,
+            "tackleZone": true,
+            "canBeActivated": false,
+            "usage": {},
+            "veteran": "ready"
+          },
+          {
+            "id": "B6",
+            "team": "B",
+            "number": 6,
+            "position": "Human Lineman",
+            "ma": 6,
+            "st": 3,
+            "ag": 3,
+            "pa": 4,
+            "av": 9,
+            "skills": [],
+            "pos": {
+              "x": 16,
+              "y": 5
+            },
+            "stance": "standing",
+            "location": "pitch",
+            "activated": false,
+            "name": "Human Lineman",
+            "keywords": [
+              "Human",
+              "Lineman"
+            ],
+            "distracted": false,
+            "tackleZone": true,
+            "canBeActivated": false,
+            "usage": {}
+          },
+          {
+            "id": "B7",
+            "team": "B",
+            "number": 7,
+            "position": "Human Lineman",
+            "ma": 6,
+            "st": 3,
+            "ag": 3,
+            "pa": 4,
+            "av": 9,
+            "skills": [],
+            "pos": {
+              "x": 18,
+              "y": 5
+            },
+            "stance": "standing",
+            "location": "pitch",
+            "activated": false,
+            "name": "Human Lineman",
+            "keywords": [
+              "Human",
+              "Lineman"
+            ],
+            "distracted": false,
+            "tackleZone": true,
+            "canBeActivated": false,
+            "usage": {}
+          }
+        ],
+        "pitch": {
+          "width": 20,
+          "height": 11,
+          "endZone": {
+            "A": 19,
+            "B": 0
+          }
+        },
+        "active": "B",
+        "teams": {
+          "A": {
+            "name": "Setup Audit Gnomes",
+            "rosterId": "gnome",
+            "score": 0,
+            "turn": 0,
+            "rerolls": 1,
+            "leaderReroll": false,
+            "bonusRerolls": 0,
+            "mascotReroll": false,
+            "apothecary": "available",
+            "specialRules": []
+          },
+          "B": {
+            "name": "Setup Audit Humans",
+            "rosterId": "human",
+            "score": 0,
+            "turn": 0,
+            "rerolls": 1,
+            "leaderReroll": false,
+            "bonusRerolls": 0,
+            "mascotReroll": false,
+            "apothecary": "none",
+            "specialRules": [
+              "Team Captain"
+            ]
+          }
+        },
+        "kicking": "B",
+        "drive": 1,
+        "activation": null,
+        "pending": null,
+        "betweenTurns": false,
+        "hostExtensions": {
+          "setup": true,
+          "coachContext": true
+        }
+      },
+      "request": {
+        "defaultPositions": {
+          "A1": {
+            "x": 6,
+            "y": 4
+          },
+          "A2": {
+            "x": 6,
+            "y": 5
+          },
+          "A3": {
+            "x": 6,
+            "y": 6
+          },
+          "A4": {
+            "x": 4,
+            "y": 3
+          },
+          "A5": {
+            "x": 4,
+            "y": 7
+          },
+          "A6": {
+            "x": 3,
+            "y": 5
+          },
+          "A7": {
+            "x": 1,
+            "y": 5
+          }
+        },
+        "fieldedIds": [
+          "A1",
+          "A2",
+          "A3",
+          "A4",
+          "A5",
+          "A6",
+          "A7"
+        ],
+        "fixedPlayerIds": [
+          "A1",
+          "A2",
+          "A3",
+          "A4",
+          "A5",
+          "A6",
+          "A7"
+        ],
+        "legalSquares": [
+          {
+            "x": 0,
+            "y": 0
+          },
+          {
+            "x": 0,
+            "y": 1
+          },
+          {
+            "x": 0,
+            "y": 2
+          },
+          {
+            "x": 0,
+            "y": 3
+          },
+          {
+            "x": 0,
+            "y": 4
+          },
+          {
+            "x": 0,
+            "y": 5
+          },
+          {
+            "x": 0,
+            "y": 6
+          },
+          {
+            "x": 0,
+            "y": 7
+          },
+          {
+            "x": 0,
+            "y": 8
+          },
+          {
+            "x": 0,
+            "y": 9
+          },
+          {
+            "x": 0,
+            "y": 10
+          },
+          {
+            "x": 1,
+            "y": 0
+          },
+          {
+            "x": 1,
+            "y": 1
+          },
+          {
+            "x": 1,
+            "y": 2
+          },
+          {
+            "x": 1,
+            "y": 3
+          },
+          {
+            "x": 1,
+            "y": 4
+          },
+          {
+            "x": 1,
+            "y": 5
+          },
+          {
+            "x": 1,
+            "y": 6
+          },
+          {
+            "x": 1,
+            "y": 7
+          },
+          {
+            "x": 1,
+            "y": 8
+          },
+          {
+            "x": 1,
+            "y": 9
+          },
+          {
+            "x": 1,
+            "y": 10
+          },
+          {
+            "x": 2,
+            "y": 0
+          },
+          {
+            "x": 2,
+            "y": 1
+          },
+          {
+            "x": 2,
+            "y": 2
+          },
+          {
+            "x": 2,
+            "y": 3
+          },
+          {
+            "x": 2,
+            "y": 4
+          },
+          {
+            "x": 2,
+            "y": 5
+          },
+          {
+            "x": 2,
+            "y": 6
+          },
+          {
+            "x": 2,
+            "y": 7
+          },
+          {
+            "x": 2,
+            "y": 8
+          },
+          {
+            "x": 2,
+            "y": 9
+          },
+          {
+            "x": 2,
+            "y": 10
+          },
+          {
+            "x": 3,
+            "y": 0
+          },
+          {
+            "x": 3,
+            "y": 1
+          },
+          {
+            "x": 3,
+            "y": 2
+          },
+          {
+            "x": 3,
+            "y": 3
+          },
+          {
+            "x": 3,
+            "y": 4
+          },
+          {
+            "x": 3,
+            "y": 5
+          },
+          {
+            "x": 3,
+            "y": 6
+          },
+          {
+            "x": 3,
+            "y": 7
+          },
+          {
+            "x": 3,
+            "y": 8
+          },
+          {
+            "x": 3,
+            "y": 9
+          },
+          {
+            "x": 3,
+            "y": 10
+          },
+          {
+            "x": 4,
+            "y": 0
+          },
+          {
+            "x": 4,
+            "y": 1
+          },
+          {
+            "x": 4,
+            "y": 2
+          },
+          {
+            "x": 4,
+            "y": 3
+          },
+          {
+            "x": 4,
+            "y": 4
+          },
+          {
+            "x": 4,
+            "y": 5
+          },
+          {
+            "x": 4,
+            "y": 6
+          },
+          {
+            "x": 4,
+            "y": 7
+          },
+          {
+            "x": 4,
+            "y": 8
+          },
+          {
+            "x": 4,
+            "y": 9
+          },
+          {
+            "x": 4,
+            "y": 10
+          },
+          {
+            "x": 5,
+            "y": 0
+          },
+          {
+            "x": 5,
+            "y": 1
+          },
+          {
+            "x": 5,
+            "y": 2
+          },
+          {
+            "x": 5,
+            "y": 3
+          },
+          {
+            "x": 5,
+            "y": 4
+          },
+          {
+            "x": 5,
+            "y": 5
+          },
+          {
+            "x": 5,
+            "y": 6
+          },
+          {
+            "x": 5,
+            "y": 7
+          },
+          {
+            "x": 5,
+            "y": 8
+          },
+          {
+            "x": 5,
+            "y": 9
+          },
+          {
+            "x": 5,
+            "y": 10
+          },
+          {
+            "x": 6,
+            "y": 0
+          },
+          {
+            "x": 6,
+            "y": 1
+          },
+          {
+            "x": 6,
+            "y": 2
+          },
+          {
+            "x": 6,
+            "y": 3
+          },
+          {
+            "x": 6,
+            "y": 4
+          },
+          {
+            "x": 6,
+            "y": 5
+          },
+          {
+            "x": 6,
+            "y": 6
+          },
+          {
+            "x": 6,
+            "y": 7
+          },
+          {
+            "x": 6,
+            "y": 8
+          },
+          {
+            "x": 6,
+            "y": 9
+          },
+          {
+            "x": 6,
+            "y": 10
+          }
+        ],
+        "lineOfScrimmage": 6,
+        "centreRows": {
+          "min": 2,
+          "max": 8
+        },
+        "minLine": 3,
+        "allOnLine": false,
+        "maxWide": 1,
+        "wideRows": 2,
+        "pitch": {
+          "w": 20,
+          "h": 11
+        },
+        "format": "sevens",
+        "fielding": {
+          "mode": "fixed",
+          "count": 7,
+          "candidates": [
+            {
+              "id": "A1",
+              "number": 1,
+              "position": "Woodland Fox",
+              "ma": 7,
+              "st": 2,
+              "ag": 2,
+              "pa": null,
+              "av": 6,
+              "skills": [
+                "dodge",
+                "sidestep",
+                "stunty"
+              ],
+              "onPitch": false
+            },
+            {
+              "id": "A2",
+              "number": 2,
+              "position": "Woodland Fox",
+              "ma": 7,
+              "st": 2,
+              "ag": 2,
+              "pa": null,
+              "av": 6,
+              "skills": [
+                "dodge",
+                "myBall",
+                "sidestep",
+                "stunty"
+              ],
+              "onPitch": false
+            },
+            {
+              "id": "A3",
+              "number": 3,
+              "position": "Altern Forest Treeman",
+              "ma": 2,
+              "st": 6,
+              "ag": 5,
+              "pa": 5,
+              "av": 11,
+              "skills": [
+                "mightyBlow",
+                "standFirm",
+                "strongArm",
+                "takeRoot",
+                "thickSkull",
+                "throwTeamMate",
+                "timmmber"
+              ],
+              "onPitch": false
+            },
+            {
+              "id": "A4",
+              "number": 4,
+              "position": "Gnome Beastmaster",
+              "ma": 5,
+              "st": 2,
+              "ag": 3,
+              "pa": 4,
+              "av": 8,
+              "skills": [
+                "guard",
+                "jumpUp",
+                "stunty",
+                "wrestle"
+              ],
+              "onPitch": false
+            },
+            {
+              "id": "A5",
+              "number": 5,
+              "position": "Gnome Lineman",
+              "ma": 4,
+              "st": 2,
+              "ag": 3,
+              "pa": 4,
+              "av": 7,
+              "skills": [
+                "jumpUp",
+                "rightStuff",
+                "stunty",
+                "wrestle"
+              ],
+              "onPitch": false
+            },
+            {
+              "id": "A6",
+              "number": 6,
+              "position": "Gnome Lineman",
+              "ma": 5,
+              "st": 2,
+              "ag": 3,
+              "pa": 4,
+              "av": 7,
+              "skills": [
+                "jumpUp",
+                "rightStuff",
+                "stunty",
+                "wrestle"
+              ],
+              "onPitch": false
+            },
+            {
+              "id": "A7",
+              "number": 7,
+              "position": "Gnome Lineman",
+              "ma": 5,
+              "st": 2,
+              "ag": 3,
+              "pa": 4,
+              "av": 7,
+              "skills": [
+                "jumpUp",
+                "rightStuff",
+                "stunty",
+                "wrestle"
+              ],
+              "onPitch": false
+            }
+          ],
+          "mustField": []
+        }
+      },
+      "expectedFrozenResult": {
+        "positions": {
+          "A1": {
+            "x": 3,
+            "y": 2
+          },
+          "A2": {
+            "x": 6,
+            "y": 6
+          },
+          "A3": {
+            "x": 6,
+            "y": 4
+          },
+          "A4": {
+            "x": 5,
+            "y": 4
+          },
+          "A5": {
+            "x": 6,
+            "y": 5
+          },
+          "A6": {
+            "x": 2,
+            "y": 8
+          },
+          "A7": {
+            "x": 5,
+            "y": 6
+          }
+        },
+        "coachContext": {
+          "schema": "hopeful-context/2.2.7",
+          "champion": {
+            "drivePlan": {
+              "schema": "hopeful-drive/1",
+              "team": "A",
+              "half": 1,
+              "drive": 1,
+              "format": "sevens",
+              "possession": "none",
+              "primaryCarrier": null,
+              "backupCarrier": null,
+              "preferredY": 5,
+              "backupY": 5,
+              "targetScoringWindow": null,
+              "driveUrgency": "pressure / counterattack",
+              "defensiveObjective": "compress routes and seek recoverable sacks",
+              "emergency": false,
+              "dangerous": false,
+              "ourCount": 0,
+              "theirCount": 7,
+              "laneCost": null,
+              "score": "0:0",
+              "updatedTurn": 1,
+              "revisionReason": "new Drive or match context",
+              "persistence": "host context"
+            }
+          },
+          "plan": null,
+          "stats": {}
+        },
+        "why": "Hopeful 2.2.7-GPT: receiving recovery and protection; 7 fielded, fast opponent, mobile matchup; joint role assignment across six regenerated formations."
+      },
+      "expectedFrozenHost": {
+        "move": {
+          "type": "step",
+          "input": {
+            "kind": "setupTeam",
+            "team": "A",
+            "positions": {
+              "A1": {
+                "x": 3,
+                "y": 2
+              },
+              "A2": {
+                "x": 6,
+                "y": 6
+              },
+              "A3": {
+                "x": 6,
+                "y": 4
+              },
+              "A4": {
+                "x": 5,
+                "y": 4
+              },
+              "A5": {
+                "x": 6,
+                "y": 5
+              },
+              "A6": {
+                "x": 2,
+                "y": 8
+              },
+              "A7": {
+                "x": 5,
+                "y": 6
+              }
+            }
+          },
+          "why": "Hopeful 2.2.7-GPT: receiving recovery and protection; 7 fielded, fast opponent, mobile matchup; joint role assignment across six regenerated formations."
+        },
+        "meta": {
+          "coach": "hopeful-2-2-7-gpt",
+          "requestId": 2,
+          "kind": "setup",
+          "via": "setup",
+          "fellBack": false,
+          "reason": null,
+          "why": "Hopeful 2.2.7-GPT: receiving recovery and protection; 7 fielded, fast opponent, mobile matchup; joint role assignment across six regenerated formations.",
+          "allowanceMs": 60000,
+          "hostExtensions": {
+            "setup": true,
+            "coachContext": true
+          },
+          "diagnostics": [],
+          "usage": {
+            "elapsedMs": 58,
+            "serviceCalls": 0,
+            "serviceMs": 0,
+            "wallServiceMs": 0,
+            "leaves": 0,
+            "positions": 0,
+            "calls": {},
+            "plans": {
+              "hits": 0,
+              "computed": 0,
+              "parallel": 0,
+              "resultHits": 0
+            },
+            "engine": {
+              "maxUnresolved": 0,
+              "inexact": 0,
+              "cutShort": 0
+            },
+            "pooled": false
+          },
+          "setup": {
+            "hook": true,
+            "answered": true,
+            "accepted": true,
+            "fallback": false,
+            "reason": null
+          },
+          "context": {
+            "supplied": null,
+            "returned": true,
+            "committed": true
+          },
+          "progress": []
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "kind": "playerAction",
+  "playerId": "A1",
+  "action": "handoff",
+  "path": [],
+  "handoffTarget": "A2"
+}

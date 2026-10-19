@@ -1,0 +1,161 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "exploreResult",
+  "type": "object",
+  "required": [
+    "ok"
+  ],
+  "properties": {
+    "ok": {
+      "type": "boolean"
+    },
+    "value": {
+      "type": "number"
+    },
+    "pTurnover": {
+      "type": "number"
+    },
+    "pTouchdown": {
+      "type": "number"
+    },
+    "pOpponentTouchdown": {
+      "type": "number"
+    },
+    "pCompleted": {
+      "type": "number"
+    },
+    "enumerated": {
+      "type": "integer"
+    },
+    "leaves": {
+      "type": "integer"
+    },
+    "outcomes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "p",
+          "value",
+          "turnover",
+          "completed"
+        ],
+        "properties": {
+          "key": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "p": {
+            "type": "number"
+          },
+          "value": {
+            "type": "number"
+          },
+          "turnover": {
+            "type": "boolean"
+          },
+          "touchdown": {
+            "anyOf": [
+              {
+                "enum": [
+                  "A",
+                  "B"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "completed": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "rest": {
+      "type": "object",
+      "required": [
+        "p",
+        "value"
+      ],
+      "properties": {
+        "p": {
+          "type": "number"
+        },
+        "value": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": true
+    },
+    "perspective": {
+      "enum": [
+        "A",
+        "B"
+      ]
+    },
+    "activeTeam": {
+      "enum": [
+        "A",
+        "B"
+      ]
+    },
+    "position": {
+      "type": "object",
+      "required": [
+        "key"
+      ],
+      "properties": {
+        "key": {
+          "type": "string"
+        },
+        "depth": {
+          "type": "integer"
+        }
+      },
+      "additionalProperties": true
+    },
+    "exact": {
+      "type": "boolean"
+    },
+    "unresolvedMass": {
+      "type": "number"
+    },
+    "approximation": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "decisionPolicy": {
+      "type": "object",
+      "required": [
+        "mode",
+        "statement"
+      ],
+      "properties": {
+        "mode": {
+          "type": "string"
+        },
+        "statement": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "applied": {}
+  },
+  "additionalProperties": true
+}

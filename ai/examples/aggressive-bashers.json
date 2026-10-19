@@ -1,0 +1,50 @@
+{
+  "format": "bloodboard-ai",
+  "formatVersion": 1,
+  "apiVersion": 1,
+  "id": "aggressive-bashers",
+  "name": "Aggressive Bashers",
+  "version": "1.0",
+  "description": "An example parameter file for the built-in algorithm: the Offensive file's weights with more blocking pressure and tempo and a little more risk; protects a lead late in a half.",
+  "author": "Bloodboard example",
+  "implementation": "bloodboard",
+  "parameters": {
+    "weights": {
+      "progress": 1.35,
+      "receivers": 1.8,
+      "pressure": 1.2,
+      "pressureReach": 1.3,
+      "marking": 1.5,
+      "screen": 0.7,
+      "cage": 0.8,
+      "turnoverCost": 0.85
+    },
+    "preferences": {
+      "aggression": 0.6,
+      "tempo": 0.3,
+      "riskTolerance": 0.2
+    },
+    "conditions": [
+      {
+        "when": {
+          "scoreDiff": [
+            1,
+            9
+          ],
+          "turnsLeft": [
+            0,
+            2
+          ]
+        },
+        "preferences": {
+          "ballSecurity": 0.8,
+          "riskTolerance": -0.6
+        }
+      }
+    ],
+    "objectives": {
+      "protectThreats": 2,
+      "protectCageBelow": 1
+    }
+  }
+}

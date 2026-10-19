@@ -1,0 +1,46 @@
+{
+  "schema": "s4-18-teacher-model-source-derivation/1",
+  "modelPath": "verification/s5/engine-search-teacher-pilot-20261007/reencoded-v3/90e97a45f48baa9e/fits-train-only-v3/48004d16f6206ef4-5676935c615d38c9/MODEL.json",
+  "modelSha256": "fae8af896aaec15fe0817036085eea74ccfd8f4b5e1ae996710ed903f7375aec",
+  "modelBytes": 27382,
+  "compiledPath": "source/src/teacher-model.mjs",
+  "compiledSha256": "455de29f1d14ca6ef9dfec89859de50bec3f19a7c87a10d2a34cd650c0c5e232",
+  "featureCount": 396,
+  "weightCount": 792,
+  "featureSources": [
+    {
+      "sourcePath": "verification/s5/engine-search-teacher-pilot-20261007/src/preference-features.mjs",
+      "sourceSha256": "71b20c33aff819715aaf2a400f33e0240a9a1753d09da4d077179405e2fbb898",
+      "destinationPath": "source/src/teacher-base-features.mjs",
+      "sha256": "3f3c68ccdd5a81eb511624625bc0ae560cab0fce7c542915637202ed3333974b",
+      "oldImport": "../../../../candidate-s4-12/source/src/tactical-features.mjs",
+      "newImport": "./tactical-features.mjs",
+      "changes": "exact one import-path redirection; function body unchanged"
+    },
+    {
+      "sourcePath": "verification/s5/engine-search-teacher-pilot-20261007/src/preference-features-v2.mjs",
+      "sourceSha256": "c924ec57573d0db25a9fdd676e3272ef7850d56627112bd50a1e28ad63fcd643",
+      "destinationPath": "source/src/teacher-path-features.mjs",
+      "sha256": "49bbcb05af86e7c9291ed7fd0e3f57dc69ebdc4ca8090c6bec6037f2528c20b0",
+      "oldImport": "./preference-features.mjs",
+      "newImport": "./teacher-base-features.mjs",
+      "changes": "exact one import-path redirection; function body unchanged"
+    },
+    {
+      "sourcePath": "verification/s5/engine-search-teacher-pilot-20261007/src/preference-features-v3.mjs",
+      "sourceSha256": "c3e8071f136cc70ee247fe9f1c2da3564c6d2e5f90e02d6e4304bf7250a48f2d",
+      "destinationPath": "source/src/teacher-features.mjs",
+      "sha256": "556a946fdc3390bc1434e4a0f891ea22586b844020f2d9a84b239a6b642f0d33",
+      "oldImport": "./preference-features-v2.mjs",
+      "newImport": "./teacher-path-features.mjs",
+      "changes": "exact one import-path redirection; function body unchanged"
+    }
+  ],
+  "baseFeatureSha256": "77742ef344556b82d04088d1e5881580db1cb1b83536fc2a48b2dde77ee8cd81",
+  "reversible": true,
+  "roundtripScope": "Frozen MODEL JSON literal retained byte-for-byte inside generated module; encoder import-only inverse equals frozen source; Python parse arrays equal; no inference execution",
+  "fixtureRun": false,
+  "built": false,
+  "nativeRun": false,
+  "testDataRead": false
+}

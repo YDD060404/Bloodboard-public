@@ -1,0 +1,30 @@
+{
+  "format": "bloodboard-ai",
+  "formatVersion": 1,
+  "apiVersion": 1,
+  "id": "bloodboard-defensive",
+  "name": "Bloodboard AI — Defensive",
+  "version": "5.5.0",
+  "description": "The built-in Bloodboard algorithm, parameters for caging the ball carrier, screening the End Zone and avoiding Turnovers.",
+  "author": "Bloodboard",
+  "implementation": "bloodboard",
+  "parameters": {
+    "weights": {
+      "carrierMarked": 1.25,
+      "carrierExposed": 1.4,
+      "cage": 1.6,
+      "screen": 1.6,
+      "pressure": 1.3,
+      "oppProgress": 1.25,
+      "progress": 0.8,
+      "receivers": 0.6,
+      "marked": 1.5,
+      "turnoverCost": 1.25,
+      "crowd": 1.25
+    },
+    "objectives": {
+      "protectThreats": 1,
+      "protectCageBelow": 2
+    }
+  }
+}

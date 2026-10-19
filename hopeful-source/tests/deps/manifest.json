@@ -1,0 +1,81 @@
+{
+  "schema": "hopeful-candidate-test-dependencies/1",
+  "files": [
+    {
+      "file": "champion-1.5.9.js",
+      "source": "AI-models/Hopeful-1.5.9-GPT/hopeful-1-5-9-gpt.js",
+      "bytes": 148534,
+      "sha256": "f5b495f8d873bf484640b2f70c6fa0ee81997eee7937e806a5eaccb74ad39941"
+    },
+    {
+      "file": "champion-game-p0001-L2.json",
+      "source": "AI-models/Hopeful-2.0-GPT/verification/candidate-release/sevens-mobile-hopeful-1.5.7/games/p0001-L2.json",
+      "bytes": 4724631,
+      "sha256": "e36a43c3a0e56024006673568cfe509fad3ec27ddb5d006408fdfc8fbca5f713"
+    },
+    {
+      "file": "execution-step-54.json",
+      "source": "AI-models/Hopeful/benchmarks/20261002-044846/step-54.json",
+      "bytes": 119961,
+      "sha256": "8591276d0cb422c13561920260f28fe14726d841f750e3af30eca096dca4eb01"
+    },
+    {
+      "file": "new-match-p0002-L2-step153.json",
+      "source": "New user test libfile_4dce4a58d6648191b90d0ea085a76b01; exact history prefix p0002-L2 step153",
+      "bytes": 453438,
+      "sha256": "30051066d4cdbf955bf768551ceba7e5c4d0419d329448490126882c44e73591"
+    },
+    {
+      "file": "new-match-p0002-L2-step154.json",
+      "source": "New user test libfile_4dce4a58d6648191b90d0ea085a76b01; exact history prefix p0002-L2 step154",
+      "bytes": 469260,
+      "sha256": "8e07cb1d15d265701732d8d32751ee10352bd1a392e7b5c3e9d56575db86baa7"
+    },
+    {
+      "file": "archived-v6-host.mjs",
+      "source": "Isolated V6 5297f51 source rebuild with minimal complete-state outcome grouping repair",
+      "bytes": 972800,
+      "sha256": "665e7fc4e5825ad633c767b929270a9eb6bac1bc661daff0baefe72832703fc2"
+    },
+    {
+      "file": "gnome-setup-role-pair.json",
+      "source": "Independent frozen e7a80723 actual API1.2 Gnome receiving setup and My Ball-only counterfactual, hopeful_setup_role_audit/implementation-fixture.json",
+      "bytes": 89319,
+      "sha256": "cccf73abd535d2492935bf452c9f7b55a633a4e2af2f76c85f227bad99c8f334"
+    },
+    {
+      "file": "my-ball-final-scoring.json",
+      "source": "Predeclared actual My Ball receiving audit, immutable e7a80723 chooser root; hopeful_receiving_audit/chooser-myball.json",
+      "bytes": 23407,
+      "sha256": "513c3a592114b6415f366f2fd1007468483061dd57e7e3f072adb5cd8d7e208c"
+    },
+    {
+      "file": "wood-elf-before-144.json",
+      "bytes": 536812,
+      "sha256": "700b2f182ab9a068e84e0e26c26de6aed70c041e081b43dc52e0bffca7cf01cf",
+      "source": "Exact current user save pre-entry #144, source SHA fd5d9ec4e94f5f3f8def57e3642921ee3d7bb6d7239a2872225b2353ad8e6eb2; unmodified prestate plus original frozen full chooser root candidates and independent audited helper/carrier inputs"
+    },
+    {
+      "file": "latest-wood-elf-before143.json",
+      "source": "Latest user Wood Elf Sevens v Wood Elf Sevens- (2).json SHA c377a5ff8783457f459b4a4c6ed70c50018ba07bb40abd1ace25bfb40798f583; exact pre-entry143 state with original history prefix; no historical context invented",
+      "bytes": 646397,
+      "sha256": "3ee8d940fb2bde1db849c0d82d70d0aab72235df5bb98d28f784a6c18036b1ad"
+    }
+  ],
+  "V6Fingerprint": {
+    "version": "6.0.0-dev",
+    "engineHash": "c67a6dff7e0f0181c7fa32c05bb7a66fd1ee51f8ed574ffcb8a9a7e63efc2b96",
+    "rulesHash": "f30d05d600c9d94909a87b731dbb4608b371bcc13aa488b56cb1761b78341b54",
+    "apiHash": "517297804b7a6141574e5694b0fb780a78d67588aff8bfee7ad8e5b630561eba",
+    "saveFormatVersion": 2,
+    "aiApiVersion": "2.0"
+  },
+  "requiredV6EntryPoints": [
+    "src/engine/index.ts",
+    "src/ai/index.ts",
+    "src/platform/v2obs.ts",
+    "src/platform/observe.ts",
+    "src/platform/index.ts"
+  ],
+  "scope": "Pinned fixtures retain their original engine/rules provenance; the test runtime is an isolated source rebuild with authorized platform-only outcome identity repair. Old grouped-state reports are historical and are not promoted as repaired-host proof."
+}

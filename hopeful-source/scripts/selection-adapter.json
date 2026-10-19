@@ -1,0 +1,21 @@
+{
+  "schema": "hopeful25-selection-adapter/1",
+  "changes": [
+    {
+      "old": "return {delta:c.critical,bounded:false,mode:'critical-only-unmatched',scope,",
+      "new": "return {delta:0,bounded:false,mode:'incomparable-reply-boundary',scope,comparable:false,"
+    },
+    {
+      "old": "challengerCritical:c.critical,incumbentCritical:i.critical,criticalDelta:c.critical,positionDelta:0,",
+      "new": "challengerCritical:c.critical,incumbentCritical:i.critical,criticalDelta:null,positionDelta:null,"
+    },
+    {
+      "old": "interpretation:'missing or mismatched counterpart; no relative safety claim'",
+      "new": "interpretation:'missing or mismatched counterpart; not comparable until both policies reach a shared boundary; neither absolute cost is charged'"
+    },
+    {
+      "old": "eligible:uncertaintyAllowed && effectiveGain>margin",
+      "new": "eligible:replyBasis.mode!=='incomparable-reply-boundary' && uncertaintyAllowed && effectiveGain>margin"
+    }
+  ]
+}

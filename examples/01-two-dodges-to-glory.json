@@ -1,0 +1,420 @@
+{
+ "format": "bloodboard-position",
+ "version": 2,
+ "name": "Turn 8: two dodges to glory",
+ "savedAt": "2026-09-25T00:00:00.000Z",
+ "notes": "Last Turn: a Marked Human Catcher (Dodge, MA 8) holding the ball must get away and past a Goblin guarding the End Zone. Try different routes and compare the previewed odds.",
+ "state": {
+  "format": "bloodboard-state",
+  "version": 1,
+  "phase": "play",
+  "rulesEdition": "faq2026",
+  "weather": "perfect",
+  "teams": {
+   "A": {
+    "id": "A",
+    "name": "Reikland Rookies",
+    "rosterId": "human",
+    "color": "#f3efe4",
+    "accent": "#1d3f8f",
+    "rerolls": 1,
+    "leaderReroll": false,
+    "score": 1,
+    "turn": 8
+   },
+   "B": {
+    "id": "B",
+    "name": "Badland Bashers",
+    "rosterId": "orc",
+    "color": "#b3261e",
+    "accent": "#fbe9d0",
+    "rerolls": 1,
+    "leaderReroll": false,
+    "score": 1,
+    "turn": 7
+   }
+  },
+  "players": [
+   {
+    "id": "A1",
+    "team": "A",
+    "number": 7,
+    "name": "Human Catcher",
+    "position": "Human Catcher",
+    "keywords": [
+     "Catcher",
+     "Human"
+    ],
+    "ma": 8,
+    "st": 3,
+    "ag": 3,
+    "pa": 4,
+    "av": 8,
+    "skills": [
+     {
+      "id": "catch"
+     },
+     {
+      "id": "dodge"
+     }
+    ],
+    "location": "pitch",
+    "pos": {
+     "x": 17,
+     "y": 7
+    },
+    "stance": "standing",
+    "distracted": false,
+    "activated": false,
+    "usage": {}
+   },
+   {
+    "id": "A2",
+    "team": "A",
+    "number": 5,
+    "name": "Human Blitzer",
+    "position": "Human Blitzer",
+    "keywords": [
+     "Blitzer",
+     "Human"
+    ],
+    "ma": 7,
+    "st": 3,
+    "ag": 3,
+    "pa": 4,
+    "av": 9,
+    "skills": [
+     {
+      "id": "block"
+     },
+     {
+      "id": "tackle"
+     }
+    ],
+    "location": "pitch",
+    "pos": {
+     "x": 14,
+     "y": 5
+    },
+    "stance": "standing",
+    "distracted": false,
+    "activated": false,
+    "usage": {}
+   },
+   {
+    "id": "A3",
+    "team": "A",
+    "number": 2,
+    "name": "Human Lineman",
+    "position": "Human Lineman",
+    "keywords": [
+     "Human",
+     "Lineman"
+    ],
+    "ma": 6,
+    "st": 3,
+    "ag": 3,
+    "pa": 4,
+    "av": 9,
+    "skills": [],
+    "location": "pitch",
+    "pos": {
+     "x": 13,
+     "y": 9
+    },
+    "stance": "standing",
+    "distracted": false,
+    "activated": false,
+    "usage": {}
+   },
+   {
+    "id": "A4",
+    "team": "A",
+    "number": 3,
+    "name": "Human Lineman",
+    "position": "Human Lineman",
+    "keywords": [
+     "Human",
+     "Lineman"
+    ],
+    "ma": 6,
+    "st": 3,
+    "ag": 3,
+    "pa": 4,
+    "av": 9,
+    "skills": [],
+    "location": "pitch",
+    "pos": {
+     "x": 12,
+     "y": 6
+    },
+    "stance": "standing",
+    "distracted": false,
+    "activated": false,
+    "usage": {}
+   },
+   {
+    "id": "A5",
+    "team": "A",
+    "number": 10,
+    "name": "Human Thrower",
+    "position": "Human Thrower",
+    "keywords": [
+     "Human",
+     "Thrower"
+    ],
+    "ma": 6,
+    "st": 3,
+    "ag": 3,
+    "pa": 3,
+    "av": 9,
+    "skills": [
+     {
+      "id": "pass"
+     },
+     {
+      "id": "sureHands"
+     }
+    ],
+    "location": "pitch",
+    "pos": {
+     "x": 11,
+     "y": 7
+    },
+    "stance": "standing",
+    "distracted": false,
+    "activated": false,
+    "usage": {}
+   },
+   {
+    "id": "B1",
+    "team": "B",
+    "number": 4,
+    "name": "Orc Lineman",
+    "position": "Orc Lineman",
+    "keywords": [
+     "Lineman",
+     "Orc"
+    ],
+    "ma": 5,
+    "st": 3,
+    "ag": 3,
+    "pa": 4,
+    "av": 10,
+    "skills": [],
+    "location": "pitch",
+    "pos": {
+     "x": 16,
+     "y": 8
+    },
+    "stance": "standing",
+    "distracted": false,
+    "activated": false,
+    "usage": {}
+   },
+   {
+    "id": "B2",
+    "team": "B",
+    "number": 5,
+    "name": "Orc Lineman",
+    "position": "Orc Lineman",
+    "keywords": [
+     "Lineman",
+     "Orc"
+    ],
+    "ma": 5,
+    "st": 3,
+    "ag": 3,
+    "pa": 4,
+    "av": 10,
+    "skills": [],
+    "location": "pitch",
+    "pos": {
+     "x": 23,
+     "y": 5
+    },
+    "stance": "standing",
+    "distracted": false,
+    "activated": false,
+    "usage": {}
+   },
+   {
+    "id": "B3",
+    "team": "B",
+    "number": 6,
+    "name": "Orc Blitzer",
+    "position": "Orc Blitzer",
+    "keywords": [
+     "Blitzer",
+     "Orc"
+    ],
+    "ma": 6,
+    "st": 3,
+    "ag": 3,
+    "pa": 4,
+    "av": 10,
+    "skills": [
+     {
+      "id": "block"
+     },
+     {
+      "id": "breakTackle"
+     }
+    ],
+    "location": "pitch",
+    "pos": {
+     "x": 23,
+     "y": 9
+    },
+    "stance": "standing",
+    "distracted": false,
+    "activated": false,
+    "usage": {}
+   },
+   {
+    "id": "B4",
+    "team": "B",
+    "number": 11,
+    "name": "Goblin Lineman",
+    "position": "Goblin Lineman",
+    "keywords": [
+     "Goblin",
+     "Lineman"
+    ],
+    "ma": 6,
+    "st": 2,
+    "ag": 3,
+    "pa": 4,
+    "av": 8,
+    "skills": [
+     {
+      "id": "dodge"
+     },
+     {
+      "id": "rightStuff"
+     },
+     {
+      "id": "stunty"
+     }
+    ],
+    "location": "pitch",
+    "pos": {
+     "x": 25,
+     "y": 7
+    },
+    "stance": "standing",
+    "distracted": false,
+    "activated": false,
+    "usage": {}
+   },
+   {
+    "id": "B5",
+    "team": "B",
+    "number": 8,
+    "name": "Big Un Blocker",
+    "position": "Big Un Blocker",
+    "keywords": [
+     "Blocker",
+     "Orc"
+    ],
+    "ma": 5,
+    "st": 4,
+    "ag": 4,
+    "pa": 6,
+    "av": 10,
+    "skills": [
+     {
+      "id": "mightyBlow"
+     },
+     {
+      "id": "taunt"
+     },
+     {
+      "id": "thickSkull"
+     },
+     {
+      "id": "unsteady"
+     }
+    ],
+    "location": "pitch",
+    "pos": {
+     "x": 15,
+     "y": 11
+    },
+    "stance": "standing",
+    "distracted": false,
+    "activated": false,
+    "usage": {}
+   },
+   {
+    "id": "B6",
+    "team": "B",
+    "number": 3,
+    "name": "Orc Lineman",
+    "position": "Orc Lineman",
+    "keywords": [
+     "Lineman",
+     "Orc"
+    ],
+    "ma": 5,
+    "st": 3,
+    "ag": 3,
+    "pa": 4,
+    "av": 10,
+    "skills": [],
+    "location": "pitch",
+    "pos": {
+     "x": 12,
+     "y": 3
+    },
+    "stance": "standing",
+    "distracted": false,
+    "activated": false,
+    "usage": {}
+   }
+  ],
+  "ball": {
+   "kind": "held",
+   "playerId": "A1"
+  },
+  "turn": {
+   "active": "A",
+   "half": 2,
+   "used": {
+    "blitz": false,
+    "pass": false,
+    "handoff": false,
+    "foul": false,
+    "secure": false,
+    "ttm": false,
+    "bomb": false,
+    "punt": false,
+    "ktm": false
+   },
+   "stunnedAtStart": [],
+   "activation": null
+  },
+  "rng": {
+   "seed": 20260925,
+   "counter": 0
+  },
+  "options": {
+   "rulerWidth": 1.8
+  },
+  "log": [],
+  "pending": null,
+  "title": "Turn 8: two dodges to glory",
+  "notes": "Last Turn: a Marked Human Catcher (Dodge, MA 8) holding the ball must get away and past a Goblin guarding the End Zone. Try different routes and compare the previewed odds."
+ },
+ "meta": {
+  "saveFormatVersion": 2,
+  "matchId": "m-mvakb63x-lnt8l0hbl4d9",
+  "displayName": "Turn 8: two dodges to glory",
+  "createdAt": "2026-10-16T06:03:57.741Z",
+  "matchFormat": "practice",
+  "engineVersion": "0.2.0",
+  "engineHash": "8ffd4c86ed2f6f0471fac87b8493e04a1bfeec216a7ebf511702835bb9f9a84d",
+  "rulesHash": "ef05264a2b584e775696b0bb3a6ce0a8e308b9eb585e73236dd8ff20da7610cf",
+  "aiApiVersion": "2.0"
+ }
+}

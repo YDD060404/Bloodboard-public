@@ -1,0 +1,20 @@
+// Compiled identity assertion from the root-owned, public-only TRAIN receipt.
+// This does not load capture files or grant native legality/value certificates.
+export const TEACHER_TRAIN_DOMAIN=Object.freeze({schema:'teacher-train-public-domain/1',verified:true,
+ receiptSha256:'be035b5be3bc74f7c9642cb04b89e32f0b3c41ef1fa8c06783990633724f5edf',
+ dispositionSha256:'e7a72b21edacf80d138e0b7e331d8c0a7b25637a0e7cc1e21a5a740ae286a577',
+ reviewSha256:'c88d2751b67dfa66ed8542c9d92021db1ddd909d54b15199aac13362536c9eb4',
+ permitSha256:'e67e2d50af24369731d24863b51d96d54e43b718a00e155459b30f2c5c9763d5',
+ modelSha256:'fae8af896aaec15fe0817036085eea74ccfd8f4b5e1ae996710ed903f7375aec',
+ featureSourceSha256:'c3e8071f136cc70ee247fe9f1c2da3564c6d2e5f90e02d6e4304bf7250a48f2d',
+ datasetSha256:'48004d16f6206ef45545b7c4982efeb33a2783d6070b6dd7524150aacabd81da',
+ verificationSha256:'5676935c615d38c9edbfd9e728f7b6633583072c4bfb00cbd6e3e108b51682a1',
+ fitFreezeSha256:'405b5eda34ae4c67f7822934c43625746b2258533ea4e4318c9c2a920eed08e0',
+ runtimeSha256:'26e02ac996afc5f6b18992a4893049366e37ec76f6fdfccdfdfc7fe1c48b9406',
+ expectedCaptureCount:24,verifiedCaptureCount:24,labelContributingCaptureCount:17,contextOnlyCaptureCount:7,
+ rulesEdition:'faq2026',engine:Object.freeze({version:'7.0.1',
+  engineHash:'015f6879ad93c03e810a71d7e541aad5da71f93839eb84951a0979d242ab7754',
+  rulesHash:'d75586a708201fdbaa93e051d501bc1b6e604cf77e540d5d9611ba42418fc47e',
+  apiHash:'cc8878821f67091585f79e6553b67cd01b2794235e73c33f2dcb0d43e607dd97'}),
+ identityScope:'strict-train-root-identity-only',
+ scope:'24 public TRAIN roots; 17 label-contributing captures and 7 context-only captures; engine-search policy distillation, not human expert supervision'});

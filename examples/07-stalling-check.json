@@ -1,0 +1,201 @@
+{
+ "format": "bloodboard-position",
+ "version": 2,
+ "name": "Stalling on Turn 3",
+ "savedAt": "2026-09-25T00:00:00.000Z",
+ "notes": "An open Human Catcher could score without rolling any dice. Ending the activation (or the Turn) without scoring triggers the Crowd Takes Action: a D6 of 3+ (the Turn number) knocks them down.",
+ "state": {
+  "format": "bloodboard-state",
+  "version": 1,
+  "phase": "play",
+  "rulesEdition": "faq2026",
+  "weather": "perfect",
+  "teams": {
+   "A": {
+    "id": "A",
+    "name": "Reikland Rookies",
+    "rosterId": "human",
+    "color": "#f3efe4",
+    "accent": "#1d3f8f",
+    "rerolls": 2,
+    "leaderReroll": false,
+    "score": 0,
+    "turn": 3
+   },
+   "B": {
+    "id": "B",
+    "name": "Badland Bashers",
+    "rosterId": "orc",
+    "color": "#b3261e",
+    "accent": "#fbe9d0",
+    "rerolls": 2,
+    "leaderReroll": false,
+    "score": 0,
+    "turn": 2
+   }
+  },
+  "players": [
+   {
+    "id": "A1",
+    "team": "A",
+    "number": 7,
+    "name": "Human Catcher",
+    "position": "Human Catcher",
+    "keywords": [
+     "Catcher",
+     "Human"
+    ],
+    "ma": 8,
+    "st": 3,
+    "ag": 3,
+    "pa": 4,
+    "av": 8,
+    "skills": [
+     {
+      "id": "catch"
+     },
+     {
+      "id": "dodge"
+     }
+    ],
+    "location": "pitch",
+    "pos": {
+     "x": 20,
+     "y": 7
+    },
+    "stance": "standing",
+    "distracted": false,
+    "activated": false,
+    "usage": {}
+   },
+   {
+    "id": "A2",
+    "team": "A",
+    "number": 2,
+    "name": "Human Lineman",
+    "position": "Human Lineman",
+    "keywords": [
+     "Human",
+     "Lineman"
+    ],
+    "ma": 6,
+    "st": 3,
+    "ag": 3,
+    "pa": 4,
+    "av": 9,
+    "skills": [],
+    "location": "pitch",
+    "pos": {
+     "x": 16,
+     "y": 6
+    },
+    "stance": "standing",
+    "distracted": false,
+    "activated": false,
+    "usage": {}
+   },
+   {
+    "id": "B1",
+    "team": "B",
+    "number": 4,
+    "name": "Orc Lineman",
+    "position": "Orc Lineman",
+    "keywords": [
+     "Lineman",
+     "Orc"
+    ],
+    "ma": 5,
+    "st": 3,
+    "ag": 3,
+    "pa": 4,
+    "av": 10,
+    "skills": [],
+    "location": "pitch",
+    "pos": {
+     "x": 15,
+     "y": 7
+    },
+    "stance": "standing",
+    "distracted": false,
+    "activated": false,
+    "usage": {}
+   },
+   {
+    "id": "B2",
+    "team": "B",
+    "number": 6,
+    "name": "Orc Blitzer",
+    "position": "Orc Blitzer",
+    "keywords": [
+     "Blitzer",
+     "Orc"
+    ],
+    "ma": 6,
+    "st": 3,
+    "ag": 3,
+    "pa": 4,
+    "av": 10,
+    "skills": [
+     {
+      "id": "block"
+     },
+     {
+      "id": "breakTackle"
+     }
+    ],
+    "location": "pitch",
+    "pos": {
+     "x": 12,
+     "y": 9
+    },
+    "stance": "standing",
+    "distracted": false,
+    "activated": false,
+    "usage": {}
+   }
+  ],
+  "ball": {
+   "kind": "held",
+   "playerId": "A1"
+  },
+  "turn": {
+   "active": "A",
+   "half": 2,
+   "used": {
+    "blitz": false,
+    "pass": false,
+    "handoff": false,
+    "foul": false,
+    "secure": false,
+    "ttm": false,
+    "bomb": false,
+    "punt": false,
+    "ktm": false
+   },
+   "stunnedAtStart": [],
+   "activation": null
+  },
+  "rng": {
+   "seed": 1234,
+   "counter": 0
+  },
+  "options": {
+   "rulerWidth": 1.8
+  },
+  "log": [],
+  "pending": null,
+  "title": "Stalling on Turn 3",
+  "notes": "An open Human Catcher could score without rolling any dice. Ending the activation (or the Turn) without scoring triggers the Crowd Takes Action: a D6 of 3+ (the Turn number) knocks them down."
+ },
+ "meta": {
+  "saveFormatVersion": 2,
+  "matchId": "m-mvakb641-12ddkswkxo1ss",
+  "displayName": "Stalling on Turn 3",
+  "createdAt": "2026-10-16T06:03:57.745Z",
+  "matchFormat": "practice",
+  "engineVersion": "0.2.0",
+  "engineHash": "8ffd4c86ed2f6f0471fac87b8493e04a1bfeec216a7ebf511702835bb9f9a84d",
+  "rulesHash": "ef05264a2b584e775696b0bb3a6ce0a8e308b9eb585e73236dd8ff20da7610cf",
+  "aiApiVersion": "2.0"
+ }
+}

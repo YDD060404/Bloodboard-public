@@ -1,0 +1,27 @@
+{
+  "format": "bloodboard-ai",
+  "formatVersion": 1,
+  "apiVersion": 1,
+  "id": "bloodboard-offensive",
+  "name": "Bloodboard AI — Offensive",
+  "version": "5.5.0",
+  "description": "The built-in Bloodboard algorithm, parameters for moving the ball forward, sending receivers ahead and pressing the ball carrier; accepts a little more risk.",
+  "author": "Bloodboard",
+  "implementation": "bloodboard",
+  "parameters": {
+    "weights": {
+      "progress": 1.35,
+      "receivers": 1.8,
+      "pressure": 1.2,
+      "pressureReach": 1.3,
+      "marking": 1.5,
+      "screen": 0.7,
+      "cage": 0.8,
+      "turnoverCost": 0.85
+    },
+    "objectives": {
+      "protectThreats": 2,
+      "protectCageBelow": 1
+    }
+  }
+}

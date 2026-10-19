@@ -1,0 +1,4177 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bloodboard.local/schemas/bloodboard.schema.json",
+  "title": "Bloodboard: Endgame Workshop — engine interface formats",
+  "description": "Generated from src/engine/*.ts by scripts/make-schemas.mjs. Main entry points: GameState (the whole game), SaveFile (a saved position), ActionInput (what a coach or agent asks for), PlanResult (preview, no dice), ExecutionResult (after dice), DecisionRequest / DecisionChoice (mid-action choices).",
+  "$defs": {
+    "ActionAvailability": {
+      "type": "object",
+      "properties": {
+        "action": {
+          "$ref": "#/$defs/ActionType"
+        },
+        "label": {
+          "type": "string"
+        },
+        "enabled": {
+          "type": "boolean"
+        },
+        "reason": {
+          "type": "string"
+        },
+        "unsupported": {
+          "description": "Not implemented in v1 (shown but always disabled).",
+          "type": "boolean"
+        },
+        "special": {
+          "description": "For action 'special': which Special Action.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "action",
+        "label",
+        "enabled"
+      ],
+      "additionalProperties": false
+    },
+    "ActionInput": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/PlayerActionInput"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "endActivation"
+            }
+          },
+          "required": [
+            "kind"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "forgo"
+            },
+            "playerId": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "kind",
+            "playerId"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "endTurn"
+            }
+          },
+          "required": [
+            "kind"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "wizard"
+            },
+            "team": {
+              "$ref": "#/$defs/TeamId"
+            },
+            "spell": {
+              "type": "string",
+              "enum": [
+                "fireball",
+                "zap",
+                "none"
+              ]
+            },
+            "square": {
+              "$ref": "#/$defs/Coord"
+            },
+            "target": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "kind",
+            "team",
+            "spell"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "pregame"
+            }
+          },
+          "required": [
+            "kind"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "setupTeam"
+            },
+            "team": {
+              "$ref": "#/$defs/TeamId"
+            },
+            "positions": {
+              "type": "object",
+              "additionalProperties": {
+                "anyOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "$ref": "#/$defs/Coord"
+                  }
+                ]
+              }
+            }
+          },
+          "required": [
+            "kind",
+            "team",
+            "positions"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "kickoff"
+            },
+            "kicker": {
+              "type": "string"
+            },
+            "target": {
+              "$ref": "#/$defs/Coord"
+            },
+            "useKick": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "kind",
+            "kicker",
+            "target"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "solidDefence"
+            },
+            "positions": {
+              "type": "object",
+              "additionalProperties": {
+                "anyOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "$ref": "#/$defs/Coord"
+                  }
+                ]
+              }
+            }
+          },
+          "required": [
+            "kind",
+            "positions"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "quickSnap"
+            },
+            "moves": {
+              "type": "object",
+              "additionalProperties": {
+                "$ref": "#/$defs/Coord"
+              }
+            }
+          },
+          "required": [
+            "kind",
+            "moves"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "endCharge"
+            }
+          },
+          "required": [
+            "kind"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "swarming"
+            },
+            "positions": {
+              "type": "object",
+              "additionalProperties": {
+                "$ref": "#/$defs/Coord"
+              }
+            }
+          },
+          "required": [
+            "kind",
+            "positions"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "dwarfenWisdom"
+            },
+            "positions": {
+              "type": "object",
+              "additionalProperties": {
+                "$ref": "#/$defs/Coord"
+              }
+            }
+          },
+          "required": [
+            "kind",
+            "positions"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "weatherMage"
+            },
+            "team": {
+              "$ref": "#/$defs/TeamId"
+            },
+            "modifier": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "kind",
+            "team",
+            "modifier"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "throwARock"
+            },
+            "team": {
+              "$ref": "#/$defs/TeamId"
+            }
+          },
+          "required": [
+            "kind",
+            "team"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "nextDrive"
+            }
+          },
+          "required": [
+            "kind"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "coachChange"
+            },
+            "team": {
+              "$ref": "#/$defs/TeamId"
+            },
+            "coach": {
+              "anyOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "$ref": "#/$defs/CoachRef"
+                }
+              ]
+            }
+          },
+          "required": [
+            "kind",
+            "team",
+            "coach"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "mvp"
+            },
+            "team": {
+              "$ref": "#/$defs/TeamId"
+            },
+            "nominees": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "kind",
+            "team",
+            "nominees"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "ActionType": {
+      "type": "string",
+      "enum": [
+        "move",
+        "blitz",
+        "block",
+        "pass",
+        "handoff",
+        "secure",
+        "foul",
+        "ttm",
+        "special"
+      ]
+    },
+    "Activation": {
+      "type": "object",
+      "properties": {
+        "playerId": {
+          "type": "string"
+        },
+        "action": {
+          "$ref": "#/$defs/ActionType"
+        },
+        "blitzTarget": {
+          "type": "string"
+        },
+        "maUsed": {
+          "description": "Squares of Move Allowance spent so far (standing up = 3, a Jump = 2, a Blitz's Block = 1).",
+          "type": "number"
+        },
+        "rushesUsed": {
+          "type": "number"
+        },
+        "blocksDone": {
+          "type": "number"
+        },
+        "ballActionDone": {
+          "description": "Pass / Hand-off / Secure the Ball performed (activation normally ends).",
+          "type": "boolean"
+        },
+        "proUsed": {
+          "type": "boolean"
+        },
+        "brawlerUsed": {
+          "description": "Brawler's re-roll has been used in this activation (FAQ May 2026 p.126: once per activation, not once per Block).",
+          "type": "boolean"
+        },
+        "stallingCandidate": {
+          "description": "Stalling check prerequisites (p.80-81).",
+          "type": "boolean"
+        },
+        "over": {
+          "description": "The activation can no longer continue (fell, distracted, finished...).",
+          "type": "boolean"
+        },
+        "foulDone": {
+          "description": "Foul made (Quick Foul lets the player keep moving afterwards, p.134).",
+          "type": "boolean"
+        },
+        "specialDone": {
+          "description": "Special Action performed (Hypnotic Gaze, Punt: no more movement afterwards).",
+          "type": "boolean"
+        },
+        "special": {
+          "description": "The Special Action declared (action 'special'), so a continued activation keeps it.",
+          "type": "string",
+          "enum": [
+            "projectileVomit",
+            "stab",
+            "chainsaw",
+            "breatheFire",
+            "hypnoticGaze",
+            "monstrousMouth",
+            "bombardier",
+            "punt",
+            "kickTeamMate",
+            "ballAndChain"
+          ]
+        },
+        "bloodlust": {
+          "description": "Bloodlust (p.125): 'hungry' after a failed roll until a Thrall is bitten ('fed').",
+          "type": "string",
+          "enum": [
+            "hungry",
+            "fed"
+          ]
+        },
+        "starFlags": {
+          "description": "Star Player special rules in effect for the rest of this activation (e.g. 'gored': Grashnak's extra Block die).",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "razzle": {
+          "description": "Sevens Desperate Measures used for this activation: Razzle-Dazzle (the first Action, and the second once declared), Grudge Match, Set Piece.",
+          "type": "object",
+          "properties": {
+            "first": {
+              "$ref": "#/$defs/ActionType"
+            },
+            "second": {
+              "type": "string",
+              "enum": [
+                "move",
+                "blitz",
+                "block",
+                "pass",
+                "handoff",
+                "secure",
+                "foul",
+                "ttm",
+                "special"
+              ]
+            }
+          },
+          "required": [
+            "first"
+          ],
+          "additionalProperties": false
+        },
+        "grudge": {
+          "type": "boolean"
+        },
+        "setPiece": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "playerId",
+        "action",
+        "maUsed",
+        "rushesUsed",
+        "blocksDone",
+        "ballActionDone",
+        "proUsed",
+        "stallingCandidate",
+        "over"
+      ],
+      "additionalProperties": false
+    },
+    "BallState": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "held"
+            },
+            "playerId": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "kind",
+            "playerId"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "ground"
+            },
+            "pos": {
+              "$ref": "#/$defs/Coord"
+            }
+          },
+          "required": [
+            "kind",
+            "pos"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "none"
+            }
+          },
+          "required": [
+            "kind"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "BlockAnalysis": {
+      "type": "object",
+      "properties": {
+        "dice": {
+          "type": "number"
+        },
+        "chooser": {
+          "type": "string",
+          "enum": [
+            "attacker",
+            "defender"
+          ]
+        },
+        "attST": {
+          "type": "number"
+        },
+        "defST": {
+          "type": "number"
+        },
+        "offAssists": {
+          "type": "number"
+        },
+        "defAssists": {
+          "type": "number"
+        },
+        "atLeastOne": {
+          "description": "P(at least one die shows face), single roll.",
+          "type": "object",
+          "properties": {
+            "playerDown": {
+              "type": "number"
+            },
+            "bothDown": {
+              "type": "number"
+            },
+            "push": {
+              "type": "number"
+            },
+            "stumble": {
+              "type": "number"
+            },
+            "pow": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "playerDown",
+            "bothDown",
+            "push",
+            "stumble",
+            "pow"
+          ],
+          "additionalProperties": false
+        },
+        "chosen": {
+          "description": "P(the chosen result is X) with the chooser picking by the stated preference, no re-roll.",
+          "type": "object",
+          "additionalProperties": {
+            "type": "number"
+          }
+        },
+        "faceNotes": {
+          "type": "object",
+          "properties": {
+            "playerDown": {
+              "type": "string"
+            },
+            "bothDown": {
+              "type": "string"
+            },
+            "push": {
+              "type": "string"
+            },
+            "stumble": {
+              "type": "string"
+            },
+            "pow": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "playerDown",
+            "bothDown",
+            "push",
+            "stumble",
+            "pow"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "dice",
+        "chooser",
+        "attST",
+        "defST",
+        "offAssists",
+        "defAssists",
+        "atLeastOne",
+        "chosen",
+        "faceNotes"
+      ],
+      "additionalProperties": false
+    },
+    "BlockFace": {
+      "type": "string",
+      "enum": [
+        "playerDown",
+        "bothDown",
+        "push",
+        "stumble",
+        "pow"
+      ]
+    },
+    "BoardSnap": {
+      "description": "Compact board snapshot: [playerId, x, y, stance, location] (x = y = -1 off the pitch).",
+      "type": "object",
+      "properties": {
+        "players": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "prefixItems": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "$ref": "#/$defs/Stance"
+              },
+              {
+                "$ref": "#/$defs/Location"
+              }
+            ],
+            "minItems": 5,
+            "maxItems": 5
+          }
+        },
+        "ball": {
+          "$ref": "#/$defs/BallState"
+        }
+      },
+      "required": [
+        "players",
+        "ball"
+      ],
+      "additionalProperties": false
+    },
+    "CoachRef": {
+      "description": "V5.5: the computer coach of a team — an AI file (docs/AI_EXTENSIONS.md).",
+      "type": "object",
+      "properties": {
+        "ai": {
+          "description": "The AI file's id (e.g. \"bloodboard-balanced\").",
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "style": {
+          "description": "V5 step 6 saves only: the built-in AI's former style (now the bundled files \"bloodboard-<style>\").",
+          "type": "string",
+          "enum": [
+            "balanced",
+            "offensive",
+            "defensive"
+          ]
+        },
+        "takeover": {
+          "description": "A temporary coaching takeover of a human-coached team: for one player activation, for the rest of the Turn, or\nuntil the human takes control back. `half`/`turn`: when it began; `since`: the log id of the change.",
+          "type": "object",
+          "properties": {
+            "mode": {
+              "$ref": "#/$defs/TakeoverMode"
+            },
+            "half": {
+              "type": "number",
+              "enum": [
+                1,
+                2
+              ]
+            },
+            "turn": {
+              "type": "number"
+            },
+            "since": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "mode",
+            "half",
+            "turn",
+            "since"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "ai"
+      ],
+      "additionalProperties": false
+    },
+    "Coord": {
+      "description": "Pitch square. Standard pitch: x 0..25 (End Zones x=0 and x=25), y 0..14. Sevens pitch: x 0..19, y 0..10.",
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "x",
+        "y"
+      ],
+      "additionalProperties": false
+    },
+    "DecisionChoice": {
+      "type": "object",
+      "properties": {
+        "requestId": {
+          "type": "string"
+        },
+        "optionId": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "requestId",
+        "optionId"
+      ],
+      "additionalProperties": false
+    },
+    "DecisionOption": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        },
+        "detail": {
+          "type": "string"
+        },
+        "square": {
+          "description": "Squares to highlight on the pitch for this option.",
+          "$ref": "#/$defs/Coord"
+        }
+      },
+      "required": [
+        "id",
+        "label"
+      ],
+      "additionalProperties": false
+    },
+    "DecisionRecord": {
+      "type": "object",
+      "properties": {
+        "requestId": {
+          "type": "string"
+        },
+        "team": {
+          "$ref": "#/$defs/TeamId"
+        },
+        "prompt": {
+          "type": "string"
+        },
+        "optionId": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "requestId",
+        "team",
+        "prompt",
+        "optionId",
+        "label"
+      ],
+      "additionalProperties": false
+    },
+    "DecisionRequest": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "Deterministic id: `<sequence>:<type>`.",
+          "type": "string"
+        },
+        "type": {
+          "$ref": "#/$defs/DecisionType"
+        },
+        "team": {
+          "description": "Coach who decides.",
+          "$ref": "#/$defs/TeamId"
+        },
+        "prompt": {
+          "type": "string"
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/DecisionOption"
+          }
+        },
+        "context": {
+          "description": "Extra information for display, e.g. dice faces.",
+          "type": "object",
+          "additionalProperties": {}
+        },
+        "rule": {
+          "$ref": "#/$defs/RuleRef"
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "team",
+        "prompt",
+        "options"
+      ],
+      "additionalProperties": false
+    },
+    "DecisionType": {
+      "type": "string",
+      "enum": [
+        "swarming",
+        "dwarfenWisdom",
+        "punt",
+        "reroll",
+        "blockDie",
+        "pushSquare",
+        "followUp",
+        "skill",
+        "mightyBlow",
+        "armBar",
+        "interceptor",
+        "sidestepSquare",
+        "grabSquare",
+        "safePairOfHands",
+        "hitAndRun",
+        "breakTackle",
+        "divingTackle",
+        "shadowing",
+        "tentacles",
+        "wrestle",
+        "juggernaut",
+        "standFirm",
+        "stripBall",
+        "fend",
+        "taunt",
+        "stalling",
+        "kickOrReceive",
+        "highKick",
+        "touchback",
+        "argueTheCall",
+        "bribe",
+        "apothecary",
+        "dirtyPlayer",
+        "foulAssist",
+        "lethalFlight",
+        "pileDriver",
+        "dumpOff",
+        "trickster",
+        "saboteur",
+        "onTheBall",
+        "divingCatch",
+        "animalSavagery",
+        "bloodlust",
+        "plagueRidden",
+        "raiseDead",
+        "briberyCorruption",
+        "regenReroll",
+        "starRule",
+        "prayerPick",
+        "swoop",
+        "bombThrow",
+        "desperate"
+      ]
+    },
+    "DiceRecord": {
+      "description": "A physical roll: the dice type and the faces that came up (before any sorting).",
+      "type": "object",
+      "properties": {
+        "kind": {
+          "description": "'block' = Block dice (faces 1..6 mapped to results), otherwise the die size.",
+          "type": "string",
+          "enum": [
+            "block",
+            "d3",
+            "d6",
+            "d8",
+            "d16",
+            "random"
+          ]
+        },
+        "sides": {
+          "description": "'random' only: a random selection among `sides` candidates (e.g. a randomly selected player).",
+          "type": "number"
+        },
+        "faces": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "block": {
+          "description": "Block dice only: the result shown on each die, same order as `faces`.",
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "playerDown",
+              "bothDown",
+              "push",
+              "stumble",
+              "pow"
+            ]
+          }
+        }
+      },
+      "required": [
+        "kind",
+        "faces"
+      ],
+      "additionalProperties": false
+    },
+    "EventType": {
+      "type": "string",
+      "enum": [
+        "move",
+        "block",
+        "push",
+        "activation",
+        "turn",
+        "reroll",
+        "declare",
+        "roll",
+        "decision",
+        "status",
+        "ball",
+        "injury",
+        "turnover",
+        "touchdown",
+        "note"
+      ]
+    },
+    "ExecutionResult": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "$ref": "#/$defs/ExecutionStatus"
+        },
+        "state": {
+          "$ref": "#/$defs/GameState"
+        },
+        "events": {
+          "description": "Events produced by this call (for a pending action: all events so far).",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/GameEvent"
+          }
+        },
+        "decision": {
+          "$ref": "#/$defs/DecisionRequest"
+        },
+        "error": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "state",
+        "events"
+      ],
+      "additionalProperties": false
+    },
+    "ExecutionStatus": {
+      "type": "string",
+      "enum": [
+        "turnover",
+        "touchdown",
+        "completed",
+        "awaitingDecision",
+        "illegal"
+      ]
+    },
+    "Facing": {
+      "description": "Direction a Throw-in Template faces (Punt, Ball & Chain): towards x=0 / x=25 End Zones or the y=0 / y=14 Sidelines.",
+      "type": "string",
+      "enum": [
+        "x-",
+        "x+",
+        "y-",
+        "y+"
+      ]
+    },
+    "GameEvent": {
+      "description": "One line of the action log. `text` is human readable; `data` is structured.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "$ref": "#/$defs/EventType"
+        },
+        "text": {
+          "type": "string"
+        },
+        "rule": {
+          "$ref": "#/$defs/RuleRef"
+        },
+        "data": {
+          "type": "object",
+          "additionalProperties": {}
+        },
+        "dice": {
+          "description": "Every die actually rolled for this event, in the order rolled (execution only).",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/DiceRecord"
+          }
+        },
+        "snap": {
+          "description": "Board at the moment of this event (execution results only; not stored in\nthe log). Lets an interface replay a multi-step action stage by stage.",
+          "$ref": "#/$defs/BoardSnap"
+        }
+      },
+      "required": [
+        "type",
+        "text"
+      ],
+      "additionalProperties": false
+    },
+    "GameOptions": {
+      "type": "object",
+      "properties": {
+        "rulerWidth": {
+          "description": "Width of the Range Ruler in squares for the interception check (see docs).",
+          "type": "number"
+        }
+      },
+      "required": [
+        "rulerWidth"
+      ],
+      "additionalProperties": false
+    },
+    "GameState": {
+      "type": "object",
+      "properties": {
+        "format": {
+          "const": "bloodboard-state"
+        },
+        "version": {
+          "const": 1
+        },
+        "variant": {
+          "description": "Absent = standard Blood Bowl. 'sevens' = Blood Bowl Sevens (pitch, set-up, tables: see variant.ts).",
+          "type": "string",
+          "enum": [
+            "standard",
+            "sevens"
+          ]
+        },
+        "phase": {
+          "$ref": "#/$defs/Phase"
+        },
+        "weather": {
+          "$ref": "#/$defs/Weather"
+        },
+        "teams": {
+          "type": "object",
+          "properties": {
+            "A": {
+              "$ref": "#/$defs/TeamState"
+            },
+            "B": {
+              "$ref": "#/$defs/TeamState"
+            }
+          },
+          "required": [
+            "A",
+            "B"
+          ],
+          "additionalProperties": false
+        },
+        "players": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Player"
+          }
+        },
+        "ball": {
+          "$ref": "#/$defs/BallState"
+        },
+        "turn": {
+          "$ref": "#/$defs/TurnState"
+        },
+        "rng": {
+          "$ref": "#/$defs/RngState"
+        },
+        "options": {
+          "$ref": "#/$defs/GameOptions"
+        },
+        "log": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/LogEntry"
+          }
+        },
+        "pending": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/PendingAction"
+            }
+          ]
+        },
+        "touchdown": {
+          "type": "object",
+          "properties": {
+            "team": {
+              "$ref": "#/$defs/TeamId"
+            },
+            "playerId": {
+              "type": "string"
+            },
+            "duringTeamTurn": {
+              "$ref": "#/$defs/TeamId"
+            }
+          },
+          "required": [
+            "team",
+            "playerId",
+            "duringTeamTurn"
+          ],
+          "additionalProperties": false
+        },
+        "match": {
+          "description": "Present when this state is a full match between two saved teams (see match.ts).",
+          "$ref": "#/$defs/MatchState"
+        },
+        "rulesEdition": {
+          "description": "V7: which rules edition this match runs. 'faq2026' = the May 2026 FAQ corrections (BB-FAQ-006..018). Absent = a match started before\nthem: it keeps the earlier behaviour for those rules so its recorded history still replays dice-for-dice.",
+          "type": "string",
+          "enum": [
+            "faq2026"
+          ]
+        },
+        "title": {
+          "description": "Free-text notes shown in the position library.",
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "clock": {
+          "description": "V5.5: the match timer shown above the pitch (display only — the rules never read it; no time limits). Written\ninto saved matches so the accumulated times survive saving and loading.",
+          "$ref": "#/$defs/MatchClock"
+        }
+      },
+      "required": [
+        "format",
+        "version",
+        "phase",
+        "weather",
+        "teams",
+        "players",
+        "ball",
+        "turn",
+        "rng",
+        "options",
+        "log",
+        "pending"
+      ],
+      "additionalProperties": false
+    },
+    "KickoffPhase": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "solidDefence"
+            },
+            "team": {
+              "$ref": "#/$defs/TeamId"
+            },
+            "max": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "type",
+            "team",
+            "max"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "quickSnap"
+            },
+            "team": {
+              "$ref": "#/$defs/TeamId"
+            },
+            "max": {
+              "type": "number"
+            },
+            "alert": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "type",
+            "team",
+            "max"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "charge"
+            },
+            "team": {
+              "$ref": "#/$defs/TeamId"
+            },
+            "max": {
+              "type": "number"
+            },
+            "activated": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "blitz": {
+              "type": "boolean"
+            },
+            "ttm": {
+              "type": "boolean"
+            },
+            "ktm": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "type",
+            "team",
+            "max",
+            "activated",
+            "blitz",
+            "ttm"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "swarming"
+            },
+            "team": {
+              "$ref": "#/$defs/TeamId"
+            },
+            "max": {
+              "type": "number"
+            },
+            "next": {
+              "type": "string",
+              "enum": [
+                "A",
+                "B"
+              ]
+            }
+          },
+          "required": [
+            "type",
+            "team",
+            "max"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "dwarfenWisdom"
+            },
+            "team": {
+              "$ref": "#/$defs/TeamId"
+            },
+            "max": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "type",
+            "team",
+            "max"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "Location": {
+      "type": "string",
+      "enum": [
+        "pitch",
+        "reserves",
+        "ko",
+        "cas",
+        "sentOff"
+      ]
+    },
+    "LogEntry": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "number"
+        },
+        "team": {
+          "$ref": "#/$defs/TeamId"
+        },
+        "turn": {
+          "type": "number"
+        },
+        "title": {
+          "description": "One-line headline, e.g. \"#5 Orc Blitzer — Blitz on #3\".",
+          "type": "string"
+        },
+        "plan": {
+          "description": "Summary of the plan as reviewed before confirmation.",
+          "$ref": "#/$defs/PlanSummaryForLog"
+        },
+        "input": {
+          "$ref": "#/$defs/ActionInput"
+        },
+        "events": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/GameEvent"
+          }
+        },
+        "decisions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/DecisionRecord"
+          }
+        },
+        "outcome": {
+          "type": "string",
+          "enum": [
+            "turnover",
+            "touchdown",
+            "completed",
+            "stopped"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "team",
+        "turn",
+        "title",
+        "input",
+        "events",
+        "decisions",
+        "outcome"
+      ],
+      "additionalProperties": false
+    },
+    "MatchClock": {
+      "description": "V5.5 match timer: milliseconds of match time in total, and used by each side (acting or deciding).",
+      "type": "object",
+      "properties": {
+        "totalMs": {
+          "type": "number"
+        },
+        "A": {
+          "type": "number"
+        },
+        "B": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "totalMs",
+        "A",
+        "B"
+      ],
+      "additionalProperties": false
+    },
+    "MatchInput": {
+      "description": "Match play inputs (only valid in a state with `match`).",
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "pregame"
+            }
+          },
+          "required": [
+            "kind"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "setupTeam"
+            },
+            "team": {
+              "$ref": "#/$defs/TeamId"
+            },
+            "positions": {
+              "type": "object",
+              "additionalProperties": {
+                "anyOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "$ref": "#/$defs/Coord"
+                  }
+                ]
+              }
+            }
+          },
+          "required": [
+            "kind",
+            "team",
+            "positions"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "kickoff"
+            },
+            "kicker": {
+              "type": "string"
+            },
+            "target": {
+              "$ref": "#/$defs/Coord"
+            },
+            "useKick": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "kind",
+            "kicker",
+            "target"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "solidDefence"
+            },
+            "positions": {
+              "type": "object",
+              "additionalProperties": {
+                "anyOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "$ref": "#/$defs/Coord"
+                  }
+                ]
+              }
+            }
+          },
+          "required": [
+            "kind",
+            "positions"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "quickSnap"
+            },
+            "moves": {
+              "type": "object",
+              "additionalProperties": {
+                "$ref": "#/$defs/Coord"
+              }
+            }
+          },
+          "required": [
+            "kind",
+            "moves"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "endCharge"
+            }
+          },
+          "required": [
+            "kind"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "swarming"
+            },
+            "positions": {
+              "type": "object",
+              "additionalProperties": {
+                "$ref": "#/$defs/Coord"
+              }
+            }
+          },
+          "required": [
+            "kind",
+            "positions"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "dwarfenWisdom"
+            },
+            "positions": {
+              "type": "object",
+              "additionalProperties": {
+                "$ref": "#/$defs/Coord"
+              }
+            }
+          },
+          "required": [
+            "kind",
+            "positions"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "weatherMage"
+            },
+            "team": {
+              "$ref": "#/$defs/TeamId"
+            },
+            "modifier": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "kind",
+            "team",
+            "modifier"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "throwARock"
+            },
+            "team": {
+              "$ref": "#/$defs/TeamId"
+            }
+          },
+          "required": [
+            "kind",
+            "team"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "nextDrive"
+            }
+          },
+          "required": [
+            "kind"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "coachChange"
+            },
+            "team": {
+              "$ref": "#/$defs/TeamId"
+            },
+            "coach": {
+              "anyOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "$ref": "#/$defs/CoachRef"
+                }
+              ]
+            }
+          },
+          "required": [
+            "kind",
+            "team",
+            "coach"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "mvp"
+            },
+            "team": {
+              "$ref": "#/$defs/TeamId"
+            },
+            "nominees": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "kind",
+            "team",
+            "nominees"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "MatchKind": {
+      "type": "string",
+      "enum": [
+        "league",
+        "tournament"
+      ]
+    },
+    "MatchOptions": {
+      "type": "object",
+      "properties": {
+        "rules": {
+          "description": "'full': Fan Factor, Weather roll and Kick-off Events (p.44-48).\n'introductory': \"your first few games\" (p.44) — equal Fan Factor,\nPerfect Conditions, no Kick-off Event.",
+          "type": "string",
+          "enum": [
+            "full",
+            "introductory"
+          ]
+        },
+        "computer": {
+          "description": "A team coached by the interface's computer opponent, and its play style.\nRecorded here so a saved match reopens with the same opponent; the rules\nengine itself never reads it (the computer acts through the same inputs\nas a human coach).",
+          "type": "object",
+          "properties": {
+            "team": {
+              "$ref": "#/$defs/TeamId"
+            },
+            "style": {
+              "type": "string",
+              "enum": [
+                "balanced",
+                "offensive",
+                "defensive"
+              ]
+            }
+          },
+          "required": [
+            "team"
+          ],
+          "additionalProperties": false
+        },
+        "coaches": {
+          "description": "V5.5: the coach of each team now — absent = a human at this computer; present = the computer, with the AI file\nchosen (its id, name and version, recorded so a saved match reopens with the same coaches). Both teams may be\ncomputer-coached (a match to watch). Changed during a match only by the `coachChange` input (logged). `computer`\nabove keeps naming the first computer team at the start of the match — the side the dice difficulty house rule\ntreats as the computer's for the whole match. The rules themselves never depend on who coaches a team.",
+          "type": "object",
+          "properties": {
+            "A": {
+              "$ref": "#/$defs/CoachRef"
+            },
+            "B": {
+              "$ref": "#/$defs/CoachRef"
+            }
+          },
+          "additionalProperties": false
+        },
+        "difficulty": {
+          "description": "Optional HOUSE RULE for matches against the computer only (not standard Blood Bowl). V5.5: every consequential\nroll — Block dice included — is weighed by whom its result helps: `player` 0-3 makes the human side's good results\na little less likely, `computer` 0-3 the computer side's good results a little more likely; every result stays\npossible and 0 = standard dice (engine: context.ts difficultyFactors). Ignored when there is no computer opponent.",
+          "type": "object",
+          "properties": {
+            "player": {
+              "type": "number"
+            },
+            "computer": {
+              "type": "number"
+            },
+            "mode": {
+              "type": "string",
+              "enum": [
+                "outcomes"
+              ]
+            }
+          },
+          "required": [
+            "player",
+            "computer"
+          ],
+          "additionalProperties": false
+        },
+        "sevensOnTheBall": {
+          "description": "V5.5, Blood Bowl Sevens only — where On the Ball may move at the kick-off. 'noMansLand' (default): into the\nreceiving team's side of No Man's Land (the GW Designer's Commentary ruling, May 2025 p.94, Death Zone Sevens);\n'ownArea': not into No Man's Land (the optional NAF recommendation for BB2025 Sevens, declared by an event).",
+          "type": "string",
+          "enum": [
+            "noMansLand",
+            "ownArea"
+          ]
+        },
+        "play": {
+          "description": "V5 step 6: which kind of one-off match this is — Tournament (Matched Play: the teams' Skill Points and bought\nskills apply) or Exhibition (no purchased skills). Informational for the interface; League matches have kind\n'league'.",
+          "type": "string",
+          "enum": [
+            "tournament",
+            "exhibition"
+          ]
+        }
+      },
+      "required": [
+        "rules"
+      ],
+      "additionalProperties": false
+    },
+    "MatchState": {
+      "type": "object",
+      "properties": {
+        "matchId": {
+          "description": "V6: the match's identity (not its name). Absent in matches created before V6.",
+          "type": "string"
+        },
+        "kind": {
+          "$ref": "#/$defs/MatchKind"
+        },
+        "options": {
+          "$ref": "#/$defs/MatchOptions"
+        },
+        "teamIds": {
+          "description": "Saved team (TeamDef) ids for both sides (a mirror copy has its own id, see `mirror`).",
+          "type": "object",
+          "properties": {
+            "A": {
+              "type": "string"
+            },
+            "B": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "A",
+            "B"
+          ],
+          "additionalProperties": false
+        },
+        "mirror": {
+          "description": "V5.5: both coaches chose the same saved team. Player 2 (`team`) plays an independent match copy of saved team\n`of` — its name marked \"*\", its colours inverted, its own team and player ids. Nothing from the copy is ever\nwritten back to the saved team (League SPP and Masters of Undeath hires go to Player 1's side only).",
+          "type": "object",
+          "properties": {
+            "team": {
+              "$ref": "#/$defs/TeamId"
+            },
+            "of": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "team",
+            "of"
+          ],
+          "additionalProperties": false
+        },
+        "rosterRerolls": {
+          "description": "Team Re-rolls bought for the roster: replenished at half-time (p.33).",
+          "type": "object",
+          "properties": {
+            "A": {
+              "type": "number"
+            },
+            "B": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "A",
+            "B"
+          ],
+          "additionalProperties": false
+        },
+        "dedicatedFans": {
+          "type": "object",
+          "properties": {
+            "A": {
+              "type": "number"
+            },
+            "B": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "A",
+            "B"
+          ],
+          "additionalProperties": false
+        },
+        "assistantCoaches": {
+          "type": "object",
+          "properties": {
+            "A": {
+              "type": "number"
+            },
+            "B": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "A",
+            "B"
+          ],
+          "additionalProperties": false
+        },
+        "cheerleaders": {
+          "type": "object",
+          "properties": {
+            "A": {
+              "type": "number"
+            },
+            "B": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "A",
+            "B"
+          ],
+          "additionalProperties": false
+        },
+        "fanFactor": {
+          "type": "object",
+          "properties": {
+            "A": {
+              "type": "number"
+            },
+            "B": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "A",
+            "B"
+          ],
+          "additionalProperties": false
+        },
+        "half": {
+          "type": "number",
+          "enum": [
+            1,
+            2
+          ]
+        },
+        "receivedFirst": {
+          "description": "The team that received in the first half (kicks in the second, p.83).",
+          "type": "string",
+          "enum": [
+            "A",
+            "B"
+          ]
+        },
+        "kicking": {
+          "description": "Kicking team of the current Drive.",
+          "type": "string",
+          "enum": [
+            "A",
+            "B"
+          ]
+        },
+        "drive": {
+          "type": "number"
+        },
+        "setupDone": {
+          "type": "object",
+          "properties": {
+            "A": {
+              "type": "boolean"
+            },
+            "B": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "A",
+            "B"
+          ],
+          "additionalProperties": false
+        },
+        "kick": {
+          "description": "The kick of the current Drive. landing null = the ball left the pitch.",
+          "type": "object",
+          "properties": {
+            "kicker": {
+              "type": "string"
+            },
+            "target": {
+              "$ref": "#/$defs/Coord"
+            },
+            "landing": {
+              "anyOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "$ref": "#/$defs/Coord"
+                }
+              ]
+            },
+            "scatterInAir": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "kicker",
+            "target",
+            "landing",
+            "scatterInAir"
+          ],
+          "additionalProperties": false
+        },
+        "kickoffEvent": {
+          "type": "object",
+          "properties": {
+            "roll": {
+              "type": "number"
+            },
+            "name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "roll",
+            "name"
+          ],
+          "additionalProperties": false
+        },
+        "pendingPhase": {
+          "description": "Interactive part of a Kick-off Event still to be played.",
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "const": "solidDefence"
+                },
+                "team": {
+                  "$ref": "#/$defs/TeamId"
+                },
+                "max": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "type",
+                "team",
+                "max"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "const": "quickSnap"
+                },
+                "team": {
+                  "$ref": "#/$defs/TeamId"
+                },
+                "max": {
+                  "type": "number"
+                },
+                "alert": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "type",
+                "team",
+                "max"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "const": "charge"
+                },
+                "team": {
+                  "$ref": "#/$defs/TeamId"
+                },
+                "max": {
+                  "type": "number"
+                },
+                "activated": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "blitz": {
+                  "type": "boolean"
+                },
+                "ttm": {
+                  "type": "boolean"
+                },
+                "ktm": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "type",
+                "team",
+                "max",
+                "activated",
+                "blitz",
+                "ttm"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "const": "swarming"
+                },
+                "team": {
+                  "$ref": "#/$defs/TeamId"
+                },
+                "max": {
+                  "type": "number"
+                },
+                "next": {
+                  "type": "string",
+                  "enum": [
+                    "A",
+                    "B"
+                  ]
+                }
+              },
+              "required": [
+                "type",
+                "team",
+                "max"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "const": "dwarfenWisdom"
+                },
+                "team": {
+                  "$ref": "#/$defs/TeamId"
+                },
+                "max": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "type",
+                "team",
+                "max"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        },
+        "bribes": {
+          "type": "object",
+          "properties": {
+            "A": {
+              "type": "number"
+            },
+            "B": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "A",
+            "B"
+          ],
+          "additionalProperties": false
+        },
+        "coachEjected": {
+          "type": "object",
+          "properties": {
+            "A": {
+              "type": "boolean"
+            },
+            "B": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "A",
+            "B"
+          ],
+          "additionalProperties": false
+        },
+        "cheering": {
+          "description": "Cheering Fans (p.48): +1 Offensive Assist on the first Block of that team's next Turn.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "team": {
+                "$ref": "#/$defs/TeamId"
+              },
+              "turn": {
+                "type": "number"
+              },
+              "used": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "team",
+              "turn",
+              "used"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "driveMods": {
+          "description": "Dodgy Snack (p.48): restore MA/AV at the end of the Drive.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "playerId": {
+                "type": "string"
+              },
+              "ma": {
+                "type": "number"
+              },
+              "av": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "playerId",
+              "ma",
+              "av"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "swarmed": {
+          "description": "Swarming (p.155): extra Linemen each team set up for the current Drive (so later set-up checks allow them).",
+          "type": "object",
+          "properties": {
+            "A": {
+              "type": "number"
+            },
+            "B": {
+              "type": "number"
+            }
+          },
+          "additionalProperties": false
+        },
+        "inducements": {
+          "description": "Inducements each team bought on its Team Draft List (pp.141-147): id → count.",
+          "type": "object",
+          "properties": {
+            "A": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "number"
+              }
+            },
+            "B": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "number"
+              }
+            }
+          },
+          "required": [
+            "A",
+            "B"
+          ],
+          "additionalProperties": false
+        },
+        "matched": {
+          "description": "V5 step 6: Tournament (Matched Play) teams — Tier, Skill Points and what they bought (shown on the match card).",
+          "type": "object",
+          "properties": {
+            "A": {
+              "type": "object",
+              "properties": {
+                "tier": {
+                  "type": "number",
+                  "enum": [
+                    1,
+                    2,
+                    3,
+                    4
+                  ]
+                },
+                "allowance": {
+                  "type": "number"
+                },
+                "spent": {
+                  "type": "number"
+                },
+                "skills": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "format": {
+                  "type": "string",
+                  "enum": [
+                    "standard",
+                    "sevens"
+                  ]
+                }
+              },
+              "required": [
+                "tier",
+                "allowance",
+                "spent",
+                "skills",
+                "format"
+              ],
+              "additionalProperties": false
+            },
+            "B": {
+              "type": "object",
+              "properties": {
+                "tier": {
+                  "type": "number",
+                  "enum": [
+                    1,
+                    2,
+                    3,
+                    4
+                  ]
+                },
+                "allowance": {
+                  "type": "number"
+                },
+                "spent": {
+                  "type": "number"
+                },
+                "skills": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "format": {
+                  "type": "string",
+                  "enum": [
+                    "standard",
+                    "sevens"
+                  ]
+                }
+              },
+              "required": [
+                "tier",
+                "allowance",
+                "spent",
+                "skills",
+                "format"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        },
+        "preMatch": {
+          "description": "V5.5: League pre-match Inducements (p.94): each team's CTV, Petty Cash received and Treasury gold spent.",
+          "type": "object",
+          "properties": {
+            "A": {
+              "type": "object",
+              "properties": {
+                "ctv": {
+                  "type": "number"
+                },
+                "pettyCash": {
+                  "type": "number"
+                },
+                "treasurySpent": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "ctv",
+                "pettyCash",
+                "treasurySpent"
+              ],
+              "additionalProperties": false
+            },
+            "B": {
+              "type": "object",
+              "properties": {
+                "ctv": {
+                  "type": "number"
+                },
+                "pettyCash": {
+                  "type": "number"
+                },
+                "treasurySpent": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "ctv",
+                "pettyCash",
+                "treasurySpent"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        },
+        "allStar": {
+          "description": "V5.5: an All-Star Match (custom Exhibition variant) — each squad's limits (null = an ordinary team).",
+          "type": "object",
+          "properties": {
+            "A": {
+              "anyOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "budget": {
+                      "anyOf": [
+                        {
+                          "type": "null"
+                        },
+                        {
+                          "type": "number"
+                        }
+                      ]
+                    },
+                    "maxStars": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "budget",
+                    "maxStars"
+                  ],
+                  "additionalProperties": false
+                }
+              ]
+            },
+            "B": {
+              "anyOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "budget": {
+                      "anyOf": [
+                        {
+                          "type": "null"
+                        },
+                        {
+                          "type": "number"
+                        }
+                      ]
+                    },
+                    "maxStars": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "budget",
+                    "maxStars"
+                  ],
+                  "additionalProperties": false
+                }
+              ]
+            }
+          },
+          "required": [
+            "A",
+            "B"
+          ],
+          "additionalProperties": false
+        },
+        "wisdomAsked": {
+          "description": "Josef Bugman's Dwarfen Wisdom was already offered to these teams this Drive.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/TeamId"
+          }
+        },
+        "prayers": {
+          "description": "Prayers to Nuffle each team received in the pre-game (D16 results, p.143; Sevens D8 results mapped to them).",
+          "type": "object",
+          "properties": {
+            "A": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              }
+            },
+            "B": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              }
+            }
+          },
+          "required": [
+            "A",
+            "B"
+          ],
+          "additionalProperties": false
+        },
+        "desperate": {
+          "description": "Blood Bowl Sevens Desperate Measures (Spike! 22 p.15): D8 results each team rolled, and those used.",
+          "type": "object",
+          "properties": {
+            "A": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              }
+            },
+            "B": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              }
+            }
+          },
+          "required": [
+            "A",
+            "B"
+          ],
+          "additionalProperties": false
+        },
+        "desperateUsed": {
+          "type": "object",
+          "properties": {
+            "A": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              }
+            },
+            "B": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              }
+            }
+          },
+          "required": [
+            "A",
+            "B"
+          ],
+          "additionalProperties": false
+        },
+        "result": {
+          "type": "object",
+          "properties": {
+            "winner": {
+              "anyOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "const": "A"
+                },
+                {
+                  "const": "B"
+                }
+              ]
+            },
+            "score": {
+              "type": "object",
+              "properties": {
+                "A": {
+                  "type": "number"
+                },
+                "B": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "A",
+                "B"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "winner",
+            "score"
+          ],
+          "additionalProperties": false
+        },
+        "spp": {
+          "description": "Star Player Points earned in this match (p.96), by player id: counts of\nCompletions, Throw Team-mate Superb Throws landed, safe landings,\nInterceptions, Casualties, Touchdowns and MVP awards.",
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/SppTally"
+          }
+        },
+        "mvp": {
+          "description": "Most Valuable Player of each team, once rolled after full time (p.97).",
+          "type": "object",
+          "properties": {
+            "A": {
+              "type": "string"
+            },
+            "B": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "played": {
+          "description": "Players who were set up for at least one Drive (p.96: MVP nominees must have played).",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sppApplied": {
+          "description": "League matches: the Star Player Points of this match were added to that team's saved roster.",
+          "type": "object",
+          "properties": {
+            "A": {
+              "type": "boolean"
+            },
+            "B": {
+              "type": "boolean"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "kind",
+        "options",
+        "teamIds",
+        "rosterRerolls",
+        "dedicatedFans",
+        "assistantCoaches",
+        "cheerleaders",
+        "half",
+        "drive",
+        "setupDone",
+        "bribes",
+        "coachEjected",
+        "driveMods"
+      ],
+      "additionalProperties": false
+    },
+    "Mod": {
+      "type": "object",
+      "properties": {
+        "label": {
+          "type": "string"
+        },
+        "value": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "label",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "MoveKind": {
+      "type": "string",
+      "enum": [
+        "step",
+        "jump",
+        "leap",
+        "pogo"
+      ]
+    },
+    "OutcomeSummary": {
+      "type": "object",
+      "properties": {
+        "explored": {
+          "description": "Probability mass explored exactly.",
+          "type": "number"
+        },
+        "unresolved": {
+          "description": "Probability mass not explored (pruned) — shown as uncertainty, never guessed.",
+          "type": "number"
+        },
+        "leaves": {
+          "type": "number"
+        },
+        "pCompleted": {
+          "type": "number"
+        },
+        "pTurnover": {
+          "type": "number"
+        },
+        "pTouchdownActive": {
+          "type": "number"
+        },
+        "pTouchdownOpp": {
+          "type": "number"
+        },
+        "pActorDown": {
+          "type": "number"
+        },
+        "pActorRemoved": {
+          "type": "number"
+        },
+        "pActorFell": {
+          "type": "number"
+        },
+        "pTargetDown": {
+          "type": "number"
+        },
+        "pTargetRemoved": {
+          "type": "number"
+        },
+        "pTargetKO": {
+          "type": "number"
+        },
+        "pTargetCas": {
+          "type": "number"
+        },
+        "pTargetArmourBroken": {
+          "type": "number"
+        },
+        "pTargetPushed": {
+          "type": "number"
+        },
+        "pTargetCrowd": {
+          "type": "number"
+        },
+        "pTarget2Down": {
+          "description": "Multiple Block (p.132): the second target is Knocked Down / off the pitch.",
+          "type": "number"
+        },
+        "pIntercepted": {
+          "type": "number"
+        },
+        "pActiveHasBall": {
+          "type": "number"
+        },
+        "pOppHasBall": {
+          "type": "number"
+        },
+        "pBallGround": {
+          "type": "number"
+        },
+        "pBallWithReceiver": {
+          "type": "number"
+        },
+        "pBallWithActor": {
+          "type": "number"
+        },
+        "blockResult": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "number"
+          }
+        },
+        "passResult": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "number"
+          }
+        },
+        "fallSquares": {
+          "description": "Where the acting player falls (square key -> probability).",
+          "type": "object",
+          "additionalProperties": {
+            "type": "number"
+          }
+        },
+        "illegal": {
+          "description": "Branches in which the planned input became illegal (message -> probability). Must be empty for a valid plan.",
+          "type": "object",
+          "additionalProperties": {
+            "type": "number"
+          }
+        }
+      },
+      "required": [
+        "explored",
+        "unresolved",
+        "leaves",
+        "pCompleted",
+        "pTurnover",
+        "pTouchdownActive",
+        "pTouchdownOpp",
+        "pActorDown",
+        "pActorRemoved",
+        "pActorFell",
+        "pTargetDown",
+        "pTargetRemoved",
+        "pTargetKO",
+        "pTargetCas",
+        "pTargetArmourBroken",
+        "pTargetPushed",
+        "pTargetCrowd",
+        "pTarget2Down",
+        "pIntercepted",
+        "pActiveHasBall",
+        "pOppHasBall",
+        "pBallGround",
+        "pBallWithReceiver",
+        "pBallWithActor",
+        "blockResult",
+        "passResult",
+        "fallSquares",
+        "illegal"
+      ],
+      "additionalProperties": false
+    },
+    "PassAnalysis": {
+      "type": "object",
+      "properties": {
+        "range": {
+          "type": "string"
+        },
+        "target": {
+          "$ref": "#/$defs/Coord"
+        },
+        "pa": {
+          "type": "number"
+        },
+        "mods": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string"
+              },
+              "value": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "label",
+              "value"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "pAccurate": {
+          "type": "number"
+        },
+        "pInaccurate": {
+          "type": "number"
+        },
+        "pFumble": {
+          "type": "number"
+        },
+        "interceptorsIfAccurate": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "label": {
+                "type": "string"
+              },
+              "p": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "id",
+              "label",
+              "p"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "hailMary": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "range",
+        "target",
+        "pa",
+        "mods",
+        "pAccurate",
+        "pInaccurate",
+        "pFumble",
+        "interceptorsIfAccurate",
+        "hailMary"
+      ],
+      "additionalProperties": false
+    },
+    "PathStep": {
+      "type": "object",
+      "properties": {
+        "to": {
+          "$ref": "#/$defs/Coord"
+        },
+        "kind": {
+          "$ref": "#/$defs/MoveKind"
+        }
+      },
+      "required": [
+        "to",
+        "kind"
+      ],
+      "additionalProperties": false
+    },
+    "PendingAction": {
+      "type": "object",
+      "properties": {
+        "base": {
+          "description": "Snapshot taken immediately before the action started (without `pending`).",
+          "$ref": "#/$defs/GameState"
+        },
+        "input": {
+          "$ref": "#/$defs/ActionInput"
+        },
+        "decisions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/DecisionRecord"
+          }
+        },
+        "request": {
+          "$ref": "#/$defs/DecisionRequest"
+        },
+        "events": {
+          "description": "Events generated so far (for display).",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/GameEvent"
+          }
+        },
+        "plan": {
+          "$ref": "#/$defs/PlanSummaryForLog"
+        }
+      },
+      "required": [
+        "base",
+        "input",
+        "decisions",
+        "request",
+        "events"
+      ],
+      "additionalProperties": false
+    },
+    "Phase": {
+      "description": "'setup' = free position editor; 'play' = a Turn is in progress; 'touchdown'\nand 'halfOver' = the Drive has ended. Match play adds 'pregame' (fans,\nweather, kicking team), 'driveSetup' (teams set up), 'kickoff' (kick,\nKick-off Event, landing) and 'fullTime'.",
+      "type": "string",
+      "enum": [
+        "pregame",
+        "kickoff",
+        "touchdown",
+        "setup",
+        "play",
+        "halfOver",
+        "driveSetup",
+        "fullTime"
+      ]
+    },
+    "PlanOptions": {
+      "type": "object",
+      "properties": {
+        "threshold": {
+          "description": "Probability threshold below which branches are not explored (their mass is reported).",
+          "type": "number"
+        },
+        "maxLeaves": {
+          "description": "Maximum number of explored outcome paths per policy.",
+          "type": "number"
+        },
+        "followUp": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "PlanResult": {
+      "type": "object",
+      "properties": {
+        "ok": {
+          "type": "boolean"
+        },
+        "errors": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "input": {
+          "$ref": "#/$defs/ActionInput"
+        },
+        "steps": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/StepRecord"
+          }
+        },
+        "withTeamRerolls": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/OutcomeSummary"
+            }
+          ]
+        },
+        "withoutTeamRerolls": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/OutcomeSummary"
+            }
+          ]
+        },
+        "assumptions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "block": {
+          "$ref": "#/$defs/BlockAnalysis"
+        },
+        "pass": {
+          "$ref": "#/$defs/PassAnalysis"
+        },
+        "finalSquare": {
+          "description": "Final square of the mover if everything succeeds.",
+          "$ref": "#/$defs/Coord"
+        },
+        "traceEvents": {
+          "description": "Trace events along the planned-success path (for a textual preview).",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/GameEvent"
+          }
+        },
+        "teamRerollsAvailable": {
+          "type": "number"
+        },
+        "endsHungry": {
+          "description": "V5.5 Bloodlust (p.125): another player's activation is still open and hungry, and this Action would end it\nfirst. `turnover` = no Thrall is next to that player, so ending it is a Turnover and this Action is not taken\n(the plan is then not ok: end that activation, or move that player next to a Thrall, instead).",
+          "type": "object",
+          "properties": {
+            "playerId": {
+              "type": "string"
+            },
+            "turnover": {
+              "type": "boolean"
+            },
+            "text": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "playerId",
+            "turnover",
+            "text"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "ok",
+        "errors",
+        "input",
+        "steps",
+        "withTeamRerolls",
+        "withoutTeamRerolls",
+        "assumptions",
+        "traceEvents",
+        "teamRerollsAvailable"
+      ],
+      "additionalProperties": false
+    },
+    "PlanSummaryForLog": {
+      "type": "object",
+      "properties": {
+        "headline": {
+          "type": "string"
+        },
+        "steps": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "probabilities": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "assumptions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "headline",
+        "steps",
+        "probabilities",
+        "assumptions"
+      ],
+      "additionalProperties": false
+    },
+    "Player": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "team": {
+          "$ref": "#/$defs/TeamId"
+        },
+        "number": {
+          "type": "number"
+        },
+        "name": {
+          "type": "string"
+        },
+        "position": {
+          "description": "Position title from the roster, e.g. \"Orc Blitzer\".",
+          "type": "string"
+        },
+        "keywords": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "ma": {
+          "type": "number"
+        },
+        "st": {
+          "type": "number"
+        },
+        "ag": {
+          "description": "Agility target number (3 means 3+).",
+          "type": "number"
+        },
+        "pa": {
+          "description": "Passing Ability target number, or null for a '-' profile.",
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "number"
+            }
+          ]
+        },
+        "av": {
+          "description": "Armour Value target number (9 means 9+).",
+          "type": "number"
+        },
+        "skills": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/SkillRef"
+          }
+        },
+        "location": {
+          "$ref": "#/$defs/Location"
+        },
+        "pos": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/Coord"
+            }
+          ]
+        },
+        "stance": {
+          "$ref": "#/$defs/Stance"
+        },
+        "distracted": {
+          "description": "Standing but without a Tackle Zone (p.39). Only meaningful when standing.",
+          "type": "boolean"
+        },
+        "activated": {
+          "description": "Has been activated during the current team turn.",
+          "type": "boolean"
+        },
+        "eyeGouged": {
+          "description": "Eye Gouge: cannot provide assists until next activated (p.128).",
+          "type": "boolean"
+        },
+        "usage": {
+          "description": "Per-turn skill usage counters, reset at the start of every team turn.",
+          "$ref": "#/$defs/SkillUsage"
+        },
+        "casualtyResult": {
+          "description": "Casualty table result, for display (p.67).",
+          "type": "string"
+        },
+        "defId": {
+          "description": "Match play: id of the player in the saved team (TeamDef) this player came from.",
+          "type": "string"
+        },
+        "inDrive": {
+          "description": "Match play: took part in the current Drive (Secret Weapon, p.135).",
+          "type": "boolean"
+        },
+        "benched": {
+          "description": "Match play: may not be set up for the next Drive (Sweltering Heat, p.46; Sevens Hangover).",
+          "type": "boolean"
+        },
+        "benchedWhy": {
+          "description": "Why `benched` (default: Sweltering Heat).",
+          "type": "string"
+        },
+        "doped": {
+          "description": "Sevens Desperate Measure You Dope! (Spike! 22 p.15): the characteristic improved for the game.",
+          "type": "string",
+          "enum": [
+            "st",
+            "ag"
+          ]
+        },
+        "rooted": {
+          "description": "Take Root (p.137): cannot move, be Pushed Back or Follow-up until Knocked Down, Placed Prone or the Drive ends.",
+          "type": "boolean"
+        },
+        "chompedBy": {
+          "description": "Monstrous Mouth (p.131): id of the player whose Chomp holds this player (while they keep Marking them).",
+          "type": "string"
+        },
+        "plagueUsed": {
+          "description": "Plague Ridden (p.133): already used this game.",
+          "type": "boolean"
+        },
+        "veteran": {
+          "description": "Blood Bowl Sevens Veteran (Spike! 22 p.13): its once-per-game re-roll is 'ready' or 'used'.",
+          "type": "string",
+          "enum": [
+            "ready",
+            "used"
+          ]
+        },
+        "captain": {
+          "description": "Team Captain (p.155): the team's nominated Captain (it has Pro; a natural 6 after a Team Re-roll makes it free).",
+          "type": "boolean"
+        },
+        "raised": {
+          "description": "Masters of Undeath (p.155): a Lineman raised during this game (its Team Roster position id).",
+          "type": "string"
+        },
+        "mercenary": {
+          "description": "Mercenary Player (Inducement, p.147): hired for this game (Loner (4+) added).",
+          "type": "boolean"
+        },
+        "journeyman": {
+          "description": "Journeyman for this game only (Riotous Rookies, p.145): a roster Lineman with Loner (4+).",
+          "type": "boolean"
+        },
+        "star": {
+          "description": "Star Player (Inducement, p.148; profiles pp.195-211): the Star Player's id (stardata.ts).",
+          "type": "string"
+        },
+        "starUsed": {
+          "description": "Star Player special rule uses: markers of when it was used ('game', 'h1', 'd3', 'a…' — see stars.ts).",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "hexed": {
+          "description": "Estelle la Veneaux's Baleful Hex (p.198): cannot be activated during this Turn of their team.",
+          "type": "object",
+          "properties": {
+            "half": {
+              "type": "number",
+              "enum": [
+                1,
+                2
+              ]
+            },
+            "turn": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "half",
+            "turn"
+          ],
+          "additionalProperties": false
+        },
+        "carriedBy": {
+          "description": "Grak's I'll Carry You (p.200): Crumbleberry is carried by this player (off the pitch until set down).",
+          "type": "string"
+        },
+        "carriedFrom": {
+          "description": "Where the carried player was picked up (fallback for setting them down).",
+          "$ref": "#/$defs/Coord"
+        },
+        "frog": {
+          "description": "Sports-Wizard's Zap! (p.149): turned into a Frog until the end of the Drive — the player's own profile, restored then.",
+          "type": "object",
+          "properties": {
+            "ma": {
+              "type": "number"
+            },
+            "st": {
+              "type": "number"
+            },
+            "ag": {
+              "type": "number"
+            },
+            "pa": {
+              "anyOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "number"
+                }
+              ]
+            },
+            "av": {
+              "type": "number"
+            },
+            "skills": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/SkillRef"
+              }
+            },
+            "keywords": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "position": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "ma",
+            "st",
+            "ag",
+            "pa",
+            "av",
+            "skills",
+            "keywords",
+            "position"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "id",
+        "team",
+        "number",
+        "name",
+        "position",
+        "keywords",
+        "ma",
+        "st",
+        "ag",
+        "pa",
+        "av",
+        "skills",
+        "location",
+        "pos",
+        "stance",
+        "distracted",
+        "activated",
+        "usage"
+      ],
+      "additionalProperties": false
+    },
+    "PlayerActionInput": {
+      "description": "A confirmed (or planned) player action segment.",
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "playerAction"
+        },
+        "playerId": {
+          "type": "string"
+        },
+        "action": {
+          "$ref": "#/$defs/ActionType"
+        },
+        "path": {
+          "description": "Squares to move through, in order (may be empty).",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/PathStep"
+          }
+        },
+        "blitzTarget": {
+          "description": "Blitz: declared target (required on the first segment of a Blitz).",
+          "type": "string"
+        },
+        "blockTarget": {
+          "description": "Block / Blitz: perform a Block against this player after moving.",
+          "type": "string"
+        },
+        "passTarget": {
+          "description": "Pass: target square.",
+          "$ref": "#/$defs/Coord"
+        },
+        "hailMary": {
+          "description": "Pass: throw it as a Hail Mary Pass (p.129).",
+          "type": "boolean"
+        },
+        "handoffTarget": {
+          "description": "Hand-off: receiving team-mate.",
+          "type": "string"
+        },
+        "jumpUpBlock": {
+          "description": "Jump Up: stand up and Block from Prone with an Agility Test (p.130).",
+          "type": "boolean"
+        },
+        "thrownPlayerId": {
+          "description": "Throw Team-mate (p.76): the adjacent Right Stuff team-mate to throw.",
+          "type": "string"
+        },
+        "throwTarget": {
+          "description": "Throw Team-mate: target square (Quick or Short Throw range).",
+          "$ref": "#/$defs/Coord"
+        },
+        "special": {
+          "description": "Special Action to perform with action 'special'. On a Blitz, a targeted\nSpecial Action (Projectile Vomit, Stab, Chainsaw Attack, Breathe Fire,\nChomp) may replace the Block against the Blitz target.",
+          "type": "string",
+          "enum": [
+            "projectileVomit",
+            "stab",
+            "chainsaw",
+            "breatheFire",
+            "hypnoticGaze",
+            "monstrousMouth",
+            "bombardier",
+            "punt",
+            "kickTeamMate",
+            "ballAndChain"
+          ]
+        },
+        "specialTarget": {
+          "description": "Target player of a targeted Special Action (Stab, Chainsaw Attack, Breathe Fire, Hypnotic Gaze, Chomp, Projectile Vomit).",
+          "type": "string"
+        },
+        "vomitTarget": {
+          "description": "Projectile Vomit target (p.133): same as specialTarget (kept for saved inputs).",
+          "type": "string"
+        },
+        "foulTarget": {
+          "description": "Foul Action (p.69): the Prone or Stunned opposition player fouled after the move.",
+          "type": "string"
+        },
+        "desperate": {
+          "description": "Blood Bowl Sevens Desperate Measure used with this input (Spike! 22 p.15): Razzle-Dazzle or Grudge Match when the\nplayer is activated, Set Piece with the Pass.",
+          "type": "string",
+          "enum": [
+            "razzleDazzle",
+            "grudgeMatch",
+            "setPiece"
+          ]
+        },
+        "useChainsaw": {
+          "description": "Chainsaw (p.126): use the chainsaw for the Foul (+3 Armour, Kick-back on a 1).",
+          "type": "boolean"
+        },
+        "blockTarget2": {
+          "description": "Multiple Block (p.132): the second target of the Block Action.",
+          "type": "string"
+        },
+        "bombTarget": {
+          "description": "Throw Bomb Special Action (Bombardier, p.125): target square.",
+          "$ref": "#/$defs/Coord"
+        },
+        "facing": {
+          "description": "Punt (p.134) and Ball & Chain (p.124): which way the Throw-in Template faces.",
+          "type": "string",
+          "enum": [
+            "x-",
+            "x+",
+            "y-",
+            "y+"
+          ]
+        },
+        "leaveBall": {
+          "description": "Fumblerooski (p.128): leave the ball on the ground in the square this move starts from.",
+          "type": "boolean"
+        },
+        "starRule": {
+          "description": "Star Players (V5): use the Star Player's special rule at the start of this activation, or the Action variant\nit allows (Maple's Block 2 squares away, Nobbla's Chainsaw Attack on a Prone player, Bilerot's Projectile\nVomit, Cindy's two bombs) — see starActions.ts. Its choices are asked as decisions.",
+          "type": "boolean"
+        },
+        "starTarget": {
+          "description": "With `starRule`: the player the rule is used on (Thorsson's, Zzharg's, Swiftvine's, Kiroth's, Zolcath's,\nEstelle's, Jeremiah's, Hakflem's, Ivar's, Grombrindal's target), chosen in advance instead of by a decision.\nThe computer uses it; the interface asks the question instead.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "playerId",
+        "action",
+        "path"
+      ],
+      "additionalProperties": false
+    },
+    "RngState": {
+      "type": "object",
+      "properties": {
+        "seed": {
+          "description": "32-bit unsigned seed.",
+          "type": "number"
+        },
+        "counter": {
+          "description": "Number of 32-bit draws consumed so far.",
+          "type": "number"
+        }
+      },
+      "required": [
+        "seed",
+        "counter"
+      ],
+      "additionalProperties": false
+    },
+    "RuleRef": {
+      "type": "object",
+      "properties": {
+        "page": {
+          "description": "Printed page number in the supplied Third Season rulebook (or in Spike! Journal 22 when source is 'sevens').",
+          "type": "number"
+        },
+        "title": {
+          "type": "string"
+        },
+        "source": {
+          "description": "'sevens': Spike! Journal: Sevens (Issue 22, 2026). Absent: the Third Season rulebook.",
+          "type": "string",
+          "enum": [
+            "sevens"
+          ]
+        }
+      },
+      "required": [
+        "page",
+        "title"
+      ],
+      "additionalProperties": false
+    },
+    "SaveFile": {
+      "type": "object",
+      "properties": {
+        "format": {
+          "const": "bloodboard-position"
+        },
+        "version": {
+          "type": "number",
+          "enum": [
+            1,
+            2
+          ]
+        },
+        "name": {
+          "type": "string"
+        },
+        "savedAt": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "state": {
+          "$ref": "#/$defs/GameState"
+        },
+        "meta": {
+          "type": "object",
+          "properties": {
+            "saveFormatVersion": {
+              "const": 2
+            },
+            "matchId": {
+              "description": "Stable identity of the match; never derived from its name. Copies made by Save As keep it; a new match gets a new one.",
+              "type": "string"
+            },
+            "displayName": {
+              "type": "string"
+            },
+            "createdAt": {
+              "type": "string"
+            },
+            "matchFormat": {
+              "type": "string",
+              "enum": [
+                "standard",
+                "sevens",
+                "practice"
+              ]
+            },
+            "engineVersion": {
+              "type": "string"
+            },
+            "engineHash": {
+              "type": "string"
+            },
+            "rulesHash": {
+              "type": "string"
+            },
+            "aiApiVersion": {
+              "type": "string"
+            },
+            "initial": {
+              "description": "The match as createMatch returned it (full match files): makes Replay exact instead of reconstructed.",
+              "anyOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "$ref": "#/$defs/GameState"
+                }
+              ]
+            },
+            "coachContext": {
+              "type": "object",
+              "properties": {
+                "A": {
+                  "anyOf": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "coachId": {
+                          "type": "string"
+                        },
+                        "coachVersion": {
+                          "type": "string"
+                        },
+                        "schemaVersion": {
+                          "type": "string"
+                        },
+                        "stateRevision": {
+                          "description": "Revision of the state this memory describes (number of log entries when it was committed).",
+                          "type": "number"
+                        },
+                        "payload": {}
+                      },
+                      "required": [
+                        "coachId",
+                        "coachVersion",
+                        "schemaVersion",
+                        "stateRevision",
+                        "payload"
+                      ],
+                      "additionalProperties": false
+                    }
+                  ]
+                },
+                "B": {
+                  "anyOf": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "coachId": {
+                          "type": "string"
+                        },
+                        "coachVersion": {
+                          "type": "string"
+                        },
+                        "schemaVersion": {
+                          "type": "string"
+                        },
+                        "stateRevision": {
+                          "description": "Revision of the state this memory describes (number of log entries when it was committed).",
+                          "type": "number"
+                        },
+                        "payload": {}
+                      },
+                      "required": [
+                        "coachId",
+                        "coachVersion",
+                        "schemaVersion",
+                        "stateRevision",
+                        "payload"
+                      ],
+                      "additionalProperties": false
+                    }
+                  ]
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "saveFormatVersion",
+            "matchId",
+            "displayName",
+            "createdAt",
+            "matchFormat",
+            "engineVersion",
+            "engineHash",
+            "rulesHash",
+            "aiApiVersion"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "format",
+        "version",
+        "name",
+        "savedAt",
+        "state"
+      ],
+      "additionalProperties": false
+    },
+    "SkillRef": {
+      "description": "A skill or trait held by a player. `value` is used by Loner (X+),\n`keyword` by Hatred (X) and Animosity (X).",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "value": {
+          "type": "number"
+        },
+        "keyword": {
+          "type": "string"
+        },
+        "until": {
+          "description": "A skill gained for a while only (Star Player special rules): removed at the end of the activation / Turn / Drive.",
+          "type": "string",
+          "enum": [
+            "activation",
+            "turn",
+            "drive"
+          ]
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "additionalProperties": false
+    },
+    "SkillUsage": {
+      "type": "object",
+      "properties": {
+        "dodgeReroll": {
+          "type": "boolean"
+        },
+        "sureFeet": {
+          "type": "boolean"
+        },
+        "breakTackle": {
+          "type": "boolean"
+        },
+        "shadowing": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    },
+    "SpecialId": {
+      "description": "Special Actions (p.54, Skills & Traits pp.123-138), named by the skill or\ntrait that grants them: Projectile Vomit, Stab, Chainsaw Attack, Breathe\nFire, Hypnotic Gaze, Chomp (Monstrous Mouth), Throw Bomb (Bombardier),\nPunt, Kick Team-mate and Ball & Chain.",
+      "type": "string",
+      "enum": [
+        "projectileVomit",
+        "stab",
+        "chainsaw",
+        "breatheFire",
+        "hypnoticGaze",
+        "monstrousMouth",
+        "bombardier",
+        "punt",
+        "kickTeamMate",
+        "ballAndChain"
+      ]
+    },
+    "SppTally": {
+      "type": "object",
+      "properties": {
+        "completion": {
+          "type": "number"
+        },
+        "ttm": {
+          "type": "number"
+        },
+        "landing": {
+          "type": "number"
+        },
+        "interception": {
+          "type": "number"
+        },
+        "casualty": {
+          "type": "number"
+        },
+        "touchdown": {
+          "type": "number"
+        },
+        "mvp": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    },
+    "Stance": {
+      "type": "string",
+      "enum": [
+        "standing",
+        "prone",
+        "stunned"
+      ]
+    },
+    "StepRecord": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        },
+        "playerId": {
+          "type": "string"
+        },
+        "at": {
+          "description": "Square where the roll happens (for drawing on the pitch).",
+          "type": "object",
+          "properties": {
+            "x": {
+              "type": "number"
+            },
+            "y": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "x",
+            "y"
+          ],
+          "additionalProperties": false
+        },
+        "dice": {
+          "type": "string"
+        },
+        "target": {
+          "description": "Target number (e.g. 4 for 4+) after listing modifiers separately.",
+          "type": "number"
+        },
+        "mods": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Mod"
+          }
+        },
+        "pSingle": {
+          "description": "Chance the first roll succeeds. `null` for a Block dice step: there is no\nsingle success chance because the result depends on which die is chosen\n(see PlanResult.block for the per-face breakdown).",
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "number"
+            }
+          ]
+        },
+        "rerolls": {
+          "description": "Re-roll sources that could be available at this step.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "pWithReroll": {
+          "description": "Chance with the best single re-roll available at this point.",
+          "type": "number"
+        },
+        "onFail": {
+          "type": "string"
+        },
+        "rule": {
+          "$ref": "#/$defs/RuleRef"
+        },
+        "extra": {
+          "type": "object",
+          "additionalProperties": {}
+        },
+        "by": {
+          "description": "Whose roll it is: the active team or the opponent (e.g. an Interception).",
+          "type": "string",
+          "enum": [
+            "active",
+            "opponent"
+          ]
+        }
+      },
+      "required": [
+        "kind",
+        "label",
+        "dice",
+        "mods",
+        "pSingle",
+        "rerolls",
+        "onFail",
+        "rule"
+      ],
+      "additionalProperties": false
+    },
+    "TakeoverMode": {
+      "type": "string",
+      "enum": [
+        "activation",
+        "turn",
+        "untilBack"
+      ]
+    },
+    "TeamId": {
+      "description": "Bloodboard rules engine — core data formats.\n\nEverything in this file is plain JSON-serialisable data. The engine never\nstores functions or class instances in the game state, so a state can be\nsaved, reloaded, diffed, or handed to an external agent (e.g. Claude or\nCodex) without loss. See docs/INTERFACE.md for the full contract.",
+      "type": "string",
+      "enum": [
+        "A",
+        "B"
+      ]
+    },
+    "TeamState": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/TeamId"
+        },
+        "name": {
+          "type": "string"
+        },
+        "rosterId": {
+          "type": "string"
+        },
+        "color": {
+          "description": "Primary colour (CSS) used by the interface.",
+          "type": "string"
+        },
+        "accent": {
+          "description": "Secondary colour used for numbers/outlines.",
+          "type": "string"
+        },
+        "rerolls": {
+          "type": "number"
+        },
+        "leaderReroll": {
+          "description": "Leader re-roll available this half (p.130). Usable only while a Leader is on the pitch.",
+          "type": "boolean"
+        },
+        "score": {
+          "type": "number"
+        },
+        "turn": {
+          "description": "Turn marker: the team's current (or last played) turn in this half, 0..8.",
+          "type": "number"
+        },
+        "bonusRerolls": {
+          "description": "Extra Team Re-rolls that expire at the end of the Drive (Brilliant Coaching, p.48). Used before normal ones.",
+          "type": "number"
+        },
+        "apothecary": {
+          "description": "Apothecary (p.68): once per game. Absent = the team has none.",
+          "type": "string",
+          "enum": [
+            "used",
+            "available"
+          ]
+        },
+        "league": {
+          "description": "Match play: the team's League and team special rules (pp.152-155), for display and the rules that use them.",
+          "type": "string"
+        },
+        "specialRules": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "raiseDeadUsed": {
+          "description": "Masters of Undeath (p.155): the once-per-game Raise the Dead has been used.",
+          "type": "boolean"
+        },
+        "briberyUsed": {
+          "description": "Bribery and Corruption (p.154): the once-per-game re-roll of a 1 to Argue the Call has been used.",
+          "type": "boolean"
+        },
+        "mascotReroll": {
+          "description": "Team Mascot (Inducement, p.144): its extra Team Re-roll is still available this half.",
+          "type": "boolean"
+        },
+        "induceUsed": {
+          "description": "Once-per-game Inducements already used this game (Weather Mage, Mortuary Assistant, Plague Doctor, Wandering Apothecaries, Dwarfen Wisdom): id → times used.",
+          "type": "object",
+          "additionalProperties": {
+            "type": "number"
+          }
+        },
+        "nextDriveRerolls": {
+          "description": "Team Re-rolls gained for the next Drive only (Count Luthor von Drakenborg, p.197): added when it starts.",
+          "type": "number"
+        },
+        "coachEjected": {
+          "description": "Argue the Call rolled a 1 in a practice position (match play records it in MatchState.coachEjected).",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "color",
+        "accent",
+        "rerolls",
+        "leaderReroll",
+        "score",
+        "turn"
+      ],
+      "additionalProperties": false
+    },
+    "TurnState": {
+      "type": "object",
+      "properties": {
+        "active": {
+          "$ref": "#/$defs/TeamId"
+        },
+        "half": {
+          "type": "number",
+          "enum": [
+            1,
+            2
+          ]
+        },
+        "used": {
+          "type": "object",
+          "properties": {
+            "blitz": {
+              "type": "boolean"
+            },
+            "pass": {
+              "type": "boolean"
+            },
+            "handoff": {
+              "type": "boolean"
+            },
+            "foul": {
+              "type": "boolean"
+            },
+            "secure": {
+              "type": "boolean"
+            },
+            "ttm": {
+              "type": "boolean"
+            },
+            "bomb": {
+              "description": "One Throw Bomb, Punt and Kick Team-mate Special Action per Turn (p.125, p.134, p.130).",
+              "type": "boolean"
+            },
+            "punt": {
+              "type": "boolean"
+            },
+            "ktm": {
+              "type": "boolean"
+            },
+            "foulBy": {
+              "description": "Players who declared a Foul Action this Turn (the Black Gobbo allows two, p.196).",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "blitz",
+            "pass",
+            "handoff",
+            "foul",
+            "secure",
+            "ttm"
+          ],
+          "additionalProperties": false
+        },
+        "stunnedAtStart": {
+          "description": "Ids of active-team players that started this turn Stunned (they roll over at turn end, p.39).",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "activation": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/Activation"
+            }
+          ]
+        },
+        "betweenTurns": {
+          "description": "A Turn has just ended and the next one has not begun yet (no player activated): the moment \"at the end of any\nTurn, before the next Turn begins\" when a Sports-Wizard may cast (p.149). Also true after the last Turn of a\nDrive (Touchdown / end of the half) until the next Drive.",
+          "type": "boolean"
+        },
+        "wizardDeclined": {
+          "description": "Teams whose (computer) coach decided not to cast their Wizard in this gap between Turns.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/TeamId"
+          }
+        }
+      },
+      "required": [
+        "active",
+        "half",
+        "used",
+        "stunnedAtStart",
+        "activation"
+      ],
+      "additionalProperties": false
+    },
+    "Variant": {
+      "description": "Game variant: standard Blood Bowl, or Blood Bowl Sevens (Spike! Journal 22; see variant.ts).",
+      "type": "string",
+      "enum": [
+        "standard",
+        "sevens"
+      ]
+    },
+    "Weather": {
+      "type": "string",
+      "enum": [
+        "perfect",
+        "verySunny",
+        "pouringRain",
+        "blizzard",
+        "swelteringHeat"
+      ]
+    }
+  }
+}

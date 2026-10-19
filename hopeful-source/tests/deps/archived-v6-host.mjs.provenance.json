@@ -1,0 +1,17 @@
+{
+  "schema": "hopeful-pinned-host-source-rebuild/1",
+  "baselineHostSha256": "c1173d9e4bad0b40d4c82893cee96d730fa8a37553dae6a7aa5ec8ca59a2a54e",
+  "outputSha256": "665e7fc4e5825ad633c767b929270a9eb6bac1bc661daff0baefe72832703fc2",
+  "outputBytes": 972800,
+  "source": "V6 5297f51 with authorized minimal platform explore outcome identity repair",
+  "outcomeIdentity": "complete-state-v1",
+  "fingerprint": {
+    "version": "6.0.0-dev",
+    "engineHash": "c67a6dff7e0f0181c7fa32c05bb7a66fd1ee51f8ed574ffcb8a9a7e63efc2b96",
+    "rulesHash": "f30d05d600c9d94909a87b731dbb4608b371bcc13aa488b56cb1761b78341b54",
+    "apiHash": "517297804b7a6141574e5694b0fb780a78d67588aff8bfee7ad8e5b630561eba",
+    "saveFormatVersion": 2,
+    "aiApiVersion": "2.0"
+  },
+  "scope": "Source-rebuilt runtime, not the original unmodified archive. Engine/rules unchanged; public continuation state grouping fixed."
+}

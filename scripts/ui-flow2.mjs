@@ -1,0 +1,20 @@
+import { open, clickSq, waitPlan, gameJSON } from './ui-helpers.mjs';
+const { browser, page, errors } = await open();
+await clickSq(page, 17, 7);
+await page.getByRole('button', { name: 'Move', exact: true }).click();
+for (const [x, y] of [[18,7],[19,7],[20,7],[21,7],[22,7],[23,7],[24,6],[25,5]]) await clickSq(page, x, y);
+await waitPlan(page);
+await page.screenshot({ path: 'build/shots/05-plan2.png' });
+await page.getByRole('button', { name: /Review probabilities/ }).click();
+await page.waitForTimeout(100);
+// scroll side panel to bottom for screenshot of outcomes
+await page.evaluate(() => { const s = document.querySelector('.side'); s.scrollTop = 400; });
+await page.screenshot({ path: 'build/shots/06-review2.png' });
+const beforeRng = await page.evaluate(() => window.bloodboard.game.rng.counter);
+await page.getByRole('button', { name: 'Confirm & roll dice' }).click();
+await page.waitForTimeout(200);
+await page.screenshot({ path: 'build/shots/07-after-confirm.png' });
+const st = await page.evaluate(() => ({ pending: !!window.bloodboard.game.pending, req: window.bloodboard.game.pending?.request, rng: window.bloodboard.game.rng.counter, log: window.bloodboard.game.log.length }));
+console.log(JSON.stringify({ beforeRng, ...st }, null, 1));
+console.log(JSON.stringify(errors));
+await browser.close();

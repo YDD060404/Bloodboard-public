@@ -1,0 +1,11 @@
+{
+  "schema": "hopeful-portable-report/1",
+  "version": "2.2.6",
+  "bundleSha256": "12f0a784bb2c8d9bd35ab2d3caa042ddf6151ad7c8a6d9286dad6e97b3742eda",
+  "tests": 141,
+  "passed": 141,
+  "failed": 0,
+  "skipped": 0,
+  "host": "Pinned archived real compiled V6, not a fresh source rebuild",
+  "freshSourceExecution": "not run; external V6 and esbuild required"
+}

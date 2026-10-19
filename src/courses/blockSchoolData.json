@@ -1,0 +1,4461 @@
+{
+ "source": "BB School of Block - English.pdf (unofficial fan-made workbook by Ferns / Richard F. J., bbsob.net)",
+ "exercises": [
+  {
+   "id": "L1E1",
+   "level": 1,
+   "number": 1,
+   "page": 2,
+   "strength": {},
+   "guard": [],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 5,
+   "rows": 5,
+   "question": "X2 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X2",
+   "defender": "Y1",
+   "workbookAnswer": "1D",
+   "answerPage": 29
+  },
+  {
+   "id": "L1E2",
+   "level": 1,
+   "number": 2,
+   "page": 2,
+   "strength": {},
+   "guard": [],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "X1",
+     "col": 1,
+     "row": 2
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 5,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "2D",
+   "answerPage": 29
+  },
+  {
+   "id": "L1E3",
+   "level": 1,
+   "number": 3,
+   "page": 2,
+   "strength": {},
+   "guard": [],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 5,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "2D",
+   "answerPage": 29
+  },
+  {
+   "id": "L1E4",
+   "level": 1,
+   "number": 4,
+   "page": 3,
+   "strength": {},
+   "guard": [],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "X4",
+     "col": 3,
+     "row": 1
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 5,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "2D",
+   "answerPage": 29
+  },
+  {
+   "id": "L1E5",
+   "level": 1,
+   "number": 5,
+   "page": 3,
+   "strength": {},
+   "guard": [],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "X4",
+     "col": 3,
+     "row": 1
+    },
+    {
+     "id": "X5",
+     "col": 1,
+     "row": 2
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 5,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "3D",
+   "answerPage": 29
+  },
+  {
+   "id": "L2E1",
+   "level": 2,
+   "number": 1,
+   "page": 3,
+   "strength": {},
+   "guard": [],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "Y2",
+     "col": 3,
+     "row": 1
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 5,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "1D",
+   "answerPage": 30
+  },
+  {
+   "id": "L2E2",
+   "level": 2,
+   "number": 2,
+   "page": 4,
+   "strength": {},
+   "guard": [],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "Y2",
+     "col": 3,
+     "row": 1
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 5,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "2D",
+   "answerPage": 30
+  },
+  {
+   "id": "L2E3",
+   "level": 2,
+   "number": 3,
+   "page": 4,
+   "strength": {},
+   "guard": [],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "Y2",
+     "col": 3,
+     "row": 1
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 5,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "2D",
+   "answerPage": 30
+  },
+  {
+   "id": "L2E4",
+   "level": 2,
+   "number": 4,
+   "page": 4,
+   "strength": {},
+   "guard": [],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "Y2",
+     "col": 3,
+     "row": 1
+    },
+    {
+     "id": "X4",
+     "col": 1,
+     "row": 2
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 5,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "2D",
+   "answerPage": 30
+  },
+  {
+   "id": "L2E5",
+   "level": 2,
+   "number": 5,
+   "page": 5,
+   "strength": {},
+   "guard": [],
+   "cells": [
+    {
+     "id": "Y2",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "X2",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 3,
+     "row": 1
+    },
+    {
+     "id": "X4",
+     "col": 1,
+     "row": 2
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "X5",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "Y3",
+     "col": 4,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 6,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "1D",
+   "answerPage": 31
+  },
+  {
+   "id": "L2E6",
+   "level": 2,
+   "number": 6,
+   "page": 5,
+   "strength": {},
+   "guard": [],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 3,
+     "row": 1
+    },
+    {
+     "id": "Y2",
+     "col": 4,
+     "row": 1
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 5,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "2D",
+   "answerPage": 31
+  },
+  {
+   "id": "L2E7",
+   "level": 2,
+   "number": 7,
+   "page": 5,
+   "strength": {},
+   "guard": [],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 3,
+     "row": 1
+    },
+    {
+     "id": "Y2",
+     "col": 4,
+     "row": 1
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "Y3",
+     "col": 1,
+     "row": 3
+    },
+    {
+     "id": "X4",
+     "col": 2,
+     "row": 3
+    },
+    {
+     "id": "X1",
+     "col": 3,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 6,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "2D",
+   "answerPage": 31
+  },
+  {
+   "id": "L2E8",
+   "level": 2,
+   "number": 8,
+   "page": 6,
+   "strength": {},
+   "guard": [],
+   "cells": [
+    {
+     "id": "Y2",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "X2",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 3,
+     "row": 1
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    },
+    {
+     "id": "Y3",
+     "col": 3,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 5,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "1D",
+   "answerPage": 31
+  },
+  {
+   "id": "L2E9",
+   "level": 2,
+   "number": 9,
+   "page": 6,
+   "strength": {},
+   "guard": [],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 3,
+     "row": 1
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "Y2",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "X4",
+     "col": 1,
+     "row": 3
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 6,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "2D",
+   "answerPage": 32
+  },
+  {
+   "id": "L2E10",
+   "level": 2,
+   "number": 10,
+   "page": 6,
+   "strength": {},
+   "guard": [],
+   "cells": [
+    {
+     "id": "Y2",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "X2",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 3,
+     "row": 1
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "Y3",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "X4",
+     "col": 1,
+     "row": 3
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 6,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "2D",
+   "answerPage": 32
+  },
+  {
+   "id": "L3E1",
+   "level": 3,
+   "number": 1,
+   "page": 7,
+   "strength": {},
+   "guard": [],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 3,
+     "row": 1
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "Y2",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 6,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "1D",
+   "answerPage": 33
+  },
+  {
+   "id": "L3E2",
+   "level": 3,
+   "number": 2,
+   "page": 7,
+   "strength": {},
+   "guard": [],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    },
+    {
+     "id": "Y2",
+     "col": 3,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 6,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "1D",
+   "answerPage": 33
+  },
+  {
+   "id": "L3E3",
+   "level": 3,
+   "number": 3,
+   "page": 7,
+   "strength": {},
+   "guard": [],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    },
+    {
+     "id": "Y2",
+     "col": 3,
+     "row": 3
+    },
+    {
+     "id": "Y3",
+     "col": 4,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 6,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "2D",
+   "answerPage": 33
+  },
+  {
+   "id": "L3E4",
+   "level": 3,
+   "number": 4,
+   "page": 8,
+   "strength": {},
+   "guard": [],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "Y2",
+     "col": 3,
+     "row": 1
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "X3",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "X4",
+     "col": 1,
+     "row": 3
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    },
+    {
+     "id": "Y3",
+     "col": 3,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 6,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "2D",
+   "answerPage": 33
+  },
+  {
+   "id": "L3E5",
+   "level": 3,
+   "number": 5,
+   "page": 8,
+   "strength": {},
+   "guard": [],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "Y2",
+     "col": 3,
+     "row": 1
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "X3",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "X4",
+     "col": 1,
+     "row": 3
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    },
+    {
+     "id": "Y3",
+     "col": 4,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 6,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "2D",
+   "answerPage": 34
+  },
+  {
+   "id": "L3E6",
+   "level": 3,
+   "number": 6,
+   "page": 8,
+   "strength": {},
+   "guard": [],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "Y2",
+     "col": 3,
+     "row": 1
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "X3",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "X4",
+     "col": 1,
+     "row": 3
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    },
+    {
+     "id": "Y3",
+     "col": 3,
+     "row": 3
+    },
+    {
+     "id": "Y4",
+     "col": 2,
+     "row": 4
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 6,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "2D",
+   "answerPage": 34
+  },
+  {
+   "id": "L3E7",
+   "level": 3,
+   "number": 7,
+   "page": 9,
+   "strength": {},
+   "guard": [],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "Y2",
+     "col": 3,
+     "row": 1
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "X3",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "X4",
+     "col": 1,
+     "row": 3
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    },
+    {
+     "id": "Y3",
+     "col": 4,
+     "row": 3
+    },
+    {
+     "id": "Y4",
+     "col": 3,
+     "row": 4
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 6,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "2D",
+   "answerPage": 34
+  },
+  {
+   "id": "L3E8",
+   "level": 3,
+   "number": 8,
+   "page": 9,
+   "strength": {},
+   "guard": [],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "Y2",
+     "col": 3,
+     "row": 1
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "X3",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "X4",
+     "col": 1,
+     "row": 3
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    },
+    {
+     "id": "Y3",
+     "col": 3,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 6,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "2D",
+   "answerPage": 34
+  },
+  {
+   "id": "L3E9",
+   "level": 3,
+   "number": 9,
+   "page": 9,
+   "strength": {},
+   "guard": [],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "Y2",
+     "col": 3,
+     "row": 1
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "X3",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "X4",
+     "col": 1,
+     "row": 3
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    },
+    {
+     "id": "Y3",
+     "col": 4,
+     "row": 3
+    },
+    {
+     "id": "Y4",
+     "col": 2,
+     "row": 4
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 6,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "2D",
+   "answerPage": 35
+  },
+  {
+   "id": "L3E10",
+   "level": 3,
+   "number": 10,
+   "page": 10,
+   "strength": {},
+   "guard": [],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "Y2",
+     "col": 3,
+     "row": 1
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "X3",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "X4",
+     "col": 1,
+     "row": 3
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    },
+    {
+     "id": "Y3",
+     "col": 3,
+     "row": 3
+    },
+    {
+     "id": "Y4",
+     "col": 3,
+     "row": 4
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 6,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "2D",
+   "answerPage": 35
+  },
+  {
+   "id": "L4E1",
+   "level": 4,
+   "number": 1,
+   "page": 10,
+   "strength": {
+    "X1": 4
+   },
+   "guard": [],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    },
+    {
+     "id": "Y2",
+     "col": 3,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 5,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "2D",
+   "answerPage": 36
+  },
+  {
+   "id": "L4E2",
+   "level": 4,
+   "number": 2,
+   "page": 10,
+   "strength": {
+    "X1": 3,
+    "Y1": 4
+   },
+   "guard": [],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 5,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "1D",
+   "answerPage": 36
+  },
+  {
+   "id": "L4E3",
+   "level": 4,
+   "number": 3,
+   "page": 11,
+   "strength": {
+    "X1": 3,
+    "Y1": 4
+   },
+   "guard": [],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    },
+    {
+     "id": "Y2",
+     "col": 3,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 5,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "-2D",
+   "answerPage": 36
+  },
+  {
+   "id": "L4E4",
+   "level": 4,
+   "number": 4,
+   "page": 11,
+   "strength": {
+    "X1": 3,
+    "Y1": 4
+   },
+   "guard": [],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    },
+    {
+     "id": "Y2",
+     "col": 3,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 5,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "1D",
+   "answerPage": 36
+  },
+  {
+   "id": "L4E5",
+   "level": 4,
+   "number": 5,
+   "page": 11,
+   "strength": {
+    "X1": 5,
+    "Y1": 3
+   },
+   "guard": [],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    },
+    {
+     "id": "Y2",
+     "col": 3,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 5,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "2D",
+   "answerPage": 36
+  },
+  {
+   "id": "L4E6",
+   "level": 4,
+   "number": 6,
+   "page": 12,
+   "strength": {
+    "X1": 5,
+    "Y1": 3
+   },
+   "guard": [],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    },
+    {
+     "id": "Y2",
+     "col": 3,
+     "row": 4
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 5,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "2D",
+   "answerPage": 37
+  },
+  {
+   "id": "L4E7",
+   "level": 4,
+   "number": 7,
+   "page": 12,
+   "strength": {
+    "X1": 5,
+    "Y1": 3
+   },
+   "guard": [],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    },
+    {
+     "id": "Y2",
+     "col": 4,
+     "row": 4
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 5,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "3D",
+   "answerPage": 37
+  },
+  {
+   "id": "L4E8",
+   "level": 4,
+   "number": 8,
+   "page": 12,
+   "strength": {
+    "X1": 2,
+    "Y1": 5
+   },
+   "guard": [],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    },
+    {
+     "id": "Y2",
+     "col": 3,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 5,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "-2D",
+   "answerPage": 37
+  },
+  {
+   "id": "L4E9",
+   "level": 4,
+   "number": 9,
+   "page": 13,
+   "strength": {
+    "X1": 4,
+    "Y1": 2
+   },
+   "guard": [],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "Y2",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 5,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "3D",
+   "answerPage": 37
+  },
+  {
+   "id": "L4E10",
+   "level": 4,
+   "number": 10,
+   "page": 13,
+   "strength": {
+    "X1": 3,
+    "Y1": 5
+   },
+   "guard": [],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "Y2",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 5,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "-2D",
+   "answerPage": 37
+  },
+  {
+   "id": "L5E1",
+   "level": 5,
+   "number": 1,
+   "page": 13,
+   "strength": {},
+   "guard": [
+    "X2"
+   ],
+   "cells": [
+    {
+     "id": "Y2",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "X2",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 5,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "2D",
+   "answerPage": 38
+  },
+  {
+   "id": "L5E2",
+   "level": 5,
+   "number": 2,
+   "page": 14,
+   "strength": {},
+   "guard": [
+    "Y2"
+   ],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "Y2",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    },
+    {
+     "id": "X3",
+     "col": 3,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 5,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "-2D",
+   "answerPage": 38
+  },
+  {
+   "id": "L5E3",
+   "level": 5,
+   "number": 3,
+   "page": 14,
+   "strength": {},
+   "guard": [
+    "Y2"
+   ],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "Y2",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    },
+    {
+     "id": "X3",
+     "col": 3,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 5,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "1D",
+   "answerPage": 38
+  },
+  {
+   "id": "L5E4",
+   "level": 5,
+   "number": 4,
+   "page": 14,
+   "strength": {},
+   "guard": [
+    "X3"
+   ],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "Y2",
+     "col": 3,
+     "row": 1
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "X3",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    },
+    {
+     "id": "Y3",
+     "col": 3,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 5,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "2D",
+   "answerPage": 38
+  },
+  {
+   "id": "L5E5",
+   "level": 5,
+   "number": 5,
+   "page": 15,
+   "strength": {},
+   "guard": [
+    "X2",
+    "Y2"
+   ],
+   "cells": [
+    {
+     "id": "Y3",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "X2",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "Y2",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "X3",
+     "col": 1,
+     "row": 3
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 5,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "2D",
+   "answerPage": 38
+  },
+  {
+   "id": "L5E6",
+   "level": 5,
+   "number": 6,
+   "page": 15,
+   "strength": {},
+   "guard": [
+    "X2",
+    "Y2"
+   ],
+   "cells": [
+    {
+     "id": "Y3",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "X2",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 3,
+     "row": 1
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "Y2",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "X4",
+     "col": 1,
+     "row": 3
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 5,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "2D",
+   "answerPage": 39
+  },
+  {
+   "id": "L5E7",
+   "level": 5,
+   "number": 7,
+   "page": 15,
+   "strength": {},
+   "guard": [
+    "X3",
+    "Y2"
+   ],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 3,
+     "row": 1
+    },
+    {
+     "id": "Y3",
+     "col": 4,
+     "row": 1
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "Y2",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "X4",
+     "col": 1,
+     "row": 3
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 6,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "2D",
+   "answerPage": 39
+  },
+  {
+   "id": "L5E8",
+   "level": 5,
+   "number": 8,
+   "page": 16,
+   "strength": {},
+   "guard": [
+    "X2",
+    "Y2",
+    "Y3"
+   ],
+   "cells": [
+    {
+     "id": "Y4",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "X2",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 3,
+     "row": 1
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "Y2",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    },
+    {
+     "id": "Y3",
+     "col": 3,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 5,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "-2D",
+   "answerPage": 39
+  },
+  {
+   "id": "L5E9",
+   "level": 5,
+   "number": 9,
+   "page": 16,
+   "strength": {},
+   "guard": [
+    "X2",
+    "X3",
+    "Y2"
+   ],
+   "cells": [
+    {
+     "id": "Y3",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "X2",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 3,
+     "row": 1
+    },
+    {
+     "id": "X4",
+     "col": 1,
+     "row": 2
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "Y2",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 5,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "2D",
+   "answerPage": 39
+  },
+  {
+   "id": "L5E10",
+   "level": 5,
+   "number": 10,
+   "page": 16,
+   "strength": {},
+   "guard": [
+    "X2",
+    "Y2"
+   ],
+   "cells": [
+    {
+     "id": "Y3",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "X2",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 3,
+     "row": 1
+    },
+    {
+     "id": "X4",
+     "col": 1,
+     "row": 2
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "Y2",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    },
+    {
+     "id": "X5",
+     "col": 3,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 5,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "1D",
+   "answerPage": 40
+  },
+  {
+   "id": "L5E11",
+   "level": 5,
+   "number": 11,
+   "page": 17,
+   "strength": {},
+   "guard": [
+    "X3",
+    "Y3"
+   ],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "Y2",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 3,
+     "row": 1
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "X4",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "X5",
+     "col": 1,
+     "row": 3
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    },
+    {
+     "id": "Y3",
+     "col": 3,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 5,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "2D",
+   "answerPage": 40
+  },
+  {
+   "id": "L5E12",
+   "level": 5,
+   "number": 12,
+   "page": 17,
+   "strength": {},
+   "guard": [
+    "X2",
+    "X3",
+    "Y3"
+   ],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "Y2",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 3,
+     "row": 1
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "X4",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "X5",
+     "col": 1,
+     "row": 3
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    },
+    {
+     "id": "Y3",
+     "col": 3,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 5,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "2D",
+   "answerPage": 40
+  },
+  {
+   "id": "L5E13",
+   "level": 5,
+   "number": 13,
+   "page": 17,
+   "strength": {},
+   "guard": [
+    "X2",
+    "X4",
+    "Y3"
+   ],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "Y2",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 3,
+     "row": 1
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "X4",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "X5",
+     "col": 1,
+     "row": 3
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    },
+    {
+     "id": "Y3",
+     "col": 3,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 5,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "2D",
+   "answerPage": 40
+  },
+  {
+   "id": "L5E14",
+   "level": 5,
+   "number": 14,
+   "page": 18,
+   "strength": {},
+   "guard": [
+    "X2",
+    "Y3"
+   ],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "Y2",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 1,
+     "row": 2
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "X4",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    },
+    {
+     "id": "Y3",
+     "col": 3,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 5,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "1D",
+   "answerPage": 41
+  },
+  {
+   "id": "L5E15",
+   "level": 5,
+   "number": 15,
+   "page": 18,
+   "strength": {},
+   "guard": [
+    "X3",
+    "Y2"
+   ],
+   "cells": [
+    {
+     "id": "Y3",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "X2",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 3,
+     "row": 1
+    },
+    {
+     "id": "X4",
+     "col": 1,
+     "row": 2
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "Y2",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 5,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "1D",
+   "answerPage": 41
+  },
+  {
+   "id": "L6E1",
+   "level": 6,
+   "number": 1,
+   "page": 18,
+   "strength": {
+    "X3": 4,
+    "Y3": 4
+   },
+   "guard": [
+    "X3",
+    "Y3"
+   ],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "Y2",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 3,
+     "row": 1
+    },
+    {
+     "id": "X4",
+     "col": 1,
+     "row": 2
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "Y3",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "X5",
+     "col": 4,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    },
+    {
+     "id": "Y5",
+     "col": 3,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 7,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "1D",
+   "answerPage": 42
+  },
+  {
+   "id": "L6E2",
+   "level": 6,
+   "number": 2,
+   "page": 19,
+   "strength": {
+    "X1": 4,
+    "Y3": 4
+   },
+   "guard": [
+    "X2",
+    "Y3"
+   ],
+   "cells": [
+    {
+     "id": "Y4",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "X2",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 3,
+     "row": 1
+    },
+    {
+     "id": "X4",
+     "col": 1,
+     "row": 2
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "Y3",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "X5",
+     "col": 4,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    },
+    {
+     "id": "Y5",
+     "col": 3,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 7,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "2D",
+   "answerPage": 42
+  },
+  {
+   "id": "L6E3",
+   "level": 6,
+   "number": 3,
+   "page": 19,
+   "strength": {
+    "X3": 4,
+    "Y1": 4
+   },
+   "guard": [
+    "X3",
+    "Y2"
+   ],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "Y4",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 3,
+     "row": 1
+    },
+    {
+     "id": "Y5",
+     "col": 1,
+     "row": 2
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "Y2",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "X4",
+     "col": 4,
+     "row": 2
+    },
+    {
+     "id": "X5",
+     "col": 1,
+     "row": 3
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    },
+    {
+     "id": "Y3",
+     "col": 3,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 7,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "-2D",
+   "answerPage": 42
+  },
+  {
+   "id": "L6E4",
+   "level": 6,
+   "number": 4,
+   "page": 19,
+   "strength": {
+    "X1": 4,
+    "Y3": 4
+   },
+   "guard": [
+    "X3",
+    "Y3"
+   ],
+   "cells": [
+    {
+     "id": "Y4",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "X2",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 3,
+     "row": 1
+    },
+    {
+     "id": "Y2",
+     "col": 4,
+     "row": 1
+    },
+    {
+     "id": "X4",
+     "col": 1,
+     "row": 2
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "Y3",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "X5",
+     "col": 4,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    },
+    {
+     "id": "Y5",
+     "col": 3,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 7,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "2D",
+   "answerPage": 43
+  },
+  {
+   "id": "L6E5",
+   "level": 6,
+   "number": 5,
+   "page": 20,
+   "strength": {
+    "X1": 2,
+    "Y1": 4,
+    "X3": 4
+   },
+   "guard": [
+    "X3",
+    "Y3"
+   ],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "Y2",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 3,
+     "row": 1
+    },
+    {
+     "id": "Y4",
+     "col": 4,
+     "row": 1
+    },
+    {
+     "id": "X4",
+     "col": 1,
+     "row": 2
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "Y3",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "X5",
+     "col": 4,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    },
+    {
+     "id": "Y5",
+     "col": 3,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 7,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "-2D",
+   "answerPage": 43
+  },
+  {
+   "id": "L6E6",
+   "level": 6,
+   "number": 6,
+   "page": 20,
+   "strength": {
+    "X1": 5,
+    "Y3": 4
+   },
+   "guard": [
+    "X3",
+    "Y3"
+   ],
+   "cells": [
+    {
+     "id": "Y4",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "X2",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 3,
+     "row": 1
+    },
+    {
+     "id": "Y2",
+     "col": 4,
+     "row": 1
+    },
+    {
+     "id": "X4",
+     "col": 1,
+     "row": 2
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "Y3",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "X5",
+     "col": 4,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    },
+    {
+     "id": "Y5",
+     "col": 3,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 7,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "2D",
+   "answerPage": 43
+  },
+  {
+   "id": "L6E7",
+   "level": 6,
+   "number": 7,
+   "page": 20,
+   "strength": {
+    "X1": 4,
+    "Y1": 4
+   },
+   "guard": [
+    "X2",
+    "Y3"
+   ],
+   "cells": [
+    {
+     "id": "Y4",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "X2",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "Y2",
+     "col": 3,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 4,
+     "row": 1
+    },
+    {
+     "id": "X4",
+     "col": 1,
+     "row": 2
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "X5",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "Y3",
+     "col": 4,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    },
+    {
+     "id": "Y5",
+     "col": 3,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 7,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "2D",
+   "answerPage": 44
+  },
+  {
+   "id": "L6E8",
+   "level": 6,
+   "number": 8,
+   "page": 21,
+   "strength": {
+    "X1": 4
+   },
+   "guard": [
+    "X3",
+    "Y2"
+   ],
+   "cells": [
+    {
+     "id": "Y4",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "X2",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 3,
+     "row": 1
+    },
+    {
+     "id": "Y2",
+     "col": 4,
+     "row": 1
+    },
+    {
+     "id": "X4",
+     "col": 1,
+     "row": 2
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "Y3",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "X5",
+     "col": 4,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    },
+    {
+     "id": "Y5",
+     "col": 3,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 7,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "2D",
+   "answerPage": 44
+  },
+  {
+   "id": "L6E9",
+   "level": 6,
+   "number": 9,
+   "page": 21,
+   "strength": {
+    "X1": 5,
+    "Y1": 2,
+    "Y4": 4
+   },
+   "guard": [
+    "X4",
+    "Y3"
+   ],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "Y2",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 3,
+     "row": 1
+    },
+    {
+     "id": "Y4",
+     "col": 4,
+     "row": 1
+    },
+    {
+     "id": "X4",
+     "col": 1,
+     "row": 2
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "Y3",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "X5",
+     "col": 4,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    },
+    {
+     "id": "Y5",
+     "col": 3,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 7,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "2D",
+   "answerPage": 44
+  },
+  {
+   "id": "L6E10",
+   "level": 6,
+   "number": 10,
+   "page": 21,
+   "strength": {
+    "X1": 5,
+    "Y1": 2
+   },
+   "guard": [
+    "X3",
+    "X4"
+   ],
+   "cells": [
+    {
+     "id": "Y4",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "X2",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 3,
+     "row": 1
+    },
+    {
+     "id": "Y2",
+     "col": 4,
+     "row": 1
+    },
+    {
+     "id": "X4",
+     "col": 1,
+     "row": 2
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "Y3",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "X5",
+     "col": 4,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    },
+    {
+     "id": "Y5",
+     "col": 4,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 7,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "3D",
+   "answerPage": 45
+  },
+  {
+   "id": "L6E11",
+   "level": 6,
+   "number": 11,
+   "page": 22,
+   "strength": {
+    "Y1": 5,
+    "Y3": 4
+   },
+   "guard": [
+    "X2",
+    "Y3",
+    "Y5"
+   ],
+   "cells": [
+    {
+     "id": "Y4",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "X2",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "Y2",
+     "col": 3,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 4,
+     "row": 1
+    },
+    {
+     "id": "X4",
+     "col": 1,
+     "row": 2
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "Y3",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "X5",
+     "col": 4,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    },
+    {
+     "id": "Y5",
+     "col": 3,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 7,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "-2D",
+   "answerPage": 45
+  },
+  {
+   "id": "L6E12",
+   "level": 6,
+   "number": 12,
+   "page": 22,
+   "strength": {
+    "X1": 4,
+    "Y1": 4
+   },
+   "guard": [
+    "X3",
+    "Y2"
+   ],
+   "cells": [
+    {
+     "id": "Y4",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "X2",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 3,
+     "row": 1
+    },
+    {
+     "id": "Y2",
+     "col": 4,
+     "row": 1
+    },
+    {
+     "id": "X4",
+     "col": 1,
+     "row": 2
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "Y3",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "X5",
+     "col": 4,
+     "row": 2
+    },
+    {
+     "id": "X6",
+     "col": 1,
+     "row": 3
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    },
+    {
+     "id": "Y5",
+     "col": 3,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 7,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "2D",
+   "answerPage": 45
+  },
+  {
+   "id": "L6E13",
+   "level": 6,
+   "number": 13,
+   "page": 22,
+   "strength": {
+    "X1": 4,
+    "Y5": 4
+   },
+   "guard": [
+    "X2",
+    "Y5"
+   ],
+   "cells": [
+    {
+     "id": "Y4",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "X2",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "Y2",
+     "col": 3,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 4,
+     "row": 1
+    },
+    {
+     "id": "X4",
+     "col": 1,
+     "row": 2
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "X5",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "Y3",
+     "col": 4,
+     "row": 2
+    },
+    {
+     "id": "X6",
+     "col": 1,
+     "row": 3
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    },
+    {
+     "id": "Y5",
+     "col": 3,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 7,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "2D",
+   "answerPage": 45
+  },
+  {
+   "id": "L6E14",
+   "level": 6,
+   "number": 14,
+   "page": 23,
+   "strength": {
+    "Y1": 4
+   },
+   "guard": [
+    "X3",
+    "X5",
+    "Y3"
+   ],
+   "cells": [
+    {
+     "id": "Y4",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "X2",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 3,
+     "row": 1
+    },
+    {
+     "id": "Y2",
+     "col": 4,
+     "row": 1
+    },
+    {
+     "id": "X4",
+     "col": 1,
+     "row": 2
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "Y3",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "X5",
+     "col": 4,
+     "row": 2
+    },
+    {
+     "id": "X6",
+     "col": 1,
+     "row": 3
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    },
+    {
+     "id": "Y5",
+     "col": 3,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 7,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "1D",
+   "answerPage": 46
+  },
+  {
+   "id": "L6E15",
+   "level": 6,
+   "number": 15,
+   "page": 23,
+   "strength": {
+    "X1": 4,
+    "Y1": 4,
+    "Y4": 5
+   },
+   "guard": [
+    "X2",
+    "X5",
+    "Y3",
+    "Y5"
+   ],
+   "cells": [
+    {
+     "id": "Y4",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "X2",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "Y2",
+     "col": 3,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 4,
+     "row": 1
+    },
+    {
+     "id": "X4",
+     "col": 1,
+     "row": 2
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "Y3",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "X5",
+     "col": 4,
+     "row": 2
+    },
+    {
+     "id": "X6",
+     "col": 1,
+     "row": 3
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    },
+    {
+     "id": "Y5",
+     "col": 3,
+     "row": 3
+    },
+    {
+     "id": "X7",
+     "col": 4,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 7,
+   "rows": 5,
+   "question": "X1 blocks Y1. How many Block dice?",
+   "kind": "count",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "1D",
+   "answerPage": 46
+  },
+  {
+   "id": "L7E1",
+   "level": 7,
+   "number": 1,
+   "page": 23,
+   "strength": {},
+   "guard": [
+    "X3"
+   ],
+   "cells": [
+    {
+     "id": "X3",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "Y2",
+     "col": 3,
+     "row": 1
+    },
+    {
+     "id": "X2",
+     "col": 1,
+     "row": 2
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 7,
+   "rows": 5,
+   "question": "You may make one normal Move with X2 before the block. The goal is a 2D block for X1. Where do you move X2?",
+   "kind": "setup",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "B3",
+   "answerPage": 47
+  },
+  {
+   "id": "L7E2",
+   "level": 7,
+   "number": 2,
+   "page": 24,
+   "strength": {},
+   "guard": [],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "Y2",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 1,
+     "row": 2
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "X4",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 7,
+   "rows": 5,
+   "question": "You ultimately want X1 on C4 to block Y1 on C3 with 2D. You must first make one block with X3. Who should X3 block first?",
+   "kind": "setup",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "Y2",
+   "answerPage": 47
+  },
+  {
+   "id": "L7E3",
+   "level": 7,
+   "number": 3,
+   "page": 24,
+   "strength": {},
+   "guard": [],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "Y2",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "Y3",
+     "col": 1,
+     "row": 2
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "X3",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "X4",
+     "col": 1,
+     "row": 3
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 7,
+   "rows": 5,
+   "question": "The goal is for X1 on C4 to block Y1 on C3 with 2D. You must first make one block with X2. Who should X2 block first?",
+   "kind": "setup",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "Y2",
+   "answerPage": 47
+  },
+  {
+   "id": "L7E4",
+   "level": 7,
+   "number": 4,
+   "page": 24,
+   "strength": {},
+   "guard": [
+    "X3"
+   ],
+   "cells": [
+    {
+     "id": "Y3",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "X2",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "Y2",
+     "col": 3,
+     "row": 1
+    },
+    {
+     "id": "X4",
+     "col": 1,
+     "row": 2
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "X3",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 7,
+   "rows": 5,
+   "question": "You may move exactly one player exactly one square before the block: X2 or X4. The goal is to create a 2D block for X1. Which player do you move, and to which square?",
+   "kind": "setup",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "X4 -> B4",
+   "answerPage": 47
+  },
+  {
+   "id": "L7E5",
+   "level": 7,
+   "number": 5,
+   "page": 25,
+   "strength": {},
+   "guard": [],
+   "cells": [
+    {
+     "id": "Y2",
+     "col": 3,
+     "row": 1
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "X2",
+     "col": 1,
+     "row": 3
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 7,
+   "rows": 5,
+   "question": "X2 is on B4. You may move X2 exactly one square before the block. The goal is to create a 2D block for X1. Where do you move X2?",
+   "kind": "setup",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "B3",
+   "answerPage": 47
+  },
+  {
+   "id": "L7E6",
+   "level": 7,
+   "number": 6,
+   "page": 25,
+   "strength": {},
+   "guard": [
+    "X3"
+   ],
+   "cells": [
+    {
+     "id": "Y3",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "Y2",
+     "col": 3,
+     "row": 1
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "X2",
+     "col": 1,
+     "row": 3
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 7,
+   "rows": 5,
+   "question": "You may make one normal Move with X2 before the block. The goal is a 2D block for X1. Where do you move X2?",
+   "kind": "setup",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "B3",
+   "answerPage": 47
+  },
+  {
+   "id": "L7E7",
+   "level": 7,
+   "number": 7,
+   "page": 25,
+   "strength": {},
+   "guard": [],
+   "cells": [
+    {
+     "id": "X3",
+     "col": 1,
+     "row": 2
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "Y2",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    },
+    {
+     "id": "X2",
+     "col": 4,
+     "row": 4
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 7,
+   "rows": 5,
+   "question": "Right now, X3 gives one offensive assist, Y2 gives one defensive assist, and X1's block is 1D. You may move X2 exactly one square before the block. The goal is a 2D block for X1. Where do you move X2?",
+   "kind": "setup",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "D4",
+   "answerPage": 48
+  },
+  {
+   "id": "L7E8",
+   "level": 7,
+   "number": 8,
+   "page": 26,
+   "strength": {},
+   "guard": [
+    "X2"
+   ],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 4,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 1,
+     "row": 2
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "Y2",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 7,
+   "rows": 5,
+   "question": "X2 on E2 has Guard. You may move X2 exactly one square. The goal is a 2D block for X1 against Y1. Where do you move X2?",
+   "kind": "setup",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "E3",
+   "answerPage": 48
+  },
+  {
+   "id": "L7E9",
+   "level": 7,
+   "number": 9,
+   "page": 26,
+   "strength": {},
+   "guard": [
+    "X2"
+   ],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 3,
+     "row": 1
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "Y2",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 7,
+   "rows": 5,
+   "question": "Right now the block is -2D because Y2 assists Y1. You may move X2 exactly one square. The goal is a 2D block for X1. Where do you move X2?",
+   "kind": "setup",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "C2",
+   "answerPage": 48
+  },
+  {
+   "id": "L7E10",
+   "level": 7,
+   "number": 10,
+   "page": 26,
+   "strength": {},
+   "guard": [
+    "X3"
+   ],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "Y2",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 1,
+     "row": 2
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "Y3",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 7,
+   "rows": 5,
+   "question": "The final goal is for X1 on C4 to block Y1 on C3 with 2D. You must first make one block with X2. Who should X2 block first?",
+   "kind": "setup",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "Y2",
+   "answerPage": 48
+  },
+  {
+   "id": "L7E11",
+   "level": 7,
+   "number": 11,
+   "page": 27,
+   "strength": {},
+   "guard": [],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "Y2",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 1,
+     "row": 2
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "Y3",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "X4",
+     "col": 1,
+     "row": 3
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 7,
+   "rows": 5,
+   "question": "The final goal is X1 on C4 against Y1 on C3 with 2D. Before that, you may make one block with either X2 or X4. Which X-player should block first?",
+   "kind": "setup",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "X2",
+   "answerPage": 48
+  },
+  {
+   "id": "L7E12",
+   "level": 7,
+   "number": 12,
+   "page": 27,
+   "strength": {},
+   "guard": [],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "Y2",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 1,
+     "row": 2
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "Y3",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "X4",
+     "col": 4,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 7,
+   "rows": 5,
+   "question": "The final goal is X1 on C4 against Y1 on C3 with 2D. First, you may make one block with either X2, who can block Y2, or X4, who can block Y3. Which player do you block with first?",
+   "kind": "setup",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "X2",
+   "answerPage": 48
+  },
+  {
+   "id": "L7E13",
+   "level": 7,
+   "number": 13,
+   "page": 27,
+   "strength": {},
+   "guard": [],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "Y2",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 1,
+     "row": 2
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "Y3",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    },
+    {
+     "id": "X4",
+     "col": 3,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 7,
+   "rows": 5,
+   "question": "The goal is still for X1 on C4 to end with a 2D block on Y1 on C3. Before X1 blocks, you may make one other block with an X-player. Which opponent should you block first?",
+   "kind": "setup",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "Y2",
+   "answerPage": 48
+  },
+  {
+   "id": "L7E14",
+   "level": 7,
+   "number": 14,
+   "page": 28,
+   "strength": {},
+   "guard": [],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "Y2",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 1,
+     "row": 2
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "Y3",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    },
+    {
+     "id": "X4",
+     "col": 3,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 7,
+   "rows": 5,
+   "question": "The final goal is X1 on C4 against Y1 on C3 with 2D. Before X1 blocks, you may make one other block. You can choose to remove either Y2 or Y3 from the scrum with a suitable push. Which opponent do you block first?",
+   "kind": "setup",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "Y2",
+   "answerPage": 49
+  },
+  {
+   "id": "L7E15",
+   "level": 7,
+   "number": 15,
+   "page": 28,
+   "strength": {},
+   "guard": [],
+   "cells": [
+    {
+     "id": "X2",
+     "col": 1,
+     "row": 1
+    },
+    {
+     "id": "Y2",
+     "col": 2,
+     "row": 1
+    },
+    {
+     "id": "X3",
+     "col": 1,
+     "row": 2
+    },
+    {
+     "id": "Y1",
+     "col": 2,
+     "row": 2
+    },
+    {
+     "id": "Y3",
+     "col": 3,
+     "row": 2
+    },
+    {
+     "id": "X1",
+     "col": 2,
+     "row": 3
+    },
+    {
+     "id": "X4",
+     "col": 4,
+     "row": 3
+    }
+   ],
+   "notes": [],
+   "defaultST": 3,
+   "cols": 7,
+   "rows": 5,
+   "question": "X2 blocks Y2. Assume the Block die gives a normal Push. Where do you push Y2 so the following X1 -> Y1 block becomes 2D?",
+   "kind": "setup",
+   "attacker": "X1",
+   "defender": "Y1",
+   "workbookAnswer": "D1",
+   "answerPage": 49
+  }
+ ]
+}

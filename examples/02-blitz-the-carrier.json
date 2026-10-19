@@ -1,0 +1,432 @@
+{
+ "format": "bloodboard-position",
+ "version": 2,
+ "name": "Blitz the ball carrier",
+ "savedAt": "2026-09-25T00:00:00.000Z",
+ "notes": "Tomb Kings must stop a Bretonnian Knight Catcher: a Blitz with an assist gives 2 dice; a POW makes the ball bounce.",
+ "state": {
+  "format": "bloodboard-state",
+  "version": 1,
+  "phase": "play",
+  "rulesEdition": "faq2026",
+  "weather": "perfect",
+  "teams": {
+   "A": {
+    "id": "A",
+    "name": "Nehekhara Nightmares",
+    "rosterId": "tombKings",
+    "color": "#d9a82e",
+    "accent": "#1b2a3a",
+    "rerolls": 2,
+    "leaderReroll": false,
+    "score": 0,
+    "turn": 7
+   },
+   "B": {
+    "id": "B",
+    "name": "Brionne Barons",
+    "rosterId": "bretonnian",
+    "color": "#2451b3",
+    "accent": "#f5d77a",
+    "rerolls": 1,
+    "leaderReroll": false,
+    "score": 1,
+    "turn": 6
+   }
+  },
+  "players": [
+   {
+    "id": "A1",
+    "team": "A",
+    "number": 6,
+    "name": "Tomb Kings Blitzer",
+    "position": "Tomb Kings Blitzer",
+    "keywords": [
+     "Blitzer",
+     "Human",
+     "Skeleton",
+     "Undead"
+    ],
+    "ma": 6,
+    "st": 3,
+    "ag": 4,
+    "pa": 5,
+    "av": 9,
+    "skills": [
+     {
+      "id": "block"
+     },
+     {
+      "id": "regeneration"
+     },
+     {
+      "id": "thickSkull"
+     }
+    ],
+    "location": "pitch",
+    "pos": {
+     "x": 12,
+     "y": 7
+    },
+    "stance": "standing",
+    "distracted": false,
+    "activated": false,
+    "usage": {}
+   },
+   {
+    "id": "A2",
+    "team": "A",
+    "number": 3,
+    "name": "Skeleton Lineman",
+    "position": "Skeleton Lineman",
+    "keywords": [
+     "Human",
+     "Lineman",
+     "Skeleton",
+     "Undead"
+    ],
+    "ma": 5,
+    "st": 3,
+    "ag": 4,
+    "pa": 6,
+    "av": 8,
+    "skills": [
+     {
+      "id": "regeneration"
+     },
+     {
+      "id": "thickSkull"
+     }
+    ],
+    "location": "pitch",
+    "pos": {
+     "x": 9,
+     "y": 8
+    },
+    "stance": "standing",
+    "distracted": false,
+    "activated": false,
+    "usage": {}
+   },
+   {
+    "id": "A3",
+    "team": "A",
+    "number": 12,
+    "name": "Tomb Guardian",
+    "position": "Tomb Guardian",
+    "keywords": [
+     "Big Guy",
+     "Blocker",
+     "Human",
+     "Undead"
+    ],
+    "ma": 4,
+    "st": 5,
+    "ag": 5,
+    "pa": 6,
+    "av": 10,
+    "skills": [
+     {
+      "id": "brawler"
+     },
+     {
+      "id": "decay"
+     },
+     {
+      "id": "regeneration"
+     }
+    ],
+    "location": "pitch",
+    "pos": {
+     "x": 9,
+     "y": 5
+    },
+    "stance": "standing",
+    "distracted": false,
+    "activated": false,
+    "usage": {}
+   },
+   {
+    "id": "A4",
+    "team": "A",
+    "number": 4,
+    "name": "Skeleton Lineman",
+    "position": "Skeleton Lineman",
+    "keywords": [
+     "Human",
+     "Lineman",
+     "Skeleton",
+     "Undead"
+    ],
+    "ma": 5,
+    "st": 3,
+    "ag": 4,
+    "pa": 6,
+    "av": 8,
+    "skills": [
+     {
+      "id": "regeneration"
+     },
+     {
+      "id": "thickSkull"
+     }
+    ],
+    "location": "pitch",
+    "pos": {
+     "x": 13,
+     "y": 10
+    },
+    "stance": "standing",
+    "distracted": false,
+    "activated": false,
+    "usage": {}
+   },
+   {
+    "id": "A5",
+    "team": "A",
+    "number": 10,
+    "name": "Tomb Kings Thrower",
+    "position": "Tomb Kings Thrower",
+    "keywords": [
+     "Human",
+     "Skeleton",
+     "Thrower",
+     "Undead"
+    ],
+    "ma": 6,
+    "st": 3,
+    "ag": 4,
+    "pa": 3,
+    "av": 9,
+    "skills": [
+     {
+      "id": "pass"
+     },
+     {
+      "id": "regeneration"
+     },
+     {
+      "id": "sureHands"
+     },
+     {
+      "id": "thickSkull"
+     }
+    ],
+    "location": "pitch",
+    "pos": {
+     "x": 16,
+     "y": 7
+    },
+    "stance": "standing",
+    "distracted": false,
+    "activated": false,
+    "usage": {}
+   },
+   {
+    "id": "B1",
+    "team": "B",
+    "number": 8,
+    "name": "Bretonnian Knight Catcher",
+    "position": "Bretonnian Knight Catcher",
+    "keywords": [
+     "Catcher",
+     "Human"
+    ],
+    "ma": 7,
+    "st": 3,
+    "ag": 3,
+    "pa": 4,
+    "av": 9,
+    "skills": [
+     {
+      "id": "catch"
+     },
+     {
+      "id": "dauntless"
+     },
+     {
+      "id": "nervesOfSteel"
+     }
+    ],
+    "location": "pitch",
+    "pos": {
+     "x": 8,
+     "y": 7
+    },
+    "stance": "standing",
+    "distracted": false,
+    "activated": false,
+    "usage": {}
+   },
+   {
+    "id": "B2",
+    "team": "B",
+    "number": 3,
+    "name": "Bretonnian Squire",
+    "position": "Bretonnian Squire",
+    "keywords": [
+     "Human",
+     "Lineman"
+    ],
+    "ma": 6,
+    "st": 3,
+    "ag": 3,
+    "pa": 4,
+    "av": 8,
+    "skills": [
+     {
+      "id": "wrestle"
+     }
+    ],
+    "location": "pitch",
+    "pos": {
+     "x": 7,
+     "y": 6
+    },
+    "stance": "standing",
+    "distracted": false,
+    "activated": false,
+    "usage": {}
+   },
+   {
+    "id": "B3",
+    "team": "B",
+    "number": 4,
+    "name": "Bretonnian Squire",
+    "position": "Bretonnian Squire",
+    "keywords": [
+     "Human",
+     "Lineman"
+    ],
+    "ma": 6,
+    "st": 3,
+    "ag": 3,
+    "pa": 4,
+    "av": 8,
+    "skills": [
+     {
+      "id": "wrestle"
+     }
+    ],
+    "location": "pitch",
+    "pos": {
+     "x": 6,
+     "y": 9
+    },
+    "stance": "standing",
+    "distracted": false,
+    "activated": false,
+    "usage": {}
+   },
+   {
+    "id": "B4",
+    "team": "B",
+    "number": 1,
+    "name": "Grail Knight",
+    "position": "Grail Knight",
+    "keywords": [
+     "Blitzer",
+     "Human"
+    ],
+    "ma": 7,
+    "st": 3,
+    "ag": 3,
+    "pa": 4,
+    "av": 10,
+    "skills": [
+     {
+      "id": "block"
+     },
+     {
+      "id": "dauntless"
+     },
+     {
+      "id": "steadyFooting"
+     }
+    ],
+    "location": "pitch",
+    "pos": {
+     "x": 9,
+     "y": 10
+    },
+    "stance": "standing",
+    "distracted": false,
+    "activated": false,
+    "usage": {}
+   },
+   {
+    "id": "B5",
+    "team": "B",
+    "number": 5,
+    "name": "Bretonnian Squire",
+    "position": "Bretonnian Squire",
+    "keywords": [
+     "Human",
+     "Lineman"
+    ],
+    "ma": 6,
+    "st": 3,
+    "ag": 3,
+    "pa": 4,
+    "av": 8,
+    "skills": [
+     {
+      "id": "wrestle"
+     }
+    ],
+    "location": "pitch",
+    "pos": {
+     "x": 8,
+     "y": 4
+    },
+    "stance": "standing",
+    "distracted": false,
+    "activated": false,
+    "usage": {}
+   }
+  ],
+  "ball": {
+   "kind": "held",
+   "playerId": "B1"
+  },
+  "turn": {
+   "active": "A",
+   "half": 2,
+   "used": {
+    "blitz": false,
+    "pass": false,
+    "handoff": false,
+    "foul": false,
+    "secure": false,
+    "ttm": false,
+    "bomb": false,
+    "punt": false,
+    "ktm": false
+   },
+   "stunnedAtStart": [],
+   "activation": null
+  },
+  "rng": {
+   "seed": 777,
+   "counter": 0
+  },
+  "options": {
+   "rulerWidth": 1.8
+  },
+  "log": [],
+  "pending": null,
+  "title": "Blitz the ball carrier",
+  "notes": "Tomb Kings must stop a Bretonnian Knight Catcher: a Blitz with an assist gives 2 dice; a POW makes the ball bounce."
+ },
+ "meta": {
+  "saveFormatVersion": 2,
+  "matchId": "m-mvakb63z-p8qqlt62pc8h",
+  "displayName": "Blitz the ball carrier",
+  "createdAt": "2026-10-16T06:03:57.743Z",
+  "matchFormat": "practice",
+  "engineVersion": "0.2.0",
+  "engineHash": "8ffd4c86ed2f6f0471fac87b8493e04a1bfeec216a7ebf511702835bb9f9a84d",
+  "rulesHash": "ef05264a2b584e775696b0bb3a6ce0a8e308b9eb585e73236dd8ff20da7610cf",
+  "aiApiVersion": "2.0"
+ }
+}

@@ -1,0 +1,332 @@
+{
+  "schema": "hopeful-standalone-build/1",
+  "file": "hopeful-2-5-s4-37u-c-unified.js",
+  "version": "2.5.0-test.s4.37u.c",
+  "experimentMode": "C",
+  "bytes": 687837,
+  "sha256": "2d0c2472c7e3e7f675835711d3e7124b3607c4e8a6015e3529419f6be5ce29fd",
+  "method": "deterministic named-module IIFE bundler plus whitespace/comment compaction; names and syntax optimization disabled",
+  "packer": {
+    "name": "esbuild",
+    "version": "0.27.7",
+    "minifyWhitespace": true,
+    "minifyIdentifiers": false,
+    "minifySyntax": false
+  },
+  "readableSha256": "7bad5ab4cd2bd4f724083daf2cbc95524c573f30aa1a026770a29509514060ff",
+  "importLimit": null,
+  "characters": 687805,
+  "builderSha256": "131820a643c5522a7935604cc3a8e89ce4937799d2391c0152515f33fe6ce645",
+  "modules": [
+    {
+      "file": "src/period-boundary.mjs",
+      "sha256": "5994159308fab058bf77d80bd92b99809c209329a146302761692c692e7ab3d2",
+      "bytes": 256
+    },
+    {
+      "file": "src/policy.mjs",
+      "sha256": "756b593f73a811a7d7e265d25090e97a7238be39e3f79e8fd74d84461b7c77eb",
+      "bytes": 7634
+    },
+    {
+      "file": "src/decision-agreement.mjs",
+      "sha256": "a7dacadd0f909be1ce9820872e7a0907b02a27b8d76a20fc62cfc86669da49c0",
+      "bytes": 1607
+    },
+    {
+      "file": "src/candidate-ledger.mjs",
+      "sha256": "3fb12d7783068822ae0a9938f64e7126edfff017e59cf1ef67820ae65f748036",
+      "bytes": 4143
+    },
+    {
+      "file": "src/experiment-config.mjs",
+      "sha256": "6a3909488492c2fb691fab2be4b27c467d6391b1a83b7e77e859360d156db74f",
+      "bytes": 637
+    },
+    {
+      "file": "src/availability.mjs",
+      "sha256": "88253dc55ceb4e436b2949dbfe729190c33bd8ae9c60237973cb21df5e334cea",
+      "bytes": 619
+    },
+    {
+      "file": "src/bounded-reply.mjs",
+      "sha256": "89c32336645505235077a4d5df7c00653aac2ae1e48c3eed56da1de1e7974e53",
+      "bytes": 1256
+    },
+    {
+      "file": "src/execution.mjs",
+      "sha256": "383e5a635dadd92e11a46b7a467855030d06f466b83190e3a6f613f30a010df3",
+      "bytes": 34135
+    },
+    {
+      "file": "src/rules.mjs",
+      "sha256": "63eb703131be2ff3153715766c3c86fde66d6f3e6c397da8e0d479503bfd8244",
+      "bytes": 12749
+    },
+    {
+      "file": "src/carrier-replies.mjs",
+      "sha256": "d2badc5604fe5a9a3a48d92749ebcab731d8990f1155f9d1ef1e560613309e20",
+      "bytes": 26801
+    },
+    {
+      "file": "src/reply-audit.mjs",
+      "sha256": "98a1e213ee5fda2dda7ee7810f579a24d6d921767f0e84ae1a36ce72b9d4f6d8",
+      "bytes": 3439
+    },
+    {
+      "file": "src/protection.mjs",
+      "sha256": "b4d43238edc7b1673f9dc5a2c1e7ba148712899c0cc173e98afe2eca778ebfcb",
+      "bytes": 26270
+    },
+    {
+      "file": "src/contact-coordination.mjs",
+      "sha256": "fcd650572aa5e7cbf6faca47d1172968f28728472fe994f54ca7d870a95211ce",
+      "bytes": 6168
+    },
+    {
+      "file": "src/endpoint-value.mjs",
+      "sha256": "ad8fdd76d0cc21bc77ae94c06bc6b8763b5117df3b7d5fec94bbdddd8db32ff6",
+      "bytes": 5230
+    },
+    {
+      "file": "src/receiver-defense.mjs",
+      "sha256": "e8923c744245a0087c0061bbf6976fa402691be9fe9d53e0e9b08c3e1e1024df",
+      "bytes": 32426
+    },
+    {
+      "file": "src/scoring.mjs",
+      "sha256": "33339ef3d2da45ab2229e2c501b19acf360a01c62c97df005549415d82ff92c7",
+      "bytes": 14926
+    },
+    {
+      "file": "src/clearance.mjs",
+      "sha256": "6b97ccb0a0c1d3e0175776971eef4ea6ef6c1cbac283cdc71d78a9a71b302355",
+      "bytes": 17933
+    },
+    {
+      "file": "src/timeout-evidence.mjs",
+      "sha256": "80034145e997525abda024580b1c143a71601f42b38e26a3d0398f1c93329d53",
+      "bytes": 3016
+    },
+    {
+      "file": "src/services.mjs",
+      "sha256": "561ae39f58b3145ad1a9f941326c0f988eebaff0ba802161e2782c8784d8697a",
+      "bytes": 54539
+    },
+    {
+      "file": "src/reply-window.mjs",
+      "sha256": "66964e524794fb825b1617c3f1a122ea726d096dc1799dbbfc8f2610c093bea8",
+      "bytes": 4105
+    },
+    {
+      "file": "src/root-refinement.mjs",
+      "sha256": "d580cd80308d05a0b02742323f5bbe23dae617c824e54280d19293a68308871a",
+      "bytes": 11494
+    },
+    {
+      "file": "src/champion.mjs",
+      "sha256": "090e582365e1df7238216249f00ef98fee55b738cc91683070db7435654c662b",
+      "bytes": 159657
+    },
+    {
+      "file": "src/fair-inspector.mjs",
+      "sha256": "1fa45d835d12f88c934f430b069d17209c1eee00c04281490d3878d890c67e14",
+      "bytes": 860
+    },
+    {
+      "file": "src/setup.mjs",
+      "sha256": "754dba79ca5bb245559ba77b0e5c411013a722403b92b78afcbf345153622efc",
+      "bytes": 9323
+    },
+    {
+      "file": "src/plans.mjs",
+      "sha256": "115c48211f07b854dbe09395ae45628251141c734b3cd09655776340e1a2c187",
+      "bytes": 7203
+    },
+    {
+      "file": "src/pickup-protection.mjs",
+      "sha256": "207126627c955b18c2a0ff53a808bdd3adf8252e28c86bb7ec97d9794afab1e0",
+      "bytes": 7111
+    },
+    {
+      "file": "src/preparation.mjs",
+      "sha256": "c0f3a1e284d7a0cd63414b335944c3af3cc00f1efc9a1072f1c0616a6a16a66d",
+      "bytes": 5604
+    },
+    {
+      "file": "src/defense.mjs",
+      "sha256": "a40234831dde52e2f203968dd0805eaf35b7f54a7a76fd9f25aa15780d0b170b",
+      "bytes": 38520
+    },
+    {
+      "file": "src/relay.mjs",
+      "sha256": "bcc1ea80a258e909cf880fde7ca1ad0d20d3d3f4555b99504972a329970d7f18",
+      "bytes": 9926
+    },
+    {
+      "file": "src/endguard.mjs",
+      "sha256": "6bf0e089e15e70f3b9aa2d0a24a9a6f3c70eafc1b783f8f1ee0fc5388ec9af1d",
+      "bytes": 4249
+    },
+    {
+      "file": "src/continuation.mjs",
+      "sha256": "e023e349fae269d5a216c08adafd4031dd2f3af39d9b2f5b46b2bcb95ad55430",
+      "bytes": 8202
+    },
+    {
+      "file": "src/lifecycle.mjs",
+      "sha256": "6e27a6a2d54557acb8ad1d925a2864dc090405a39f5f5ae108bf0e90eacae0dd",
+      "bytes": 5711
+    },
+    {
+      "file": "src/goals.mjs",
+      "sha256": "1aefa6e42053ad4978731442c02e4f50bb573450393c6b28a5d8118b3a6c96a8",
+      "bytes": 11862
+    },
+    {
+      "file": "src/recoveries.mjs",
+      "sha256": "304731f824c62aa9aa3949ef7aba583f1e744053c17f57035d6f6e52ba1865eb",
+      "bytes": 2344
+    },
+    {
+      "file": "src/mechanisms.mjs",
+      "sha256": "e15177f2d813eab47bdb3796468173c7319b55eda08175f00b93c4b4ce6efdd4",
+      "bytes": 4920
+    },
+    {
+      "file": "src/strategy.mjs",
+      "sha256": "703d0bc415b0a787a5e34ae4460cb6a74ab3755bc302ce79d17f1b7152707bbb",
+      "bytes": 14448
+    },
+    {
+      "file": "src/learned-model.mjs",
+      "sha256": "753b6533c2005241f5914a9ed4e53ed33ae8e5fd271fc5ef5859851f15db74d7",
+      "bytes": 821
+    },
+    {
+      "file": "src/learned-choice.mjs",
+      "sha256": "688ad3058ef19b1a75bef122cd364cf1d48490b085e9e64cd3b55d36ea655045",
+      "bytes": 2993
+    },
+    {
+      "file": "src/tactical-models.mjs",
+      "sha256": "ffd930669295efd463921fc40c48e54b4277fcff2baaca60c60978f8192554e2",
+      "bytes": 11521
+    },
+    {
+      "file": "src/teacher-domain.mjs",
+      "sha256": "e8348186e5fe0e69a555eb264176d55d79593770d9750449eed566b801243d2d",
+      "bytes": 1728
+    },
+    {
+      "file": "src/runtime-engines.mjs",
+      "sha256": "ce7722195c00e6d349889f8bf4132dbaece9a8557046abcdbe093d094f9b86e4",
+      "bytes": 3276
+    },
+    {
+      "file": "src/teacher-model.mjs",
+      "sha256": "455de29f1d14ca6ef9dfec89859de50bec3f19a7c87a10d2a34cd650c0c5e232",
+      "bytes": 27650
+    },
+    {
+      "file": "src/learning-domain.mjs",
+      "sha256": "24bda59c0823b0ce053a414d22c81a65dfb9ba14eb2b1824c13c069d62331040",
+      "bytes": 4945
+    },
+    {
+      "file": "src/tactical-features.mjs",
+      "sha256": "77742ef344556b82d04088d1e5881580db1cb1b83536fc2a48b2dde77ee8cd81",
+      "bytes": 8482
+    },
+    {
+      "file": "src/teacher-base-features.mjs",
+      "sha256": "3f3c68ccdd5a81eb511624625bc0ae560cab0fce7c542915637202ed3333974b",
+      "bytes": 1098
+    },
+    {
+      "file": "src/teacher-path-features.mjs",
+      "sha256": "49bbcb05af86e7c9291ed7fd0e3f57dc69ebdc4ca8090c6bec6037f2528c20b0",
+      "bytes": 4586
+    },
+    {
+      "file": "src/teacher-features.mjs",
+      "sha256": "556a946fdc3390bc1434e4a0f891ea22586b844020f2d9a84b239a6b642f0d33",
+      "bytes": 2095
+    },
+    {
+      "file": "src/teacher-ranker.mjs",
+      "sha256": "ec1452a26d11070600eb28de40f34e378e04869213ef8cbaca24d3b027cd6492",
+      "bytes": 2360
+    },
+    {
+      "file": "src/tactical-shadow.mjs",
+      "sha256": "85955b13cb96c4a81f8b6c5c7d66b43ee4bf36dacffe2ab469b1faf1c30d427c",
+      "bytes": 7511
+    },
+    {
+      "file": "src/scoring-intervals.mjs",
+      "sha256": "442846f4d9188ba0a280d0c00637c519e72f2d2f9173b53a25a7dfa5b508dd60",
+      "bytes": 3340
+    },
+    {
+      "file": "src/learned-proposal.mjs",
+      "sha256": "a7818016a48cd3bf8dbcb6b9370d9b852224baec35c04168a2f876e3e89ee3d5",
+      "bytes": 8569
+    },
+    {
+      "file": "src/common-boundary.mjs",
+      "sha256": "a74fcf71134061952a670616f2df7252865b42cd81c780ceb55f7b99b7583193",
+      "bytes": 14108
+    },
+    {
+      "file": "src/common-legacy.mjs",
+      "sha256": "45e2d04b37428a7282a2945c9c7836554c33bc653986a7fce57fb552382eb1fe",
+      "bytes": 5643
+    },
+    {
+      "file": "src/coordination-value.mjs",
+      "sha256": "6f17fa1a9da8cb3057116ce353c02d688b48b767e245e5dc146f4e7ca8422cb3",
+      "bytes": 7670
+    },
+    {
+      "file": "src/endpoint-utility.mjs",
+      "sha256": "2b1a7a7ba3cfe8e5e4445f6c3a199c62a164ec0738ea3924a4ab0c88b021d27c",
+      "bytes": 2916
+    },
+    {
+      "file": "src/changed-zone-replies.mjs",
+      "sha256": "1061879750eb8e9bed68e3719bd5c6f938d20061fc839e485ba7e973e04df117",
+      "bytes": 3036
+    },
+    {
+      "file": "src/opponent-end-values.mjs",
+      "sha256": "055aae9e6d9debb9e4a617fa6dd1353ceb16b3bfcddfc3eb307bd6c20fabea4f",
+      "bytes": 24492
+    },
+    {
+      "file": "src/common-turn-pool.mjs",
+      "sha256": "14913521a3acedd92c08e3d200976bd9f56bb1b0e2b8d41f0304853947432bb3",
+      "bytes": 13744
+    },
+    {
+      "file": "src/trace-size.mjs",
+      "sha256": "7780e072607d18e5c7dbd3c5a2d182eb5988cab2d7df4f8ecdf227375a7af728",
+      "bytes": 8524
+    },
+    {
+      "file": "src/protect-first.mjs",
+      "sha256": "e6ca7de98a4891e9632ddffa288bb24b51fbd1e5d11aeb517a2febd99e103ef0",
+      "bytes": 15167
+    },
+    {
+      "file": "src/turn-planner.mjs",
+      "sha256": "e29e5614cca3dbe3c83b6cd1f2e6815edac5f9771cedc1ec43f1cff0e358dd7f",
+      "bytes": 32403
+    },
+    {
+      "file": "src/index.mjs",
+      "sha256": "1b41760a78995a74ccc7751f61b39d282f855afe8b7815ee14fab20d84c7b9c7",
+      "bytes": 48301
+    }
+  ]
+}

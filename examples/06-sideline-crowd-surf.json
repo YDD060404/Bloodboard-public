@@ -1,0 +1,273 @@
+{
+ "format": "bloodboard-position",
+ "version": 2,
+ "name": "Sideline crowd surf",
+ "savedAt": "2026-09-25T00:00:00.000Z",
+ "notes": "A Human Catcher holds the ball on the sideline. Any push sends them into the crowd (Injury by the Crowd + Throw-in).",
+ "state": {
+  "format": "bloodboard-state",
+  "version": 1,
+  "phase": "play",
+  "rulesEdition": "faq2026",
+  "weather": "perfect",
+  "teams": {
+   "A": {
+    "id": "A",
+    "name": "Badland Bashers",
+    "rosterId": "orc",
+    "color": "#b3261e",
+    "accent": "#fbe9d0",
+    "rerolls": 2,
+    "leaderReroll": false,
+    "score": 0,
+    "turn": 4
+   },
+   "B": {
+    "id": "B",
+    "name": "Reikland Rookies",
+    "rosterId": "human",
+    "color": "#f3efe4",
+    "accent": "#1d3f8f",
+    "rerolls": 2,
+    "leaderReroll": false,
+    "score": 0,
+    "turn": 3
+   }
+  },
+  "players": [
+   {
+    "id": "A1",
+    "team": "A",
+    "number": 8,
+    "name": "Big Un Blocker",
+    "position": "Big Un Blocker",
+    "keywords": [
+     "Blocker",
+     "Orc"
+    ],
+    "ma": 5,
+    "st": 4,
+    "ag": 4,
+    "pa": 6,
+    "av": 10,
+    "skills": [
+     {
+      "id": "mightyBlow"
+     },
+     {
+      "id": "taunt"
+     },
+     {
+      "id": "thickSkull"
+     },
+     {
+      "id": "unsteady"
+     }
+    ],
+    "location": "pitch",
+    "pos": {
+     "x": 10,
+     "y": 1
+    },
+    "stance": "standing",
+    "distracted": false,
+    "activated": false,
+    "usage": {}
+   },
+   {
+    "id": "A2",
+    "team": "A",
+    "number": 6,
+    "name": "Orc Blitzer",
+    "position": "Orc Blitzer",
+    "keywords": [
+     "Blitzer",
+     "Orc"
+    ],
+    "ma": 6,
+    "st": 3,
+    "ag": 3,
+    "pa": 4,
+    "av": 10,
+    "skills": [
+     {
+      "id": "block"
+     },
+     {
+      "id": "breakTackle"
+     }
+    ],
+    "location": "pitch",
+    "pos": {
+     "x": 13,
+     "y": 3
+    },
+    "stance": "standing",
+    "distracted": false,
+    "activated": false,
+    "usage": {}
+   },
+   {
+    "id": "A3",
+    "team": "A",
+    "number": 4,
+    "name": "Orc Lineman",
+    "position": "Orc Lineman",
+    "keywords": [
+     "Lineman",
+     "Orc"
+    ],
+    "ma": 5,
+    "st": 3,
+    "ag": 3,
+    "pa": 4,
+    "av": 10,
+    "skills": [],
+    "location": "pitch",
+    "pos": {
+     "x": 9,
+     "y": 3
+    },
+    "stance": "standing",
+    "distracted": false,
+    "activated": false,
+    "usage": {}
+   },
+   {
+    "id": "B1",
+    "team": "B",
+    "number": 7,
+    "name": "Human Catcher",
+    "position": "Human Catcher",
+    "keywords": [
+     "Catcher",
+     "Human"
+    ],
+    "ma": 8,
+    "st": 3,
+    "ag": 3,
+    "pa": 4,
+    "av": 8,
+    "skills": [
+     {
+      "id": "catch"
+     },
+     {
+      "id": "dodge"
+     }
+    ],
+    "location": "pitch",
+    "pos": {
+     "x": 10,
+     "y": 0
+    },
+    "stance": "standing",
+    "distracted": false,
+    "activated": false,
+    "usage": {}
+   },
+   {
+    "id": "B2",
+    "team": "B",
+    "number": 2,
+    "name": "Human Lineman",
+    "position": "Human Lineman",
+    "keywords": [
+     "Human",
+     "Lineman"
+    ],
+    "ma": 6,
+    "st": 3,
+    "ag": 3,
+    "pa": 4,
+    "av": 9,
+    "skills": [],
+    "location": "pitch",
+    "pos": {
+     "x": 11,
+     "y": 2
+    },
+    "stance": "standing",
+    "distracted": false,
+    "activated": false,
+    "usage": {}
+   },
+   {
+    "id": "B3",
+    "team": "B",
+    "number": 5,
+    "name": "Human Blitzer",
+    "position": "Human Blitzer",
+    "keywords": [
+     "Blitzer",
+     "Human"
+    ],
+    "ma": 7,
+    "st": 3,
+    "ag": 3,
+    "pa": 4,
+    "av": 9,
+    "skills": [
+     {
+      "id": "block"
+     },
+     {
+      "id": "tackle"
+     }
+    ],
+    "location": "pitch",
+    "pos": {
+     "x": 7,
+     "y": 2
+    },
+    "stance": "standing",
+    "distracted": false,
+    "activated": false,
+    "usage": {}
+   }
+  ],
+  "ball": {
+   "kind": "held",
+   "playerId": "B1"
+  },
+  "turn": {
+   "active": "A",
+   "half": 2,
+   "used": {
+    "blitz": false,
+    "pass": false,
+    "handoff": false,
+    "foul": false,
+    "secure": false,
+    "ttm": false,
+    "bomb": false,
+    "punt": false,
+    "ktm": false
+   },
+   "stunnedAtStart": [],
+   "activation": null
+  },
+  "rng": {
+   "seed": 9001,
+   "counter": 0
+  },
+  "options": {
+   "rulerWidth": 1.8
+  },
+  "log": [],
+  "pending": null,
+  "title": "Sideline crowd surf",
+  "notes": "A Human Catcher holds the ball on the sideline. Any push sends them into the crowd (Injury by the Crowd + Throw-in)."
+ },
+ "meta": {
+  "saveFormatVersion": 2,
+  "matchId": "m-mvakb641-z44mzcmi8kv6",
+  "displayName": "Sideline crowd surf",
+  "createdAt": "2026-10-16T06:03:57.745Z",
+  "matchFormat": "practice",
+  "engineVersion": "0.2.0",
+  "engineHash": "8ffd4c86ed2f6f0471fac87b8493e04a1bfeec216a7ebf511702835bb9f9a84d",
+  "rulesHash": "ef05264a2b584e775696b0bb3a6ce0a8e308b9eb585e73236dd8ff20da7610cf",
+  "aiApiVersion": "2.0"
+ }
+}

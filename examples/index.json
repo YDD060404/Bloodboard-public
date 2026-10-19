@@ -1,0 +1,37 @@
+[
+ {
+  "file": "01-two-dodges-to-glory.json",
+  "name": "Turn 8: two dodges to glory",
+  "summary": "Last Turn: a Marked Human Catcher (Dodge, MA 8) holding the ball must get away and past a Goblin guarding the End Zone. Try different routes and compare the previewed odds."
+ },
+ {
+  "file": "02-blitz-the-carrier.json",
+  "name": "Blitz the ball carrier",
+  "summary": "Tomb Kings must stop a Bretonnian Knight Catcher: a Blitz with an assist gives 2 dice; a POW makes the ball bounce."
+ },
+ {
+  "file": "03-short-pass-to-the-end-zone.json",
+  "name": "Short pass into the End Zone",
+  "summary": "Human Thrower passes to a Catcher standing in the End Zone. Two Orcs sit under the Range Ruler; one also Marks the catcher."
+ },
+ {
+  "file": "04-hand-off-and-run.json",
+  "name": "Hand-off, then run it in",
+  "summary": "Bretonnian Knight Thrower hands off to a Marked Knight Catcher, who must dodge away and Rush twice to score."
+ },
+ {
+  "file": "05-loose-ball-in-traffic.json",
+  "name": "Loose ball in traffic",
+  "summary": "Orcs need a loose ball surrounded by Humans: Sure Hands Thrower vs a Stunty Goblin. Secure the Ball is not allowed (opponents within 2 squares)."
+ },
+ {
+  "file": "06-sideline-crowd-surf.json",
+  "name": "Sideline crowd surf",
+  "summary": "A Human Catcher holds the ball on the sideline. Any push sends them into the crowd (Injury by the Crowd + Throw-in)."
+ },
+ {
+  "file": "07-stalling-check.json",
+  "name": "Stalling on Turn 3",
+  "summary": "An open Human Catcher could score without rolling any dice. Ending the activation (or the Turn) without scoring triggers the Crowd Takes Action: a D6 of 3+ (the Turn number) knocks them down."
+ }
+]

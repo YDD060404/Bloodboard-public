@@ -1,0 +1,14 @@
+{
+  "name": "bloodboard-match-server",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Bloodboard hosted match server (runnable files only; no dependencies)",
+  "type": "module",
+  "scripts": {
+    "start": "node lan/server.mjs --hosted"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "UNLICENSED"
+}

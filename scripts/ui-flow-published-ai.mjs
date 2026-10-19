@@ -1,0 +1,54 @@
+import { chromium } from 'playwright';
+import assert from 'node:assert/strict';
+import {readFileSync,writeFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {dirname,join} from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {createServer} from '../lan/server.mjs';
+import {memoryStore} from '../lan/store.mjs';
+const root=join(dirname(fileURLToPath(import.meta.url)),'..');
+const server=await createServer({code:'PUBLISH22',store:memoryStore(),webDir:join(root,'dist/web')});
+const port=await server.listen(0,'127.0.0.1');const browser=await chromium.launch();
+const page=await browser.newPage({viewport:{width:1600,height:1000}}),checks=[],errors=[];
+const check=(name,ok)=>{assert.ok(ok,name);checks.push({name,passed:true});console.log('PASS '+name);};
+page.on('pageerror',e=>errors.push(e.message));
+try {
+ await page.goto('http://127.0.0.1:'+port+'/');
+ await page.waitForFunction(()=>window.bloodboardAI?.list().length===3);
+ const list=await page.evaluate(()=>window.bloodboardAI.list());
+ check('only Balanced, Hopeful 1.5.9 and S4.37U are bundled',JSON.stringify(list.map(x=>x.id).sort())===JSON.stringify(['bloodboard-balanced','hopeful-1-5-9-gpt','hopeful-2-5-s4-37u-c-unified']));
+ check('all three coaches validate successfully',list.every(x=>!x.errors?.length)&&list.find(x=>x.id==='hopeful-1-5-9-gpt').version==='1.5.9');
+ check('Hopeful published bytes match the frozen release',createHash('sha256').update(readFileSync(join(root,'ai/hopeful-1-5-9-gpt.js'))).digest('hex')==='f5b495f8d873bf484640b2f70c6fa0ee81997eee7937e806a5eaccb74ad39941');
+ const extra=readFileSync(join(root,'ai/examples/aggressive-bashers.json'),'utf8');
+ await page.evaluate(extra=>localStorage.setItem('bloodboard.ai.v1',JSON.stringify({'aggressive-bashers.json':{json:extra,savedAt:new Date().toISOString()}})),extra);
+ await page.evaluate(()=>window.bloodboardAI.reload());
+ check('existing local imported opponents are retained',await page.evaluate(()=>window.bloodboardAI.list().length)===4);
+ await page.evaluate(()=>{
+ window.BroadboardLanguage.setLanguage('en');window.bloodboardOpenPractice(0);
+ const a=window.bloodboard,E=window.BloodboardEngine,g=E.cloneState(a.game);
+ for(const p of g.players){p.location='reserves';p.pos=null;p.activated=true;}
+ g.ball={kind:'none'};g.phase='play';g.turn.active='A';g.turn.activation=null;g.pending=null;g.log=[];
+ a.replaceGame(g,{keepDirty:true});a.st.computer.advisorAi='hopeful-1-5-9-gpt';a.st.computer.advisor=null;a.emit();
+ });
+ const before=await page.evaluate(()=>JSON.stringify(window.bloodboard.game));
+ await page.click('#advisor-btn');
+ await page.waitForFunction(()=>window.bloodboardLastDecision?.fellBack!==undefined,{},{timeout:90000});
+ await page.waitForFunction(()=>!window.bloodboard.st.computer.advisor?.busy,{},{timeout:90000});
+ const decision=await page.evaluate(()=>({last:window.bloodboardLastDecision,advisor:window.bloodboard.st.computer.advisor,log:window.bloodboardDecisionLog}));
+ check('Hopeful executes a real advisory worker call without fallback',decision.last.fellBack===false&&decision.advisor.entry.id==='hopeful-1-5-9-gpt'&&!decision.advisor.error&&!!decision.advisor.decision);
+ check('advice preserves the game state',before===await page.evaluate(()=>JSON.stringify(window.bloodboard.game)));
+ const ids=await page.locator('#advisor-ai-focus option').evaluateAll(xs=>xs.map(x=>x.value));
+ check('AI Focus excludes imported alternatives',JSON.stringify(ids.sort())===JSON.stringify(['bloodboard-balanced','hopeful-1-5-9-gpt','hopeful-2-5-s4-37u-c-unified']));
+ await page.selectOption('#advisor-ai-focus','hopeful-2-5-s4-37u-c-unified');
+ await page.waitForFunction(()=>!window.bloodboard.st.computer.advisor?.busy,{},{timeout:150000});
+ const unifiedDecision=await page.evaluate(()=>({last:window.bloodboardLastDecision,advisor:window.bloodboard.st.computer.advisor}));
+ check('S4.37U executes the actual browser worker without fallback',unifiedDecision.last.fellBack===false&&unifiedDecision.advisor.entry.id==='hopeful-2-5-s4-37u-c-unified'&&!unifiedDecision.advisor.error&&!!unifiedDecision.advisor.decision);
+ check('S4.37U advice preserves game state',before===await page.evaluate(()=>JSON.stringify(window.bloodboard.game)));
+ await page.selectOption('#advisor-ai-focus','bloodboard-balanced');
+ await page.waitForFunction(()=>!window.bloodboard.st.computer.advisor.busy);
+ check('Balanced remains selectable in AI Focus',await page.evaluate(()=>window.bloodboard.st.computer.advisor.entry.id)==='bloodboard-balanced');
+ await page.screenshot({path:join(root,'verification/AI_FOCUS_0.2.0.png'),fullPage:true});
+ check('no browser errors',errors.length===0);
+ writeFileSync(join(root,'verification/published-ai-results.json'),JSON.stringify({version:'0.2.0',checks,errors,worker:decision.last,unifiedWorker:unifiedDecision.last,scope:'Actual built browser, real Hopeful legacy worker on a sparse advisory fixture; no strength benchmark'},null,2)+'\n');
+ console.log(checks.length+'/'+checks.length+' passed');
+} finally {await browser.close();await server.close();}

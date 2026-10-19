@@ -1,0 +1,12 @@
+{
+  "kind": "playerAction",
+  "playerId": "A1",
+  "action": "blitz",
+  "blitzTarget": "B1",
+  "blockTarget": "B1",
+  "path": [
+    { "to": { "x": 11, "y": 7 }, "kind": "step" },
+    { "to": { "x": 10, "y": 7 }, "kind": "step" },
+    { "to": { "x": 9, "y": 7 }, "kind": "step" }
+  ]
+}

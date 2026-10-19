@@ -1,0 +1,666 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "trajectoryStep",
+  "type": "object",
+  "required": [
+    "schema",
+    "game",
+    "step",
+    "team",
+    "kind"
+  ],
+  "properties": {
+    "schema": {
+      "const": "bloodboard-trajectory/1"
+    },
+    "game": {
+      "type": "string"
+    },
+    "step": {
+      "type": "integer"
+    },
+    "team": {
+      "enum": [
+        "A",
+        "B"
+      ]
+    },
+    "kind": {
+      "enum": [
+        "action",
+        "decision"
+      ]
+    },
+    "observation": {
+      "type": "object",
+      "required": [
+        "apiMinor",
+        "team",
+        "players",
+        "ball",
+        "score",
+        "turn",
+        "turnsPerHalf",
+        "half",
+        "weather",
+        "phase",
+        "rerolls",
+        "requestId",
+        "active",
+        "pending"
+      ],
+      "properties": {
+        "apiMinor": {
+          "type": "integer"
+        },
+        "requestId": {
+          "type": "integer"
+        },
+        "team": {
+          "enum": [
+            "A",
+            "B"
+          ]
+        },
+        "format": {
+          "type": "string"
+        },
+        "pitch": {
+          "type": "object",
+          "required": [
+            "w",
+            "h"
+          ],
+          "properties": {
+            "w": {
+              "type": "integer"
+            },
+            "h": {
+              "type": "integer"
+            }
+          },
+          "additionalProperties": true
+        },
+        "players": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "team",
+              "location",
+              "stance",
+              "ma",
+              "st",
+              "ag",
+              "pa",
+              "av"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "team": {
+                "enum": [
+                  "A",
+                  "B"
+                ]
+              },
+              "name": {
+                "type": "string"
+              },
+              "position": {
+                "type": "string"
+              },
+              "location": {
+                "type": "string"
+              },
+              "stance": {
+                "type": "string"
+              },
+              "pos": {
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "required": [
+                      "x",
+                      "y"
+                    ],
+                    "properties": {
+                      "x": {
+                        "type": "integer"
+                      },
+                      "y": {
+                        "type": "integer"
+                      }
+                    }
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "ma": {
+                "type": "integer"
+              },
+              "st": {
+                "type": "integer"
+              },
+              "ag": {
+                "type": "integer"
+              },
+              "pa": {
+                "anyOf": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "av": {
+                "type": "integer"
+              },
+              "skills": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "activated": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": true
+          }
+        },
+        "ball": {
+          "type": "object",
+          "required": [
+            "kind"
+          ],
+          "properties": {
+            "kind": {
+              "enum": [
+                "held",
+                "ground",
+                "none",
+                "inAir"
+              ]
+            }
+          },
+          "additionalProperties": true
+        },
+        "score": {
+          "type": "object",
+          "required": [
+            "A",
+            "B"
+          ],
+          "properties": {
+            "A": {
+              "type": "integer"
+            },
+            "B": {
+              "type": "integer"
+            }
+          },
+          "additionalProperties": true
+        },
+        "turn": {
+          "type": "object",
+          "required": [
+            "A",
+            "B"
+          ],
+          "properties": {
+            "A": {
+              "type": "integer"
+            },
+            "B": {
+              "type": "integer"
+            }
+          },
+          "additionalProperties": true
+        },
+        "turnsPerHalf": {
+          "type": "integer"
+        },
+        "half": {
+          "type": "integer"
+        },
+        "weather": {
+          "type": "string"
+        },
+        "phase": {
+          "type": "string"
+        },
+        "rerolls": {
+          "type": "object",
+          "required": [
+            "A",
+            "B"
+          ],
+          "properties": {
+            "A": {
+              "type": "integer"
+            },
+            "B": {
+              "type": "integer"
+            }
+          },
+          "additionalProperties": true
+        },
+        "active": {
+          "enum": [
+            "A",
+            "B"
+          ]
+        },
+        "pending": {
+          "anyOf": [
+            {
+              "type": "object",
+              "required": [
+                "requestId",
+                "type",
+                "team",
+                "options"
+              ],
+              "properties": {
+                "requestId": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "team": {
+                  "enum": [
+                    "A",
+                    "B"
+                  ]
+                },
+                "prompt": {
+                  "type": "string"
+                },
+                "options": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "id"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "label": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  }
+                },
+                "context": {}
+              },
+              "additionalProperties": true
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "activation": {
+          "anyOf": [
+            {
+              "type": "object",
+              "required": [
+                "playerId"
+              ],
+              "properties": {
+                "playerId": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": true
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "position",
+          "team",
+          "family",
+          "kind",
+          "label",
+          "legal",
+          "input"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "position": {
+            "type": "string"
+          },
+          "team": {
+            "enum": [
+              "A",
+              "B"
+            ]
+          },
+          "family": {
+            "enum": [
+              "move",
+              "standUp",
+              "secure",
+              "block",
+              "blitz",
+              "pass",
+              "handoff",
+              "foul",
+              "ttm",
+              "special",
+              "endActivation",
+              "endTurn"
+            ]
+          },
+          "kind": {
+            "type": "string"
+          },
+          "actorId": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "targetId": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "targetIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "label": {
+            "type": "string"
+          },
+          "input": {
+            "anyOf": [
+              {
+                "type": "object",
+                "required": [
+                  "kind"
+                ],
+                "properties": {
+                  "kind": {
+                    "enum": [
+                      "playerAction",
+                      "endActivation",
+                      "endTurn"
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "path": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "x",
+                "y",
+                "kind"
+              ],
+              "properties": {
+                "x": {
+                  "type": "integer"
+                },
+                "y": {
+                  "type": "integer"
+                },
+                "kind": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": true
+            }
+          },
+          "destination": {
+            "anyOf": [
+              {
+                "type": "object",
+                "required": [
+                  "x",
+                  "y"
+                ],
+                "properties": {
+                  "x": {
+                    "type": "integer"
+                  },
+                  "y": {
+                    "type": "integer"
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "legal": {
+            "type": "boolean"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "rushes": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "dodges": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "exact": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "pSuccess": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "pTurnover": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "pTouchdown": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "pOpponentTouchdown": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "unresolved": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "builtIn": {}
+        },
+        "additionalProperties": true
+      }
+    },
+    "selected": {},
+    "source": {
+      "type": "object",
+      "required": [
+        "coach",
+        "via"
+      ],
+      "properties": {
+        "coach": {
+          "type": "string"
+        },
+        "via": {
+          "type": "string"
+        },
+        "fellBack": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": true
+    },
+    "why": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "features": {
+      "type": "object"
+    },
+    "builtInValue": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "diagnostics": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "seq",
+          "tMs",
+          "service",
+          "code",
+          "severity",
+          "message"
+        ],
+        "properties": {
+          "seq": {
+            "type": "integer"
+          },
+          "tMs": {
+            "type": "number"
+          },
+          "service": {
+            "type": "string"
+          },
+          "code": {
+            "type": "string"
+          },
+          "severity": {
+            "enum": [
+              "info",
+              "warn",
+              "error"
+            ]
+          },
+          "message": {
+            "type": "string"
+          },
+          "limit": {
+            "type": "string"
+          },
+          "max": {
+            "type": "number"
+          },
+          "value": {
+            "type": "number"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "outcome": {}
+  },
+  "additionalProperties": true
+}

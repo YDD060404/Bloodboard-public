@@ -1,0 +1,1176 @@
+{
+  "sourceBundleSha256": "e7a80723999a5fa01af2b6ded64a65640930e51bf03e992d344ca31d32d7d9a6",
+  "hostSha256": "665e7fc4e5825ad633c767b929270a9eb6bac1bc661daff0baefe72832703fc2",
+  "prestate": {
+    "format": "bloodboard-state",
+    "version": 1,
+    "phase": "play",
+    "weather": "perfect",
+    "teams": {
+      "A": {
+        "id": "A",
+        "name": "Home",
+        "color": "#1f4e9c",
+        "accent": "#f4f1e8",
+        "rerolls": 0,
+        "leaderReroll": false,
+        "score": 0,
+        "turn": 8
+      },
+      "B": {
+        "id": "B",
+        "name": "Away",
+        "color": "#8c1c1c",
+        "accent": "#f4f1e8",
+        "rerolls": 0,
+        "leaderReroll": false,
+        "score": 0,
+        "turn": 7
+      }
+    },
+    "players": [
+      {
+        "id": "passer",
+        "team": "A",
+        "number": 1,
+        "name": "Gnome Lineman",
+        "position": "Gnome Lineman",
+        "keywords": [
+          "Gnome",
+          "Lineman"
+        ],
+        "ma": 5,
+        "st": 2,
+        "ag": 3,
+        "pa": 4,
+        "av": 7,
+        "skills": [
+          {
+            "id": "jumpUp"
+          },
+          {
+            "id": "rightStuff"
+          },
+          {
+            "id": "stunty"
+          },
+          {
+            "id": "wrestle"
+          }
+        ],
+        "location": "pitch",
+        "pos": {
+          "x": 12,
+          "y": 7
+        },
+        "stance": "standing",
+        "distracted": false,
+        "activated": false,
+        "usage": {}
+      },
+      {
+        "id": "fox",
+        "team": "A",
+        "number": 2,
+        "name": "Woodland Fox",
+        "position": "Woodland Fox",
+        "keywords": [
+          "Animal",
+          "Runner"
+        ],
+        "ma": 7,
+        "st": 2,
+        "ag": 2,
+        "pa": null,
+        "av": 6,
+        "skills": [
+          {
+            "id": "dodge"
+          },
+          {
+            "id": "myBall"
+          },
+          {
+            "id": "sidestep"
+          },
+          {
+            "id": "stunty"
+          }
+        ],
+        "location": "pitch",
+        "pos": {
+          "x": 22,
+          "y": 7
+        },
+        "stance": "standing",
+        "distracted": false,
+        "activated": false,
+        "usage": {}
+      },
+      {
+        "id": "foe",
+        "team": "B",
+        "number": 1,
+        "name": "Human Lineman",
+        "position": "Human Lineman",
+        "keywords": [
+          "Human",
+          "Lineman"
+        ],
+        "ma": 6,
+        "st": 3,
+        "ag": 3,
+        "pa": 4,
+        "av": 9,
+        "skills": [],
+        "location": "pitch",
+        "pos": {
+          "x": 1,
+          "y": 14
+        },
+        "stance": "standing",
+        "distracted": false,
+        "activated": false,
+        "usage": {}
+      }
+    ],
+    "ball": {
+      "kind": "held",
+      "playerId": "passer"
+    },
+    "turn": {
+      "active": "A",
+      "half": 2,
+      "used": {
+        "blitz": false,
+        "pass": false,
+        "handoff": false,
+        "foul": false,
+        "secure": false,
+        "ttm": false,
+        "bomb": false,
+        "punt": false,
+        "ktm": false
+      },
+      "stunnedAtStart": [],
+      "activation": null
+    },
+    "rng": {
+      "seed": 13,
+      "counter": 0
+    },
+    "options": {
+      "rulerWidth": 1.8
+    },
+    "log": [],
+    "pending": null,
+    "match": {
+      "kind": "tournament",
+      "options": {
+        "rules": "full"
+      },
+      "teamIds": {
+        "A": "receiving-audit-gnome",
+        "B": "receiving-audit-human"
+      },
+      "rosterRerolls": {
+        "A": 0,
+        "B": 0
+      },
+      "dedicatedFans": {
+        "A": 0,
+        "B": 0
+      },
+      "assistantCoaches": {
+        "A": 0,
+        "B": 0
+      },
+      "cheerleaders": {
+        "A": 0,
+        "B": 0
+      },
+      "half": 2,
+      "drive": 2,
+      "setupDone": {
+        "A": true,
+        "B": true
+      },
+      "bribes": {
+        "A": 0,
+        "B": 0
+      },
+      "coachEjected": {
+        "A": false,
+        "B": false
+      },
+      "driveMods": [],
+      "fanFactor": {
+        "A": 3,
+        "B": 1
+      },
+      "kicking": "B",
+      "receivedFirst": "B",
+      "played": [
+        "passer",
+        "fox",
+        "foe"
+      ],
+      "kickoffEvent": {
+        "roll": 4,
+        "name": "Alert Defence"
+      },
+      "inducements": {
+        "A": {},
+        "B": {}
+      }
+    }
+  },
+  "native": [
+    {
+      "id": 0,
+      "label": "#1 Gnome Lineman: move to R3",
+      "kind": "carry",
+      "playerId": "passer",
+      "input": {
+        "kind": "playerAction",
+        "playerId": "passer",
+        "action": "move",
+        "path": [
+          {
+            "to": {
+              "x": 13,
+              "y": 6
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 14,
+              "y": 5
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 15,
+              "y": 4
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 16,
+              "y": 3
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 17,
+              "y": 2
+            },
+            "kind": "step"
+          }
+        ]
+      },
+      "pSuccess": 1,
+      "pTurnover": 0,
+      "pTouchdown": 0,
+      "builtInValue": 3.8125
+    },
+    {
+      "id": 1,
+      "label": "#1 Gnome Lineman: move to R4",
+      "kind": "carry",
+      "playerId": "passer",
+      "input": {
+        "kind": "playerAction",
+        "playerId": "passer",
+        "action": "move",
+        "path": [
+          {
+            "to": {
+              "x": 13,
+              "y": 6
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 14,
+              "y": 5
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 15,
+              "y": 4
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 16,
+              "y": 3
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 17,
+              "y": 3
+            },
+            "kind": "step"
+          }
+        ]
+      },
+      "pSuccess": 1,
+      "pTurnover": 0,
+      "pTouchdown": 0,
+      "builtInValue": 3.8125
+    },
+    {
+      "id": 2,
+      "label": "#1 Gnome Lineman: move to R5",
+      "kind": "carry",
+      "playerId": "passer",
+      "input": {
+        "kind": "playerAction",
+        "playerId": "passer",
+        "action": "move",
+        "path": [
+          {
+            "to": {
+              "x": 13,
+              "y": 6
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 14,
+              "y": 5
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 15,
+              "y": 4
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 16,
+              "y": 3
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 17,
+              "y": 4
+            },
+            "kind": "step"
+          }
+        ]
+      },
+      "pSuccess": 1,
+      "pTurnover": 0,
+      "pTouchdown": 0,
+      "builtInValue": 3.8125
+    },
+    {
+      "id": 3,
+      "label": "#1 Gnome Lineman: move to Q4",
+      "kind": "carry",
+      "playerId": "passer",
+      "input": {
+        "kind": "playerAction",
+        "playerId": "passer",
+        "action": "move",
+        "path": [
+          {
+            "to": {
+              "x": 13,
+              "y": 6
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 14,
+              "y": 5
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 15,
+              "y": 4
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 16,
+              "y": 3
+            },
+            "kind": "step"
+          }
+        ]
+      },
+      "pSuccess": 1,
+      "pTurnover": 0,
+      "pTouchdown": 0,
+      "builtInValue": 3.3100000000000023
+    },
+    {
+      "id": 4,
+      "label": "#1 Gnome Lineman: move to Q5",
+      "kind": "carry",
+      "playerId": "passer",
+      "input": {
+        "kind": "playerAction",
+        "playerId": "passer",
+        "action": "move",
+        "path": [
+          {
+            "to": {
+              "x": 13,
+              "y": 6
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 14,
+              "y": 5
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 15,
+              "y": 4
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 16,
+              "y": 4
+            },
+            "kind": "step"
+          }
+        ]
+      },
+      "pSuccess": 1,
+      "pTurnover": 0,
+      "pTouchdown": 0,
+      "builtInValue": 3.3100000000000023
+    },
+    {
+      "id": 5,
+      "label": "#1 Gnome Lineman: move to P5",
+      "kind": "carry",
+      "playerId": "passer",
+      "input": {
+        "kind": "playerAction",
+        "playerId": "passer",
+        "action": "move",
+        "path": [
+          {
+            "to": {
+              "x": 13,
+              "y": 6
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 14,
+              "y": 5
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 15,
+              "y": 4
+            },
+            "kind": "step"
+          }
+        ]
+      },
+      "pSuccess": 1,
+      "pTurnover": 0,
+      "pTouchdown": 0,
+      "builtInValue": 2.8075000000000045
+    },
+    {
+      "id": 6,
+      "label": "#1 Gnome Lineman: move to P6",
+      "kind": "carry",
+      "playerId": "passer",
+      "input": {
+        "kind": "playerAction",
+        "playerId": "passer",
+        "action": "move",
+        "path": [
+          {
+            "to": {
+              "x": 13,
+              "y": 6
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 14,
+              "y": 5
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 15,
+              "y": 5
+            },
+            "kind": "step"
+          }
+        ]
+      },
+      "pSuccess": 1,
+      "pTurnover": 0,
+      "pTouchdown": 0,
+      "builtInValue": 2.8075000000000045
+    },
+    {
+      "id": 7,
+      "label": "#1 Gnome Lineman: move to O6",
+      "kind": "carry",
+      "playerId": "passer",
+      "input": {
+        "kind": "playerAction",
+        "playerId": "passer",
+        "action": "move",
+        "path": [
+          {
+            "to": {
+              "x": 13,
+              "y": 6
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 14,
+              "y": 5
+            },
+            "kind": "step"
+          }
+        ]
+      },
+      "pSuccess": 1,
+      "pTurnover": 0,
+      "pTouchdown": 0,
+      "builtInValue": 2.3049999999999997
+    },
+    {
+      "id": 8,
+      "label": "#1 Gnome Lineman: move to N7",
+      "kind": "carry",
+      "playerId": "passer",
+      "input": {
+        "kind": "playerAction",
+        "playerId": "passer",
+        "action": "move",
+        "path": [
+          {
+            "to": {
+              "x": 13,
+              "y": 6
+            },
+            "kind": "step"
+          }
+        ]
+      },
+      "pSuccess": 1,
+      "pTurnover": 0,
+      "pTouchdown": 0,
+      "builtInValue": 0.5025000000000048
+    },
+    {
+      "id": 9,
+      "label": "#1 Gnome Lineman: move to M7",
+      "kind": "carry",
+      "playerId": "passer",
+      "input": {
+        "kind": "playerAction",
+        "playerId": "passer",
+        "action": "move",
+        "path": [
+          {
+            "to": {
+              "x": 12,
+              "y": 6
+            },
+            "kind": "step"
+          }
+        ]
+      },
+      "pSuccess": 1,
+      "pTurnover": 0,
+      "pTouchdown": 0,
+      "builtInValue": 0
+    },
+    {
+      "id": 10,
+      "label": "#2 Woodland Fox: move to V7",
+      "kind": "move",
+      "playerId": "fox",
+      "input": {
+        "kind": "playerAction",
+        "playerId": "fox",
+        "action": "move",
+        "path": [
+          {
+            "to": {
+              "x": 21,
+              "y": 6
+            },
+            "kind": "step"
+          }
+        ]
+      },
+      "pSuccess": 1,
+      "pTurnover": 0,
+      "pTouchdown": 0,
+      "builtInValue": 0
+    },
+    {
+      "id": 11,
+      "label": "#2 Woodland Fox: move to W7",
+      "kind": "move",
+      "playerId": "fox",
+      "input": {
+        "kind": "playerAction",
+        "playerId": "fox",
+        "action": "move",
+        "path": [
+          {
+            "to": {
+              "x": 22,
+              "y": 6
+            },
+            "kind": "step"
+          }
+        ]
+      },
+      "pSuccess": 1,
+      "pTurnover": 0,
+      "pTouchdown": 0,
+      "builtInValue": 0
+    },
+    {
+      "id": 12,
+      "label": "#2 Woodland Fox: move to X7",
+      "kind": "move",
+      "playerId": "fox",
+      "input": {
+        "kind": "playerAction",
+        "playerId": "fox",
+        "action": "move",
+        "path": [
+          {
+            "to": {
+              "x": 23,
+              "y": 6
+            },
+            "kind": "step"
+          }
+        ]
+      },
+      "pSuccess": 1,
+      "pTurnover": 0,
+      "pTouchdown": 0,
+      "builtInValue": 0
+    },
+    {
+      "id": 13,
+      "label": "#1 Gnome Lineman: move to L7",
+      "kind": "carry",
+      "playerId": "passer",
+      "input": {
+        "kind": "playerAction",
+        "playerId": "passer",
+        "action": "move",
+        "path": [
+          {
+            "to": {
+              "x": 11,
+              "y": 6
+            },
+            "kind": "step"
+          }
+        ]
+      },
+      "pSuccess": 1,
+      "pTurnover": 0,
+      "pTouchdown": 0,
+      "builtInValue": -0.5024999999999977
+    },
+    {
+      "id": 14,
+      "label": "#1 Gnome Lineman: move to K5",
+      "kind": "carry",
+      "playerId": "passer",
+      "input": {
+        "kind": "playerAction",
+        "playerId": "passer",
+        "action": "move",
+        "path": [
+          {
+            "to": {
+              "x": 12,
+              "y": 6
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 11,
+              "y": 5
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 10,
+              "y": 4
+            },
+            "kind": "step"
+          }
+        ]
+      },
+      "pSuccess": 1,
+      "pTurnover": 0,
+      "pTouchdown": 0,
+      "builtInValue": -1.0050000000000026
+    },
+    {
+      "id": 15,
+      "label": "#1 Gnome Lineman: move to S2",
+      "kind": "carry",
+      "playerId": "passer",
+      "input": {
+        "kind": "playerAction",
+        "playerId": "passer",
+        "action": "move",
+        "path": [
+          {
+            "to": {
+              "x": 13,
+              "y": 6
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 14,
+              "y": 5
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 15,
+              "y": 4
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 16,
+              "y": 3
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 17,
+              "y": 2
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 18,
+              "y": 1
+            },
+            "kind": "step"
+          }
+        ]
+      },
+      "pSuccess": 0.8333333333333333,
+      "pTurnover": 0.16666666666666674,
+      "pTouchdown": 0,
+      "builtInValue": -1.483148148148151
+    },
+    {
+      "id": 16,
+      "label": "#1 Gnome Lineman: move to J5",
+      "kind": "carry",
+      "playerId": "passer",
+      "input": {
+        "kind": "playerAction",
+        "playerId": "passer",
+        "action": "move",
+        "path": [
+          {
+            "to": {
+              "x": 11,
+              "y": 6
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 10,
+              "y": 5
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 9,
+              "y": 4
+            },
+            "kind": "step"
+          }
+        ]
+      },
+      "pSuccess": 1,
+      "pTurnover": 0,
+      "pTouchdown": 0,
+      "builtInValue": -1.5074999999999932
+    },
+    {
+      "id": 17,
+      "label": "#1 Gnome Lineman: move to I4",
+      "kind": "carry",
+      "playerId": "passer",
+      "input": {
+        "kind": "playerAction",
+        "playerId": "passer",
+        "action": "move",
+        "path": [
+          {
+            "to": {
+              "x": 11,
+              "y": 6
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 10,
+              "y": 5
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 9,
+              "y": 4
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 8,
+              "y": 3
+            },
+            "kind": "step"
+          }
+        ]
+      },
+      "pSuccess": 1,
+      "pTurnover": 0,
+      "pTouchdown": 0,
+      "builtInValue": -2.009999999999998
+    },
+    {
+      "id": 18,
+      "label": "#1 Gnome Lineman: move to H3",
+      "kind": "carry",
+      "playerId": "passer",
+      "input": {
+        "kind": "playerAction",
+        "playerId": "passer",
+        "action": "move",
+        "path": [
+          {
+            "to": {
+              "x": 11,
+              "y": 6
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 10,
+              "y": 5
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 9,
+              "y": 4
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 8,
+              "y": 3
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 7,
+              "y": 2
+            },
+            "kind": "step"
+          }
+        ]
+      },
+      "pSuccess": 1,
+      "pTurnover": 0,
+      "pTouchdown": 0,
+      "builtInValue": -2.5124999999999957
+    },
+    {
+      "id": 19,
+      "label": "#1 Gnome Lineman: move to T1",
+      "kind": "carry",
+      "playerId": "passer",
+      "input": {
+        "kind": "playerAction",
+        "playerId": "passer",
+        "action": "move",
+        "path": [
+          {
+            "to": {
+              "x": 13,
+              "y": 6
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 14,
+              "y": 5
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 15,
+              "y": 4
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 16,
+              "y": 3
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 17,
+              "y": 2
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 18,
+              "y": 1
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 19,
+              "y": 0
+            },
+            "kind": "step"
+          }
+        ]
+      },
+      "pSuccess": 0.6944444444444443,
+      "pTurnover": 0.30555555555555564,
+      "pTouchdown": 0,
+      "builtInValue": -5.957797097422076
+    },
+    {
+      "id": 20,
+      "label": "#1 Gnome Lineman: move to G2",
+      "kind": "carry",
+      "playerId": "passer",
+      "input": {
+        "kind": "playerAction",
+        "playerId": "passer",
+        "action": "move",
+        "path": [
+          {
+            "to": {
+              "x": 11,
+              "y": 6
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 10,
+              "y": 5
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 9,
+              "y": 4
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 8,
+              "y": 3
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 7,
+              "y": 2
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 6,
+              "y": 1
+            },
+            "kind": "step"
+          }
+        ]
+      },
+      "pSuccess": 0.8333333333333333,
+      "pTurnover": 0.16666666666666674,
+      "pTouchdown": 0,
+      "builtInValue": -13.549259259259248
+    },
+    {
+      "id": 21,
+      "label": "#1 Gnome Lineman: move to F1",
+      "kind": "carry",
+      "playerId": "passer",
+      "input": {
+        "kind": "playerAction",
+        "playerId": "passer",
+        "action": "move",
+        "path": [
+          {
+            "to": {
+              "x": 11,
+              "y": 6
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 10,
+              "y": 5
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 9,
+              "y": 4
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 8,
+              "y": 3
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 7,
+              "y": 2
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 6,
+              "y": 1
+            },
+            "kind": "step"
+          },
+          {
+            "to": {
+              "x": 5,
+              "y": 0
+            },
+            "kind": "step"
+          }
+        ]
+      },
+      "pSuccess": 0.6944444444444443,
+      "pTurnover": 0.30555555555555575,
+      "pTouchdown": 0,
+      "builtInValue": -22.85163974673981
+    },
+    {
+      "id": 22,
+      "label": "#1 Gnome Lineman: long pass to #2 Woodland Fox",
+      "kind": "pass",
+      "playerId": "passer",
+      "input": {
+        "kind": "playerAction",
+        "playerId": "passer",
+        "action": "pass",
+        "path": [],
+        "passTarget": {
+          "x": 22,
+          "y": 7
+        }
+      }
+    }
+  ],
+  "standingInput": {
+    "kind": "playerAction",
+    "playerId": "passer",
+    "action": "pass",
+    "path": [],
+    "passTarget": {
+      "x": 22,
+      "y": 7
+    }
+  }
+}

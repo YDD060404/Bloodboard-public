@@ -1,0 +1,10 @@
+import { readFileSync } from 'node:fs';
+import { parseSaveFile, reconstructInitial, execute } from '../src/engine/index';
+declare const process: any;
+const p: any = parseSaveFile(readFileSync(process.argv[2], 'utf8'));
+const st = p.save.state; const init: any = reconstructInitial(st);
+console.log('recorded decisions', JSON.stringify(st.log[0].decisions.map((d: any) => [d.requestId, d.optionId, d.prompt.slice(0, 60)])));
+let out: any = execute(init, st.log[0].input);
+console.log(out.status, out.state.pending && JSON.stringify(out.state.pending.request.options.map((o: any) => o.id)), out.state.pending?.request.id, out.state.pending?.request.prompt);
+console.log('saved match inducements', JSON.stringify(st.match.inducements), 'prayers', JSON.stringify(st.match.prayers), 'rosterRerolls', JSON.stringify(st.match.rosterRerolls));
+console.log('A rerolls', JSON.stringify(st.teams.A), JSON.stringify(st.players.filter((q: any)=>q.team==='A').slice(0,2).map((q:any)=>[q.id,q.defId,q.veteran,q.captain,q.skills.map((s:any)=>s.id)])));

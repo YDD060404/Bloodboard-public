@@ -1,0 +1,109 @@
+  const other = t => t === 'A' ? 'B' : 'A';
+  const clamp = (x, a, b) => Math.max(a, Math.min(b, x));
+  const num = (x, d = 0) => Number.isFinite(x) ? x : d;
+  const has = (p, s) => (p?.skills || []).some(x => x === s || x.startsWith(s + '('));
+  const dist = (a, b) => a && b ? Math.max(Math.abs(a.x - b.x), Math.abs(a.y - b.y)) : 99;
+  const sqKey = p => `${p.x},${p.y}`;
+  const find = (o, id) => o.players.find(p => p.id === id);
+  const onPitch = p => p?.location === 'pitch' && !!p.pos;
+  const standing = p => onPitch(p) && p.stance === 'standing';
+  const tz = p => standing(p) && p.tackleZone !== false && !p.distracted;
+  const holder = o => o.ball?.kind === 'held' ? find(o, o.ball.playerId) : null;
+  const goal = (o, t) => o.pitch?.endZone?.[t] ?? (t === 'A' ? 25 : 0);
+  const height = o => o.pitch?.height ?? (o.format === 'sevens' ? 11 : 15);
+  const width = o => o.pitch?.width ?? (o.format === 'sevens' ? 20 : 26);
+  const goalDist = (o, t, p) => Math.abs(goal(o, t) - p.x);
+  const edge = (o, p) => Math.min(p.y, height(o) - 1 - p.y);
+  const crowdEdge = (o, p) => Math.min(edge(o, p), p.x, width(o) - 1 - p.x);
+  const usefulSkill = p => ['block', 'dodge', 'guard', 'standFirm', 'sidestep'].filter(s => has(p, s)).length;
+  const unreliable = p => ['boneHead', 'reallyStupid', 'unchannelledFury', 'animalSavagery', 'takeRoot', 'bloodlust'].filter(s => has(p, s)).length;
+  const round = x => Math.round(num(x) * 1000) / 1000;
+  const available = (o, p) => onPitch(p) && p.stance !== 'stunned' &&
+    (o.activation?.playerId === p.id && !o.activation.over || !p.activated && p.canBeActivated !== false);
+  const movementLeft = (o, p) => {
+    if (o.active !== p.team || !available(o, p) || p.rooted) return 0;
+    const used = o.activation?.playerId === p.id ? num(o.activation.maUsed) : p.stance === 'prone' ? 3 : 0;
+    return Math.max(0, p.ma - used);
+  };
+  const destOf = c => c.destination || c.input?.path?.at(-1)?.to || null;
+  const valueCache = new WeakMap(), routeCache = new WeakMap();
+
+  function heapPush(heap, row) {
+    let i = heap.length; heap.push(row);
+    while (i > 0) {
+      const parent = (i - 1) >> 1;
+      if (heap[parent][0] <= row[0]) break;
+      heap[i] = heap[parent]; i = parent;
+    }
+    heap[i] = row;
+  }
+  function heapPop(heap) {
+    const root = heap[0], last = heap.pop();
+    if (!heap.length) return root;
+    let i = 0;
+    while (i * 2 + 1 < heap.length) {
+      let child = i * 2 + 1;
+      if (child + 1 < heap.length && heap[child + 1][0] < heap[child][0]) child++;
+      if (last[0] <= heap[child][0]) break;
+      heap[i] = heap[child]; i = child;
+    }
+    heap[i] = last; return root;
+  }
+
+  function zones(o, team) {
+    const m = new Map();
+    for (const p of o.players.filter(p => p.team === team && tz(p))) {
+      for (let dx = -1; dx <= 1; dx++) for (let dy = -1; dy <= 1; dy++) {
+        if (!dx && !dy) continue;
+        const c = { x: p.pos.x + dx, y: p.pos.y + dy };
+        m.set(sqKey(c), (m.get(sqKey(c)) || 0) + 1);
+      }
+    }
+    return m;
+  }
+
+  // A bounded geometric path measure, NOT a probability. Actual execution uses engine paths.
+  // Occupied cells and Tackle Zones affect the corridor; this distinguishes screening from chasing.
+  function corridor(o, team, carrier, approach = false) {
+    if (!carrier?.pos) return { cost: 0, extra: 0, path: [] };
+    let cached = routeCache.get(o);
+    if (!cached) { cached = new Map(); routeCache.set(o, cached); }
+    const cacheKey = `${team}:${carrier.id}:${approach ? 'approach' : 'score'}`;
+    if (cached.has(cacheKey)) return cached.get(cacheKey);
+    const w = width(o), h = height(o), n = w * h;
+    const start = carrier.pos.y * w + carrier.pos.x, gx = goal(o, team);
+    const ballCarrier = approach ? holder(o) : null;
+    const blocked = new Set(o.players.filter(p => onPitch(p) && p.id !== carrier.id).map(p => sqKey(p.pos)));
+    const z = zones(o, other(team));
+    const costs = Array(n).fill(Infinity), parents = Array(n).fill(-1), heap = [];
+    costs[start] = 0;
+    heapPush(heap, [0, start]);
+    let end = -1;
+    while (heap.length) {
+      const [best, at] = heapPop(heap);
+      if (best !== costs[at]) continue;
+      const x = at % w, y = Math.floor(at / w);
+      if (approach ? ballCarrier?.pos && dist({ x, y }, ballCarrier.pos) === 1 : x === gx) { end = at; break; }
+      if (approach && best > carrier.ma + 6) break;
+      for (let dx = -1; dx <= 1; dx++) for (let dy = -1; dy <= 1; dy++) {
+        if (!dx && !dy) continue;
+        const nx = x + dx, ny = y + dy;
+        if (nx < 0 || nx >= w || ny < 0 || ny >= h || blocked.has(`${nx},${ny}`)) continue;
+        const idx = ny * w + nx;
+        const markings = z.get(`${nx},${ny}`) || 0;
+        const leaving = z.get(`${x},${y}`) || 0;
+        const cost = 1 + (leaving ? 2.5 + markings : markings * 0.65) +
+          (ny === 0 || ny === h - 1 ? 1.8 : 0) + Math.abs(dy) * 0.015 +
+          ((team === 'A' && dx < 0) || (team === 'B' && dx > 0) ? 0.05 : 0);
+        const next = best + cost;
+        if (next < costs[idx]) { costs[idx] = next; parents[idx] = at; heapPush(heap, [next, idx]); }
+      }
+    }
+    const path = [];
+    if (end >= 0) for (let at = end; at !== start && at >= 0; at = parents[at]) path.push({ x: at % w, y: Math.floor(at / w) });
+    path.reverse();
+    const base = approach ? Math.max(0, dist(carrier.pos, ballCarrier?.pos) - 1) : goalDist(o, team, carrier.pos);
+    const cost = end < 0 ? base + 24 : costs[end];
+    const result = { cost, extra: Math.max(0, cost - base), path, closedInStaticBoard: end < 0 };
+    cached.set(cacheKey, result); return result;
+  }

@@ -1,0 +1,15 @@
+const pw = await import(process.env.PLAYWRIGHT_MODULE || 'playwright');
+const { chromium } = pw.default ?? pw;
+import { mkdirSync } from 'node:fs';
+mkdirSync('build/shots', { recursive: true });
+const url = 'file://' + process.cwd() + '/dist/web/index.html';
+const browser = await chromium.launch();
+const page = await browser.newPage({ viewport: { width: 1470, height: 920 }, deviceScaleFactor: 1 });
+const errors = [];
+page.on('console', (m) => { if (m.type() === 'error' || m.type() === 'warning') errors.push(`${m.type()}: ${m.text()}`); });
+page.on('pageerror', (e) => errors.push('pageerror: ' + e.message));
+await page.goto(url);
+await page.waitForTimeout(500);
+await page.screenshot({ path: 'build/shots/01-initial.png' });
+console.log(JSON.stringify(errors, null, 1));
+await browser.close();

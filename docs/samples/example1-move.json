@@ -1,0 +1,15 @@
+{
+  "kind": "playerAction",
+  "playerId": "A1",
+  "action": "move",
+  "path": [
+    { "to": { "x": 18, "y": 7 }, "kind": "step" },
+    { "to": { "x": 19, "y": 7 }, "kind": "step" },
+    { "to": { "x": 20, "y": 7 }, "kind": "step" },
+    { "to": { "x": 21, "y": 7 }, "kind": "step" },
+    { "to": { "x": 22, "y": 7 }, "kind": "step" },
+    { "to": { "x": 23, "y": 7 }, "kind": "step" },
+    { "to": { "x": 24, "y": 7 }, "kind": "step" },
+    { "to": { "x": 25, "y": 6 }, "kind": "step" }
+  ]
+}

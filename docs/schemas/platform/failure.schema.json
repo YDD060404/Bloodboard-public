@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "failure",
+  "type": "object",
+  "required": [
+    "ok",
+    "code",
+    "message",
+    "errors"
+  ],
+  "properties": {
+    "ok": {
+      "const": false
+    },
+    "code": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "errors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}

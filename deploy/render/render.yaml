@@ -1,0 +1,23 @@
+# Render Blueprint for the Bloodboard match server (free plan, no paid add-ons).
+# Render reads this file from the ROOT of the Git repository you connect. See RENDER_SETUP.md for the exact steps.
+services:
+  - type: web
+    name: bloodboard-match
+    runtime: node
+    plan: free                       # the free web service; nothing here enables a paid instance, disk or database
+    region: oregon                   # pick the region nearest your friends if you like (it cannot be changed later)
+    buildCommand: node --version     # nothing to build: the repository already contains the runnable server and the web app
+    startCommand: node lan/server.mjs --hosted
+    healthCheckPath: /api/ping       # answered from memory; it never touches the recovery store
+    autoDeployTrigger: "off"         # deploys happen only when you press Deploy, so a push never restarts a running match
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: BLOODBOARD_HOSTED
+        value: "1"
+      - key: BLOODBOARD_ROOM_CODE    # 8-24 letters/digits that only you and your friends know; you type it in the Render dashboard
+        sync: false
+      - key: UPSTASH_REDIS_REST_URL  # from your free Upstash Redis database (REST API section)
+        sync: false
+      - key: UPSTASH_REDIS_REST_TOKEN
+        sync: false

@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "diagnostic",
+  "type": "object",
+  "required": [
+    "seq",
+    "tMs",
+    "service",
+    "code",
+    "severity",
+    "message"
+  ],
+  "properties": {
+    "seq": {
+      "type": "integer"
+    },
+    "tMs": {
+      "type": "number"
+    },
+    "service": {
+      "type": "string"
+    },
+    "code": {
+      "type": "string"
+    },
+    "severity": {
+      "enum": [
+        "info",
+        "warn",
+        "error"
+      ]
+    },
+    "message": {
+      "type": "string"
+    },
+    "limit": {
+      "type": "string"
+    },
+    "max": {
+      "type": "number"
+    },
+    "value": {
+      "type": "number"
+    }
+  },
+  "additionalProperties": true
+}

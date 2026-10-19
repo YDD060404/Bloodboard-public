@@ -1,0 +1,7 @@
+{
+  "kind": "playerAction",
+  "playerId": "A1",
+  "action": "pass",
+  "path": [],
+  "passTarget": { "x": 25, "y": 5 }
+}

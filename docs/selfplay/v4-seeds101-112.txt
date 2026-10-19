@@ -1,0 +1,59 @@
+seed 101: balanced human 1-0 orc balanced | 213 actions | think median 180 ms, 95% 1024 ms, max 1822 ms | 65 s
+seed 102: offensive human 2-0 orc defensive | 182 actions | think median 190 ms, 95% 954 ms, max 1588 ms | 52 s
+seed 103: defensive human 0-1 orc offensive | 198 actions | think median 139 ms, 95% 1523 ms, max 2486 ms | 68 s
+seed 104: offensive human 0-0 orc balanced | 180 actions | think median 183 ms, 95% 1993 ms, max 4727 ms | 77 s
+seed 105: balanced human 0-1 orc defensive | 216 actions | think median 180 ms, 95% 2165 ms, max 5339 ms | 111 s
+seed 106: defensive human 2-0 orc defensive | 214 actions | think median 121 ms, 95% 1883 ms, max 2604 ms | 65 s
+seed 107: balanced orc 0-2 human balanced | 233 actions | think median 159 ms, 95% 1419 ms, max 2287 ms | 80 s
+seed 108: offensive orc 0-0 human defensive | 207 actions | think median 126 ms, 95% 4048 ms, max 8169 ms | 166 s
+seed 109: defensive orc 0-0 human offensive | 177 actions | think median 187 ms, 95% 1239 ms, max 1933 ms | 56 s
+seed 110: offensive orc 1-1 human balanced | 172 actions | think median 223 ms, 95% 1663 ms, max 2630 ms | 69 s
+seed 111: balanced orc 0-0 human defensive | 158 actions | think median 286 ms, 95% 976 ms, max 1220 ms | 56 s
+seed 112: defensive orc 0-1 human defensive | 189 actions | think median 186 ms, 95% 626 ms, max 925 ms | 43 s
+
+Per style:
+| Style | Coach-matches | TDs per match | TD attempts (avg chance) | Declined ≥60% chances | Turnovers (expected, unlikely) | Avoidable risks | Ball lost: own action / opp. Turn (of Turns with ball) | Action mix | Most common | Objectives | Think median / 95% | Edge at Turn end / pushable now / in Blitz reach | Pushed into the crowd (result) / caused |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| balanced | 8 | 0.50 | 5 (avg 74%) | 3 | 42 (exp. 39.7, unlikely 6) | 10 | 3 / 15 of 51 | move 42%, carry 4%, block 14%, blitz 12%, standUp 11%, pickup 1%, secure 2%, handoff 1%, score 1%, continue 1%, endTurn 10% | move 47% | pressureCarrier 35%, advance 28%, protectCarrier 17%, stopScore 10%, recoverBall 5%, score 3%, contestBall 1%, position 0% | 208 / 1457 ms | 35 / 5 / 13 | 2 (reserves 1, ko 1) / caused 1 |
+| offensive | 6 | 0.67 | 5 (avg 72%) | 6 | 32 (exp. 37.0, unlikely 1) | 5 | 1 / 11 of 40 | move 41%, carry 4%, block 16%, blitz 12%, standUp 10%, pickup 3%, secure 1%, handoff 1%, score 1%, continue 1%, endTurn 10% | move 46% | pressureCarrier 35%, advance 30%, protectCarrier 18%, recoverBall 7%, score 5%, stopScore 3%, contestBall 1% | 157 / 1933 ms | 11 / 3 / 4 | 1 (reserves 1) / caused 2 |
+| defensive | 10 | 0.40 | 4 (avg 94%) | 0 | 58 (exp. 50.8, unlikely 6) | 8 | 4 / 14 of 61 | move 42%, carry 5%, block 15%, blitz 13%, standUp 10%, pickup 2%, secure 1%, handoff 0%, score 0%, continue 1%, endTurn 10% | move 47% | pressureCarrier 32%, advance 29%, stopScore 16%, protectCarrier 16%, recoverBall 4%, score 1%, contestBall 1%, position 0% | 180 / 1516 ms | 17 / 1 / 4 | 2 (reserves 1, ko 1) / caused 2 |
+
+Declined scoring chances (9):
+  - seed 101 balanced: B half 2 Turn 6: #4 Orc Lineman: run in to score at A1 (89% to score) was available; the Turn ended after End Turn
+  - seed 101 balanced: B half 2 Turn 7: #4 Orc Lineman: run in to score at A2 (67% to score) was available; the Turn ended after End Turn
+  - seed 102 offensive: A half 1 Turn 5: #10 Human Catcher: run in to score at Z5 (83% to score) was available; the Turn ended after End Turn
+  - seed 102 offensive: A half 1 Turn 6: #10 Human Catcher: run in to score at Z6 (83% to score) was available; the Turn ended after End Turn
+  - seed 102 offensive: A half 2 Turn 5: #10 Human Catcher: run in to score at Z2 (83% to score) was available; the Turn ended after End Turn
+  - seed 104 balanced: B half 2 Turn 5: #7 Orc Lineman: run in to score at A1 (83% to score) was available; the Turn ended after #10 Big Un Blocker: Block #12 Human Thrower (2D)
+  - seed 109 offensive: B half 1 Turn 4: #11 Human Catcher: run in to score at A1 (61% to score) was available; the Turn ended after End Turn
+  - seed 109 offensive: B half 1 Turn 5: #11 Human Catcher: run in to score at A7 (69% to score) was available; the Turn ended after End Turn
+  - seed 109 offensive: B half 1 Turn 7: #10 Human Catcher: run in to score at A7 (62% to score) was available; the Turn ended after End Turn
+
+Avoidable risks (23):
+  - seed 101 balanced: A half 2 Turn 6: #6 Human Lineman: Blitz #4 Orc Lineman from H5 (Turnover 56%, value 33.5) over #6 Human Lineman: move to H5 (Turnover 0%, value 32.2)
+  - seed 102 offensive: A half 1 Turn 6: #4 Human Lineman: move to S12 (Turnover 33%, value 2.6) over #8 Human Blitzer: Block #3 Orc Lineman (2D) (Turnover 3%, value 1.6)
+  - seed 102 defensive: B half 2 Turn 5: #1 Orc Lineman: move to P10 (Turnover 67%, value 3.1) over #4 Orc Lineman: Block #2 Human Lineman (2D) (Turnover 11%, value 2.9)
+  - seed 103 defensive: A half 1 Turn 4: #1 Human Lineman: move to E3 (Turnover 33%, value 3.0) over #3 Human Lineman: Block #7 Orc Lineman (2D) (Turnover 11%, value 2.2)
+  - seed 104 offensive: A half 1 Turn 5: #1 Human Lineman: Blitz #9 Orc Blitzer from O6 (Turnover 63%, value 5.0) over #2 Human Lineman: Blitz #1 Orc Lineman (Turnover 11%, value 4.8)
+  - seed 104 balanced: B half 1 Turn 5: #1 Orc Lineman: Blitz #7 Human Lineman (Turnover 33%, value 2.8) over #11 Big Un Blocker: Block #9 Human Blitzer (2D) (Turnover 11%, value 2.0)
+  - seed 104 balanced: B half 2 Turn 3: #8 Orc Blitzer: move to J7 (Turnover 67%, value 3.0) over #8 Orc Blitzer: stand up (Turnover 0%, value 2.9)
+  - seed 105 balanced: A half 1 Turn 6: #10 Human Catcher: Blitz #1 Orc Lineman from N15 (Turnover 83%, value 3.8) over #10 Human Catcher: Block #4 Orc Lineman (1D) (Turnover 33%, value 3.7)
+  - seed 105 balanced: A half 2 Turn 5: #4 Human Lineman: Blitz #1 Orc Lineman from O13 (Turnover 44%, value 1.7) over #1 Human Lineman: Blitz #11 Big Un Blocker (Turnover 11%, value 0.8)
+  - seed 105 balanced: A half 2 Turn 8: #5 Human Lineman: Blitz #10 Big Un Blocker (Turnover 56%, value 5.3) over #5 Human Lineman: Blitz #1 Orc Lineman (Turnover 11%, value 4.7)
+  - seed 105 defensive: B half 2 Turn 7: #2 Orc Lineman: Block #4 Human Lineman (1D) (Turnover 33%, value 2.6) over #10 Big Un Blocker: Blitz #3 Human Lineman (Turnover 11%, value 1.7)
+  - seed 105 defensive: B half 2 Turn 8: #1 Orc Lineman: Block #5 Human Lineman (1D) (Turnover 33%, value 1.8) over #2 Orc Lineman: Block #4 Human Lineman (2D) (Turnover 11%, value 1.7)
+
+Ball lost during its own action (8):
+  - seed 101 balanced: B half 1 Turn 7: #9 Orc Blitzer: move to K2 (estimated 2%)
+  - seed 104 balanced: B half 2 Turn 6: #7 Orc Lineman: run in to score at A1 (estimated 29%)
+  - seed 105 defensive: B half 2 Turn 2: #4 Orc Lineman: hand the ball to #7 Orc Lineman (estimated 9%)
+  - seed 106 defensive: B half 2 Turn 4: #8 Orc Blitzer: move to H5 (estimated 42%)
+  - seed 108 defensive: B half 1 Turn 5: #8 Human Blitzer: move to B14 (estimated 44%)
+  - seed 109 offensive: B half 1 Turn 8: #10 Human Catcher: run in to score at A7 (estimated 34%)
+  - seed 110 balanced: B half 2 Turn 5: #8 Human Blitzer: move to J9 (estimated 33%)
+  - seed 112 defensive: B half 1 Turn 7: #6 Human Lineman: Blitz #8 Orc Blitzer (estimated 30%)
+
+Crowd: 63 player-Turn-ends on an edge square, 9 with an opponent already on a crowd-push square, 21 with one in Blitz reach; 5 players pushed into the crowd.
+SUMMARY matches=12 tds=12 turnovers=132 expectedTurnovers=127.4 ballLostOwn=8 ballLostOppTurn=40 declined=9 avoidable=23 edgeEnds=63 exposedAdjacent=9 exposedReach=21 crowdPushed=5 thinkMedian=180 think95=1603 thinkMax=8169 illegal=0
+
+12 matches, 12 Touchdowns, illegal inputs: 0.

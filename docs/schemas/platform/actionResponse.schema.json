@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "actionResponse",
+  "anyOf": [
+    {
+      "type": "object",
+      "required": [
+        "candidateId"
+      ],
+      "properties": {
+        "candidateId": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "why": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    {
+      "type": "object",
+      "required": [
+        "input"
+      ],
+      "properties": {
+        "input": {
+          "type": "object",
+          "required": [
+            "kind"
+          ],
+          "properties": {
+            "kind": {
+              "enum": [
+                "playerAction",
+                "endActivation",
+                "endTurn"
+              ]
+            }
+          }
+        },
+        "why": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    {
+      "type": "object",
+      "required": [
+        "endTurn"
+      ],
+      "properties": {
+        "endTurn": {
+          "const": true
+        },
+        "why": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    {
+      "type": "object",
+      "required": [
+        "ranking"
+      ],
+      "properties": {
+        "ranking": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "candidateId"
+            ],
+            "properties": {
+              "candidateId": {
+                "anyOf": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ]
+              },
+              "score": {
+                "type": "number"
+              },
+              "logit": {
+                "type": "number"
+              }
+            },
+            "additionalProperties": true
+          }
+        },
+        "why": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    }
+  ]
+}

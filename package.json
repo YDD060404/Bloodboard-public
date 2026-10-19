@@ -1,0 +1,30 @@
+{
+  "name": "broadboard-online",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Unified Bloodboard desktop, browser and hosted room engine",
+  "scripts": {
+    "build": "node scripts/build-online.mjs",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "start": "node lan/server.mjs --host 127.0.0.1 --port 8790 --web dist/web",
+    "test:network": "node --test lan/test/*.test.mjs",
+    "test:online-ui": "node scripts/ui-flow-online.mjs",
+    "package": "node scripts/package-online.mjs",
+    "test:language": "node scripts/ui-flow-language.mjs",
+    "test:orientation": "node scripts/ui-flow-orientation.mjs",
+    "test:sideline": "node scripts/ui-flow-sideline.mjs",
+    "test:operations": "node scripts/ui-flow-operations.mjs",
+    "test:keyboard": "node scripts/ui-flow-keyboard.mjs",
+    "test:published-ai": "node scripts/ui-flow-published-ai.mjs"
+  },
+  "license": "UNLICENSED",
+  "type": "module",
+  "devDependencies": {
+    "esbuild": "^0.27.7",
+    "typescript": "^6.0.3",
+    "playwright": "^1.56.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

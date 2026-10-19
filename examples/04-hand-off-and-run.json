@@ -1,0 +1,367 @@
+{
+ "format": "bloodboard-position",
+ "version": 2,
+ "name": "Hand-off, then run it in",
+ "savedAt": "2026-09-25T00:00:00.000Z",
+ "notes": "Bretonnian Knight Thrower hands off to a Marked Knight Catcher, who must dodge away and Rush twice to score.",
+ "state": {
+  "format": "bloodboard-state",
+  "version": 1,
+  "phase": "play",
+  "rulesEdition": "faq2026",
+  "weather": "perfect",
+  "teams": {
+   "A": {
+    "id": "A",
+    "name": "Brionne Barons",
+    "rosterId": "bretonnian",
+    "color": "#2451b3",
+    "accent": "#f5d77a",
+    "rerolls": 2,
+    "leaderReroll": false,
+    "score": 0,
+    "turn": 6
+   },
+   "B": {
+    "id": "B",
+    "name": "Nehekhara Nightmares",
+    "rosterId": "tombKings",
+    "color": "#d9a82e",
+    "accent": "#1b2a3a",
+    "rerolls": 2,
+    "leaderReroll": false,
+    "score": 0,
+    "turn": 5
+   }
+  },
+  "players": [
+   {
+    "id": "A1",
+    "team": "A",
+    "number": 9,
+    "name": "Bretonnian Knight Thrower",
+    "position": "Bretonnian Knight Thrower",
+    "keywords": [
+     "Human",
+     "Thrower"
+    ],
+    "ma": 6,
+    "st": 3,
+    "ag": 3,
+    "pa": 3,
+    "av": 9,
+    "skills": [
+     {
+      "id": "dauntless"
+     },
+     {
+      "id": "nervesOfSteel"
+     },
+     {
+      "id": "pass"
+     }
+    ],
+    "location": "pitch",
+    "pos": {
+     "x": 15,
+     "y": 7
+    },
+    "stance": "standing",
+    "distracted": false,
+    "activated": false,
+    "usage": {}
+   },
+   {
+    "id": "A2",
+    "team": "A",
+    "number": 7,
+    "name": "Bretonnian Knight Catcher",
+    "position": "Bretonnian Knight Catcher",
+    "keywords": [
+     "Catcher",
+     "Human"
+    ],
+    "ma": 7,
+    "st": 3,
+    "ag": 3,
+    "pa": 4,
+    "av": 9,
+    "skills": [
+     {
+      "id": "catch"
+     },
+     {
+      "id": "dauntless"
+     },
+     {
+      "id": "nervesOfSteel"
+     }
+    ],
+    "location": "pitch",
+    "pos": {
+     "x": 16,
+     "y": 8
+    },
+    "stance": "standing",
+    "distracted": false,
+    "activated": false,
+    "usage": {}
+   },
+   {
+    "id": "A3",
+    "team": "A",
+    "number": 1,
+    "name": "Grail Knight",
+    "position": "Grail Knight",
+    "keywords": [
+     "Blitzer",
+     "Human"
+    ],
+    "ma": 7,
+    "st": 3,
+    "ag": 3,
+    "pa": 4,
+    "av": 10,
+    "skills": [
+     {
+      "id": "block"
+     },
+     {
+      "id": "dauntless"
+     },
+     {
+      "id": "steadyFooting"
+     }
+    ],
+    "location": "pitch",
+    "pos": {
+     "x": 14,
+     "y": 10
+    },
+    "stance": "standing",
+    "distracted": false,
+    "activated": false,
+    "usage": {}
+   },
+   {
+    "id": "A4",
+    "team": "A",
+    "number": 3,
+    "name": "Bretonnian Squire",
+    "position": "Bretonnian Squire",
+    "keywords": [
+     "Human",
+     "Lineman"
+    ],
+    "ma": 6,
+    "st": 3,
+    "ag": 3,
+    "pa": 4,
+    "av": 8,
+    "skills": [
+     {
+      "id": "wrestle"
+     }
+    ],
+    "location": "pitch",
+    "pos": {
+     "x": 13,
+     "y": 6
+    },
+    "stance": "standing",
+    "distracted": false,
+    "activated": false,
+    "usage": {}
+   },
+   {
+    "id": "B1",
+    "team": "B",
+    "number": 3,
+    "name": "Skeleton Lineman",
+    "position": "Skeleton Lineman",
+    "keywords": [
+     "Human",
+     "Lineman",
+     "Skeleton",
+     "Undead"
+    ],
+    "ma": 5,
+    "st": 3,
+    "ag": 4,
+    "pa": 6,
+    "av": 8,
+    "skills": [
+     {
+      "id": "regeneration"
+     },
+     {
+      "id": "thickSkull"
+     }
+    ],
+    "location": "pitch",
+    "pos": {
+     "x": 17,
+     "y": 9
+    },
+    "stance": "standing",
+    "distracted": false,
+    "activated": false,
+    "usage": {}
+   },
+   {
+    "id": "B2",
+    "team": "B",
+    "number": 4,
+    "name": "Skeleton Lineman",
+    "position": "Skeleton Lineman",
+    "keywords": [
+     "Human",
+     "Lineman",
+     "Skeleton",
+     "Undead"
+    ],
+    "ma": 5,
+    "st": 3,
+    "ag": 4,
+    "pa": 6,
+    "av": 8,
+    "skills": [
+     {
+      "id": "regeneration"
+     },
+     {
+      "id": "thickSkull"
+     }
+    ],
+    "location": "pitch",
+    "pos": {
+     "x": 19,
+     "y": 6
+    },
+    "stance": "standing",
+    "distracted": false,
+    "activated": false,
+    "usage": {}
+   },
+   {
+    "id": "B3",
+    "team": "B",
+    "number": 6,
+    "name": "Tomb Kings Blitzer",
+    "position": "Tomb Kings Blitzer",
+    "keywords": [
+     "Blitzer",
+     "Human",
+     "Skeleton",
+     "Undead"
+    ],
+    "ma": 6,
+    "st": 3,
+    "ag": 4,
+    "pa": 5,
+    "av": 9,
+    "skills": [
+     {
+      "id": "block"
+     },
+     {
+      "id": "regeneration"
+     },
+     {
+      "id": "thickSkull"
+     }
+    ],
+    "location": "pitch",
+    "pos": {
+     "x": 21,
+     "y": 8
+    },
+    "stance": "standing",
+    "distracted": false,
+    "activated": false,
+    "usage": {}
+   },
+   {
+    "id": "B4",
+    "team": "B",
+    "number": 12,
+    "name": "Tomb Guardian",
+    "position": "Tomb Guardian",
+    "keywords": [
+     "Big Guy",
+     "Blocker",
+     "Human",
+     "Undead"
+    ],
+    "ma": 4,
+    "st": 5,
+    "ag": 5,
+    "pa": 6,
+    "av": 10,
+    "skills": [
+     {
+      "id": "brawler"
+     },
+     {
+      "id": "decay"
+     },
+     {
+      "id": "regeneration"
+     }
+    ],
+    "location": "pitch",
+    "pos": {
+     "x": 18,
+     "y": 11
+    },
+    "stance": "standing",
+    "distracted": false,
+    "activated": false,
+    "usage": {}
+   }
+  ],
+  "ball": {
+   "kind": "held",
+   "playerId": "A1"
+  },
+  "turn": {
+   "active": "A",
+   "half": 2,
+   "used": {
+    "blitz": false,
+    "pass": false,
+    "handoff": false,
+    "foul": false,
+    "secure": false,
+    "ttm": false,
+    "bomb": false,
+    "punt": false,
+    "ktm": false
+   },
+   "stunnedAtStart": [],
+   "activation": null
+  },
+  "rng": {
+   "seed": 4242,
+   "counter": 0
+  },
+  "options": {
+   "rulerWidth": 1.8
+  },
+  "log": [],
+  "pending": null,
+  "title": "Hand-off, then run it in",
+  "notes": "Bretonnian Knight Thrower hands off to a Marked Knight Catcher, who must dodge away and Rush twice to score."
+ },
+ "meta": {
+  "saveFormatVersion": 2,
+  "matchId": "m-mvakb640-pfzj96j0s239",
+  "displayName": "Hand-off, then run it in",
+  "createdAt": "2026-10-16T06:03:57.744Z",
+  "matchFormat": "practice",
+  "engineVersion": "0.2.0",
+  "engineHash": "8ffd4c86ed2f6f0471fac87b8493e04a1bfeec216a7ebf511702835bb9f9a84d",
+  "rulesHash": "ef05264a2b584e775696b0bb3a6ce0a8e308b9eb585e73236dd8ff20da7610cf",
+  "aiApiVersion": "2.0"
+ }
+}
